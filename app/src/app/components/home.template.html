@@ -1,0 +1,31 @@
+<div fxLayout="column " class="backgoundImage" fxLayoutAlign="center center" [fxShow]="true" fxFill>
+  <div fxLayout="row wrap" class="width80 backgorundColor heightwhite" fxLayoutAlign="start stretch" [fxShow]="true">
+    <div fxLayout="column wrap" fxFlex="100" fxLayoutAlign="start stretch" [fxShow]="true">
+      <div fxLayout="row wrap" class="paddingtop toolbarHeight" fxLayoutAlign="center center" [fxShow]="true">
+        <bh-toolbar class="width100"></bh-toolbar>
+      </div>
+      <div fxLayout="row wrap" class="scroll bodyHeight width100" fxLayoutAlign="start stretch" [fxShow]="true">
+        <div fxLayout="column wrap" style="padding10" fxFlex="100" fxLayoutAlign="start stretch" [fxShow]="true">
+          <router-outlet></router-outlet>
+        </div>
+      </div>
+      <div fxLayout="row wrap" class="padding10 borderTop width98" fxLayoutGap="10px" fxLayoutAlign="end end" [fxShow]="page.routerVal==&apos;/home/summary&apos;"><button mat-raised-button style="width:100px" routerLink="register" class="fontWeight500 secondary-button">
+          <mat-icon class="left fontSize14 lineHeight1-8">arrow_back</mat-icon><label>Back<label></label></label>
+        </button><button mat-raised-button style="width:155px" routerLink="quotes" class="primary-button" (click)="changeText()">Check My Price<mat-icon class="fontSize12 lineHeight1-9">arrow_forward</mat-icon></button></div>
+      <div fxLayout="row wrap" class="padding10 borderTop width98" fxLayoutGap="10px" fxLayoutAlign="end end" [fxShow]="page.routerVal==&apos;/home/quotes&apos;"><button mat-raised-button style="width:100px" routerLink="summary" class="fontWeight500 secondary-button">
+          <mat-icon class="left eft fontSize14 lineHeight1-8">arrow_back</mat-icon><label>Back<label></label></label>
+        </button><button mat-raised-button style="width:116px" routerLink="summary_page" class="primary-button" (click)="changeText()">Review<mat-icon class="left fontSize14 lineHeight1-8">arrow_forward</mat-icon></button></div>
+      <div fxLayout="row wrap" class="padding10 borderTop width98" fxLayoutGap="10px" fxLayoutAlign="end end" [fxShow]="page.routerVal==&apos;/home/summary_page&apos;"><button mat-raised-button style="width:100px" routerLink="quotes" class="fontWeight500 secondary-button">
+          <mat-icon class="left fontSize14 lineHeight1-8">arrow_back</mat-icon><label>Back<label></label></label>
+        </button><button mat-raised-button style="width:120px" routerLink="register" class="primary-button" (click)="changeText()">Apply Now<mat-icon class="left fontSize14 lineHeight1-8">arrow_forward</mat-icon></button></div>
+    </div>
+  </div>
+  <div fxLayout="row wrap" class="width80" fxLayoutAlign="start stretch" [fxShow]="page.routerVal==&apos;/home/quotes&apos; || page.routerVal==&apos;/home/summary_page&apos;">
+    <div fxLayout="column wrap" class="marginTop10" fxLayoutAlign="start stretch" [fxShow]="true">
+      <h4 class="darkGreyText fontSize12">
+        Disclaimer</h4>
+      <p class="lightGreyText fontSize12">
+        Woligo is the marketing name of CamSolutions, LLC, an Oklahoma corporation. CamSolutions, LLC is a licensed independent insurance broker. CamSolutions, LLC operates in California as Woligo Insurance Solutions with the California license number (6002977) and is also licensed in Oklahoma (30009078&#x200A;1), Arizona (3000982823), and Texas (2572693). Other state insurance license numbers available on request.<span> Read more </span></p>
+    </div>
+  </div>
+</div>

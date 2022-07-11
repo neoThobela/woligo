@@ -1,0 +1,139 @@
+[
+    {
+        "id": "sd_C5bLX9s6xiUJByjE",
+        "type": "tab",
+        "createdDate": "2022-07-05T08:23:17.154Z",
+        "label": "toolbar",
+        "disabled": false,
+        "info": "",
+        "functionSeq": 0,
+        "generateNext": true,
+        "serviceName": "toolbarComponent"
+    },
+    {
+        "id": "sd_plBRezOeIZFfYsGD",
+        "type": "OnInit",
+        "z": "sd_C5bLX9s6xiUJByjE",
+        "viewType": "common",
+        "nodeType": "start",
+        "name": "",
+        "functionName": "sd_plBRezOeIZFfYsGD",
+        "category": "Lifecycle Events",
+        "x": 30,
+        "y": 30,
+        "wires": [
+            [
+                "sd_01uWBFUD8noaLAkU"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "toolbarComponent"
+    },
+    {
+        "id": "sd_01uWBFUD8noaLAkU",
+        "type": "PageVariables",
+        "z": "sd_C5bLX9s6xiUJByjE",
+        "viewType": "pages",
+        "nodeType": "flow",
+        "name": "",
+        "inputs": 1,
+        "outputs": 1,
+        "operation": "set",
+        "globalVariables": [
+            {
+                "textIp": "routerVal",
+                "typedIpValue": {
+                    "type": "this.page",
+                    "value": ""
+                }
+            }
+        ],
+        "functionName": "sd_01uWBFUD8noaLAkU",
+        "category": "Function",
+        "x": 180,
+        "y": 30,
+        "wires": [
+            [
+                "sd_zGxcqRBN5GClLJcL"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "generated": true
+    },
+    {
+        "id": "sd_zGxcqRBN5GClLJcL",
+        "type": "UseDependency",
+        "z": "sd_C5bLX9s6xiUJByjE",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "inputs": 1,
+        "outputs": 1,
+        "property": "",
+        "propertyType": "bh",
+        "propertyGv": "bh.",
+        "alias": "",
+        "modules": [
+            {
+                "textIp": "Router",
+                "typedIpValue": {
+                    "type": "this.page",
+                    "value": "router"
+                },
+                "injectable": true
+            },
+            {
+                "textIp": "NavigationEnd",
+                "typedIpValue": {
+                    "type": "this.page",
+                    "value": "navigationEnd"
+                },
+                "injectable": false
+            },
+            {
+                "textIp": "NavigationStart",
+                "typedIpValue": {
+                    "type": "this.page",
+                    "value": "navigationStart"
+                },
+                "injectable": false
+            }
+        ],
+        "import_all": false,
+        "library": "@angular/router",
+        "serviceDesignerType": "pages",
+        "functionName": "sd_zGxcqRBN5GClLJcL",
+        "category": "Function",
+        "x": 305,
+        "y": 40,
+        "wires": [
+            [
+                "sd_YwxVNFGjd7gqxxL1"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "generated": true
+    },
+    {
+        "id": "sd_YwxVNFGjd7gqxxL1",
+        "type": "Script",
+        "z": "sd_C5bLX9s6xiUJByjE",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "// console.log('page.router', page.router.url);\npage.routerVal = page.router.url;\npage.router.events.subscribe((event) => {\n    if (event instanceof page.navigationEnd) {\n        // Hide loading indicator\n        console.log(event)\n    page.routerVal = event.url\n    }\n\n});\nconsole.log('page.router', page.routerVal);\n",
+        "functionName": "sd_YwxVNFGjd7gqxxL1",
+        "category": "Function",
+        "x": 425,
+        "y": 40,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "generated": true
+    }
+]

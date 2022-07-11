@@ -1,0 +1,36 @@
+{
+    "routes": [
+        {
+            "component": "homeComponent",
+            "path": "home",
+            "children": [
+                {
+                    "path": "summary_page",
+                    "component": "summaryForDisabilityComponent"
+                },
+                {
+                    "path": "quotes",
+                    "component": "pageComponent"
+                },
+                {
+                    "component": "summaryComponent",
+                    "path": "summary"
+                },
+                {
+                    "component": "registerComponent",
+                    "path": "register"
+                }
+            ]
+        },
+        {
+            "path": "''",
+            "redirectTo": "/home",
+            "pathMatch": "full",
+            "default": true
+        },
+        {
+            "path": "**",
+            "component": "PageNotFoundComponent"
+        }
+    ]
+}

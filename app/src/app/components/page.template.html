@@ -1,0 +1,116 @@
+<div fxLayout="column wrap" class="marginTop padding10" fxLayoutGap="2em" fxLayoutAlign="start stretch" [fxShow]="true">
+  <div fxLayout="row wrap" class="width100" fxLayoutAlign="start stretch" [fxShow]="true">
+    <div fxLayout="column wrap" fxFlex="100" fxLayoutGap="2em" fxLayoutAlign="center center" [fxShow]="true">
+      <h3>
+        Recommended Options for Disability Insurance </h3>
+      <div fxLayout="row wrap" class="width90" fxLayoutAlign="center center" [fxShow]="true">
+        <div fxLayout="column wrap" fxFlex="100" fxLayoutAlign="center center" [fxShow]="true">
+          <div fxLayout="row wrap" class="width100" fxLayoutGap="2em" fxLayoutAlign="center center" [fxShow]="true">
+            <div fxLayout="column wrap" class="grayBorder" fxFlex="240px" fxLayoutGap="2em" fxLayoutAlign="center center" [fxShow]="true" *ngFor="let item of page.options" [ngClass]="{&apos;selectedClass&apos;:item.value===&apos;Selected&apos;}">
+              <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true">
+                <h4 class="fontSize18 darkGreyText">
+                  {{item.title}}
+                </h4>
+              </div>
+              <div fxLayout="row wrap" class="darkGreyText" fxLayoutAlign="start stretch" [fxShow]="true"><span class="fontSize14">
+                <!-- &#36;<span class="number fontWeight500"> 17 </span>/ monthly cost -->
+                <span class="price  fontWeight500">$</span>
+                <span class="currency price number fontWeight500 fontSize14">{{item.price}}<span class="fontSize14">/monthly cost</span></span></span>
+              </div>
+              <div fxLayout="row wrap" class="textDarkGray centerText fontSize12" fxLayoutAlign="start stretch" [fxShow]="true">
+                <div>
+                  <p>Monthly Benefit Amount: {{item.benefitAmount}}</p>
+                  <p>Benefit Period: {{item.benefitPeriod}}</p>
+                  <p>Elimination Period: {{item.estimationPeriod}}</p>
+                </div>
+              </div>
+              <div fxLayout="row wrap" class="width80" fxLayoutAlign="center center" [fxShow]="true">
+                <div fxLayout="column wrap" fxFlex="100" fxLayoutAlign="start stretch" [fxShow]="true"><button mat-button class="peachBtn" [ngClass]="{&apos;primary-button&apos; :item.value===&apos;Selected&apos;}" (click)="choosePlan(item.title)">
+                    <mat-icon class="greenTick" *ngIf="item.value ===&apos;Selected&apos;"> done</mat-icon>{{item.value}}
+                  </button><button mat-button class="orangeText">Customize</button></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <h3>
+        Other products to consider</h3>
+      <div fxLayout="row wrap" class="width90" fxLayoutAlign="center center" [fxShow]="true">
+        <div fxLayout="column wrap" fxFlex="100" fxLayoutAlign="center center" [fxShow]="true">
+          <div fxLayout="row wrap" class="width100" fxLayoutGap="2em" fxLayoutAlign="center center" [fxShow]="true">
+            <div fxLayout="column wrap" class="secondBorder" fxFlex="240px" fxLayoutGap="1em" fxLayoutAlign="center center" [fxShow]="true" [ngClass]="{&apos;selectedClass&apos;:page.clicked===&apos;true&apos;}">
+              <div fxLayout="row wrap" class="centerText" fxLayoutAlign="center center" [fxShow]="true">
+                <h4 class="textDarkGray">
+                  Well-Being
+                  Discount Plan</h4>
+              </div>
+              <div fxLayout="row wrap" class="lightGreyText fontSize14 centerText" fxLayoutAlign="center center" [fxShow]="true">
+                <p class="lightGreyText">
+                  Add your spouse and your dependents (up to age 26) for free</p>
+              </div>
+              <div fxLayout="row wrap" class="blueText" fxLayoutAlign="center center" [fxShow]="true">
+                <div class="fontSize14 fontWeight500 blueText">
+                  <a href="#" class="blueText">Includes:</a>
+                </div>
+              </div>
+              <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true">
+                <div fxLayout="column wrap" fxFlex="100" fxLayoutAlign="start stretch" [fxShow]="true" *ngFor="let item of page.wellBegin">
+                  <div fxLayout="row wrap" class="margin-bottom1 width90" fxLayoutGap="1em" fxLayoutAlign="start stretch" [fxShow]="true">
+                    <div fxLayout="column wrap" fxFlex="5" fxLayoutGap="1em" fxLayoutAlign="start stretch" [fxShow]="true"><img imgSrc="{{item.image}}" class="dot"></div>
+                    <div fxLayout="column wrap" fxFlex="85" fxLayoutGap="1em" fxLayoutAlign="start stretch" [fxShow]="true">
+                      <p class="fontSize12 textDarkGray">
+                        {{item.paragraph}}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div fxLayout="row wrap" class="width100 darkGreyText" fxLayoutGap=".5em" fxLayoutAlign="center center" [fxShow]="true">
+                <mat-checkbox name="checked" (change)="checkBox(page.clicked)" [required]="false"></mat-checkbox><span class="fontSize12">
+                <span class="orangNumber fontWeight500"> $14.95 </span>/ monthly cost</span>
+              </div>
+            </div>
+            <div fxLayout="column wrap" class="secondBorder" fxFlex="240px" fxLayoutGap="1.6em" fxLayoutAlign="center center" [fxShow]="true" [ngClass]="{&apos;selectedClass&apos;:page.radio===&apos;true&apos;}">
+              <div fxLayout="row wrap" class="centerText" fxLayoutAlign="center center" [fxShow]="true">
+                <h4 class="textDarkGray">
+                  Safeguard
+                  Discount Plan</h4>
+              </div>
+              <div fxLayout="row wrap" class="blueText" fxLayoutAlign="center center" [fxShow]="true">
+                <div class="fontSize14 fontWeight500 blueText">
+                  <a href="#" class="blueText">Includes:</a>
+                </div>
+              </div>
+              <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true">
+                <div fxLayout="column wrap" fxFlex="100" fxLayoutAlign="start stretch" [fxShow]="true" *ngFor="let item of page.safeguard">
+                  <div fxLayout="row wrap" class="margin-bottom1 width90" fxLayoutGap="1em" fxLayoutAlign="start stretch" [fxShow]="true">
+                    <div fxLayout="column wrap" fxFlex="5" fxLayoutGap="1em" fxLayoutAlign="space-between space-between" [fxShow]="true"><img imgSrc="{{item.image}}" class="dot"></div>
+                    <div fxLayout="column wrap" fxFlex="85" fxLayoutGap="1em" fxLayoutAlign="space-between space-between" [fxShow]="true">
+                      <p class="fontSize12 textDarkGray">
+                        {{item.paragraph}}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div fxLayout="row wrap" class="fontSize18 width100 darkGreyText" fxLayoutGap="1em" fxLayoutAlign="center center" [fxShow]="true">
+                <div fxLayout="column wrap" fxFlex="5" fxLayoutAlign="start stretch" [fxShow]="true">
+                  <mat-radio-button [value]="radio" [required]="false" (change)="radioBtn(page.radio)"></mat-radio-button>
+                </div>
+                <div fxLayout="column wrap" fxFlex="80" fxLayoutAlign="start stretch" [fxShow]="true"><span class="fontSize14">
+                <span class="orangNumber fontWeight500"> $14.95 </span>/ monthly Per Family</span></div>
+              </div>
+              <div fxLayout="row wrap" class="fontSize18 darkGreyText" fxLayoutGap="1em" fxLayoutAlign="center center" [fxShow]="true">
+                <div fxLayout="column wrap" fxFlex="5" fxLayoutAlign="start stretch" [fxShow]="true">
+                  <mat-radio-button [required]="false" (change)="radioBtn(page.radio)"></mat-radio-button>
+                </div>
+                <div fxLayout="column wrap" fxFlex="80" fxLayoutAlign="start stretch" [fxShow]="true"><span class="fontSize14">
+                <span class="orangNumber fontWeight500"> $16.95 </span>/ monthly Per Family</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

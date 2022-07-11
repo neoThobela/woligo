@@ -1,0 +1,160 @@
+[
+    {
+        "id": "sd_NhfqXtAUI2DC6gFF",
+        "type": "tab",
+        "createdDate": "2022-07-06T07:33:18.113Z",
+        "label": "summaryForDisability",
+        "disabled": false,
+        "info": "",
+        "functionSeq": 0,
+        "generateNext": true,
+        "serviceName": "summaryForDisabilityComponent"
+    },
+    {
+        "id": "sd_rsbIklhA4kpLH4Pd",
+        "type": "OnInit",
+        "z": "sd_NhfqXtAUI2DC6gFF",
+        "viewType": "common",
+        "nodeType": "start",
+        "name": "",
+        "functionName": "sd_rsbIklhA4kpLH4Pd",
+        "category": "Lifecycle Events",
+        "x": 45,
+        "y": 40,
+        "wires": [
+            [
+                "sd_SVZvMc2YRt7OThtl"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "summaryForDisabilityComponent"
+    },
+    {
+        "id": "sd_SVZvMc2YRt7OThtl",
+        "type": "PageVariables",
+        "z": "sd_NhfqXtAUI2DC6gFF",
+        "viewType": "pages",
+        "nodeType": "flow",
+        "name": "",
+        "inputs": 1,
+        "outputs": 1,
+        "operation": "set",
+        "globalVariables": [
+            {
+                "textIp": "priceDisability",
+                "typedIpValue": {
+                    "type": "this.page",
+                    "value": ""
+                }
+            }
+        ],
+        "functionName": "sd_SVZvMc2YRt7OThtl",
+        "category": "Function",
+        "x": 185,
+        "y": 40,
+        "wires": [
+            [
+                "sd_X4zaEuPvLEGzvifn"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "generated": true
+    },
+    {
+        "id": "sd_X4zaEuPvLEGzvifn",
+        "type": "Script",
+        "z": "sd_NhfqXtAUI2DC6gFF",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "page.priceDisability=[\n    {\n        title:\"Benefit Amount\",\n        description:\"$1,200\",\n        color:\"#B9B9C3\"\n    },\n     {\n        title:\"Benefit Period\",\n        description:\"5 years\",\n        color:\"#B9B9C3\"\n    },\n     {\n        title:\"Waiting Period\",\n        description:\"30 days\",\n        color:\"#B9B9C3\"\n    },\n     {\n        title:\"Monthly Premium\",\n        description:\"$17\",\n        color:\"#DD601E\",\n        titleColor:\"#4B4B4B\"\n    },\n]\n\npage.button=[{\n    buttonName:\"Well-Being\",\n    link:\"Brochure \",\n    description:\"$14.95 / month\",\n},\n{\n    buttonName:\"Safeguard (Individual Plan)\",\n    link:\"Brochure \",\n    description:\"$16.95 / month\",\n},\n]",
+        "functionName": "sd_X4zaEuPvLEGzvifn",
+        "category": "Function",
+        "x": 325,
+        "y": 40,
+        "wires": [
+            [
+                "sd_Ibb60nX6MmDCWl1X"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "generated": true
+    },
+    {
+        "id": "sd_Ibb60nX6MmDCWl1X",
+        "type": "UseDependency",
+        "z": "sd_NhfqXtAUI2DC6gFF",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "inputs": 1,
+        "outputs": 1,
+        "property": "",
+        "propertyType": "bh",
+        "propertyGv": "bh.",
+        "alias": "",
+        "modules": [
+            {
+                "textIp": "Router",
+                "typedIpValue": {
+                    "type": "this.page",
+                    "value": "router"
+                },
+                "injectable": true
+            },
+            {
+                "textIp": "NavigationEnd",
+                "typedIpValue": {
+                    "type": "this.page",
+                    "value": "navigationEnd"
+                },
+                "injectable": false
+            },
+            {
+                "textIp": "NavigationStart",
+                "typedIpValue": {
+                    "type": "this.page",
+                    "value": "navigationStart"
+                },
+                "injectable": false
+            }
+        ],
+        "import_all": false,
+        "library": "@angular/router",
+        "serviceDesignerType": "pages",
+        "functionName": "sd_Ibb60nX6MmDCWl1X",
+        "category": "Function",
+        "x": 445,
+        "y": 40,
+        "wires": [
+            [
+                "sd_9IJ5y3D13dFhipBu"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "generated": true
+    },
+    {
+        "id": "sd_9IJ5y3D13dFhipBu",
+        "type": "Script",
+        "z": "sd_NhfqXtAUI2DC6gFF",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "// console.log('page.router', page.router.url);\npage.routerVal = page.router.url;\npage.router.events.subscribe((event) => {\n    if (event instanceof page.navigationEnd) {\n        // Hide loading indicator\n        console.log(event)\n    }\n\n});\nconsole.log('page.router', page.routerVal);\n",
+        "functionName": "sd_9IJ5y3D13dFhipBu",
+        "category": "Function",
+        "x": 565,
+        "y": 40,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "generated": true
+    }
+]

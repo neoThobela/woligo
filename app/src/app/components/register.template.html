@@ -1,0 +1,135 @@
+<div fxLayout="column wrap" fxLayoutAlign="space-around stretch" [fxShow]="true">
+  <div fxLayout="row wrap" fxLayoutAlign="space-between stretch" [fxShow]="true">
+    <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true">
+      <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true"><img imgSrc="/Web/Images/outerImg1.png"></div>
+      <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true"><img imgSrc="/Web/Images/outerImg2.png"></div>
+    </div>
+    <div fxLayout="column wrap" class="margintop8em" fxFlex="40" fxLayoutAlign="start center" [fxShow]="true">
+      <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true">
+        <div fxLayout="column wrap" fxLayoutGap="2.5em" fxLayoutAlign="start stretch" [fxShow]="true">
+          <div fxLayout="row wrap" class="width80 margin-bottom05" fxLayoutAlign="center center" [fxShow]="true">
+            <div fxLayout="column wrap" class="centerText" fxLayoutAlign="start stretch" [fxShow]="true">
+              <div class="circleOrange">
+                1</div>
+            </div>
+            <div fxLayout="column wrap" fxLayoutAlign="center center" [fxShow]="true">
+              <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true">
+                <div class="orangeLine">
+                </div>
+                <div class="grayLine">
+                </div>
+              </div>
+            </div>
+            <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true">
+              <div class="circleGray centerText">
+                2</div>
+            </div>
+          </div>
+          <div fxLayout="row wrap" class="width80" fxLayoutAlign="space-between center" [fxShow]="true">
+            <div fxLayout="column wrap" fxFlex="48" fxLayoutAlign="center end" [fxShow]="true"><label>
+                Basic Details</label></div>
+            <div fxLayout="column wrap" fxFlex="48" fxLayoutAlign="center start" [fxShow]="true"><label class="lightGreyText">
+                Password Setup</label></div>
+          </div>
+          <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true">
+            <div fxLayout="column wrap" fxLayoutGap="10px" fxLayoutAlign="start stretch" [fxShow]="true">
+              <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true"><img imgSrc="/Web/Images/welcome.png"></div>
+              <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true">
+                <p class="textDarkGray">
+                  Please provide your information to register your account
+                </p>
+              </div>
+            </div>
+          </div>
+          <form #registerForm="ngForm">
+            <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true">
+              <div fxLayout="column wrap" fxLayoutGap="1em" fxLayoutAlign="start stretch" [fxShow]="true">
+                <div fxLayout="row wrap" class="width100" fxLayoutAlign="start stretch" [fxShow]="true">
+                  <div fxLayout="column wrap" class="width100" fxLayoutAlign="start stretch" [fxShow]="true"><label class="darkGreyText fontSize14">
+                      Email ( Recovery email address ) <span class="required">*</span></label>
+                    <mat-form-field style="width:460px" [appearance]="&apos;outline&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
+                      <input matInput [(ngModel)]="page.registerForm.email" name="email" type="email" placeholder="e.g johnsmith@gmail.com" [required]="true" pattern="^\w+([\.-]?\w+)@\w+([\.-]?\w+)(\.\w{2,3})+$">
+
+                    </mat-form-field><label class="darkestGrayText fontSize12">
+                      This will be used to reset password</label>
+                  </div>
+                </div>
+                <div fxLayout="row wrap" class="width100" fxLayoutAlign="space-between center" [fxShow]="true">
+                  <div fxLayout="column wrap" fxFlex="48" fxLayoutAlign="start stretch" [fxShow]="true"><label class="darkGreyText fontSize14">
+                      First Name <span>*</span></label>
+                    <mat-form-field [appearance]="&apos;outline&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
+                      <input matInput [(ngModel)]="page.registerForm.firstName" name="firstName" type="text" placeholder="Enter Name" [required]="true" pattern="[a-zA-Z ]*">
+
+                    </mat-form-field>
+                  </div>
+                  <div fxLayout="column wrap" fxFlex="48" fxLayoutAlign="start stretch" [fxShow]="true"><label class="darkGreyText fontSize12">
+                      Last Name <span>*</span></label>
+                    <mat-form-field [appearance]="&apos;outline&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
+                      <input matInput [(ngModel)]="page.registerForm.lastName" name="lastName" type="text" placeholder="Enter Name" [required]="true" pattern="[a-zA-Z ]*">
+
+                    </mat-form-field>
+                  </div>
+                </div>
+                <div fxLayout="row wrap" class="width100" fxLayoutAlign="space-between center" [fxShow]="true">
+                  <mat-radio-group style="width:100%" [(ngModel)]="page.registerForm.gender" name="gender" [required]="false">
+                    <div fxLayout="row wrap" style="width:100%" fxLayoutAlign="space-between center" [fxShow]="true">
+                      <div fxLayout="column wrap" style="width:48%" fxLayoutAlign="start stretch" [fxShow]="true">
+                        <div class="darkGreyText fontSize14">
+                          Gender At Birth *</div>
+                        <div fxLayout="row wrap" class="border" fxLayoutGap="10px" fxLayoutAlign="start center" [fxShow]="true">
+                          <mat-radio-button [value]="&apos;male&apos;" [required]="true" name="male"></mat-radio-button><img imgSrc="/Web/Images/male.png">
+                          <div>
+                            Male</div>
+                        </div>
+                      </div>
+                      <div fxLayout="column wrap" style="width:48%" fxLayoutAlign="start stretch" [fxShow]="true">
+                        <div style="color:white">
+                          State *</div>
+                        <div fxLayout="row wrap" class="border" fxLayoutGap="10px" fxLayoutAlign="start center" [fxShow]="true">
+                          <mat-radio-button [value]="&apos;female&apos;" [required]="true" name="female"></mat-radio-button><img imgSrc="/Web/Images/female.png">
+                          <div>
+                            Female</div>
+                        </div>
+                      </div>
+                    </div>
+                  </mat-radio-group>
+                </div>
+                <div fxLayout="row wrap" class="width100" fxLayoutGap="1%" fxLayoutAlign="space-between center" [fxShow]="true">
+                  <div fxLayout="column wrap" fxFlex="48" fxLayoutAlign="start stretch" [fxShow]="true"><label class="darkGreyText fontSize14">
+                      Date of Birth <span>*</span></label>
+                    <mat-form-field [appearance]="&apos;outline&apos;">
+                      <input matInput placeholder="mm/dd/yyyy" [matDatepicker]="dob" [(ngModel)]="page.registerForm.dob" name="dob" [required]="true" [disabled]="false">
+                      <mat-datepicker-toggle matSuffix [for]="dob" disabled="false"></mat-datepicker-toggle>
+                      <mat-datepicker #dob [disabled]="false"></mat-datepicker>
+
+                    </mat-form-field>
+                  </div>
+                  <div fxLayout="column wrap" fxFlex="48" fxLayoutAlign="start stretch" [fxShow]="true"><label class="darkGreyText fontSize14">
+                      State <span>*</span></label>
+                    <mat-form-field [appearance]="&apos;outline&apos;" [floatLabel]="&apos;auto&apos;">
+                      <mat-select placeholder="Select" [(ngModel)]="page.registerForm.state" [required]="true" name="state">
+                        <ng-template ngFor let-option [ngForOf]="page.mySelect" let-i="index">
+                          <mat-option [value]="option.viewValue">{{option.viewValue}}</mat-option>
+                        </ng-template>
+                      </mat-select>
+
+                    </mat-form-field>
+                  </div>
+                </div>
+                <div fxLayout="row wrap" fxLayoutAlign="center center" [fxShow]="true">
+                  <div>
+                    Already have an account? <a href="/home/register"><span> Login</span></a></div>
+                </div>
+                <div fxLayout="row wrap" class="margin-top2" fxLayoutAlign="center center" [fxShow]="true"><button mat-raised-button style="width:110px;height:45px" routerLink="/home/summary" class="primary-button" (click)="register(registerForm.value)" [disabled]="registerForm.invalid" type="button">Next<mat-icon class="left fontSize14 lineHeight1-8">arrow_forward</mat-icon></button></div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div fxLayout="column wrap" fxLayoutAlign="space-between stretch" [fxShow]="true">
+      <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true"><img imgSrc="/Web/Images/outerImg4.png"></div>
+      <div fxLayout="row wrap" style="width:172px" fxLayoutAlign="start stretch" [fxShow]="true"><img imgSrc="/Web/Images/outerImg3.png"></div>
+    </div>
+  </div>
+</div>

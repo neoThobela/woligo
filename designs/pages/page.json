@@ -1,0 +1,346 @@
+[
+    {
+        "id": "sd_SWBmTWlGFVqlW5A0",
+        "type": "tab",
+        "createdDate": "2022-07-05T08:03:46.973Z",
+        "label": "page",
+        "disabled": false,
+        "info": "",
+        "functionSeq": 0,
+        "generateNext": true,
+        "serviceName": "pageComponent"
+    },
+    {
+        "id": "sd_g4VVwTXC49sVtg1k",
+        "type": "OnInit",
+        "z": "sd_SWBmTWlGFVqlW5A0",
+        "viewType": "common",
+        "nodeType": "start",
+        "name": "",
+        "functionName": "sd_g4VVwTXC49sVtg1k",
+        "category": "Lifecycle Events",
+        "x": 45,
+        "y": 40,
+        "wires": [
+            [
+                "sd_ypGMtm2VjPeDT43j"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "pageComponent"
+    },
+    {
+        "id": "sd_ypGMtm2VjPeDT43j",
+        "type": "PageVariables",
+        "z": "sd_SWBmTWlGFVqlW5A0",
+        "viewType": "pages",
+        "nodeType": "flow",
+        "name": "",
+        "inputs": 1,
+        "outputs": 1,
+        "operation": "set",
+        "globalVariables": [
+            {
+                "textIp": "safegruard",
+                "typedIpValue": {
+                    "type": "this.page",
+                    "value": ""
+                }
+            },
+            {
+                "textIp": "choosePlan",
+                "typedIpValue": {
+                    "type": "str",
+                    "value": "Choose Plan"
+                }
+            },
+            {
+                "textIp": "options",
+                "typedIpValue": {
+                    "type": "literal",
+                    "value": "[]"
+                }
+            },
+            {
+                "textIp": "clicked",
+                "typedIpValue": {
+                    "type": "literal",
+                    "value": "false"
+                }
+            },
+            {
+                "textIp": "radio",
+                "typedIpValue": {
+                    "type": "str",
+                    "value": "false"
+                }
+            }
+        ],
+        "functionName": "sd_ypGMtm2VjPeDT43j",
+        "category": "Function",
+        "x": 205,
+        "y": 40,
+        "wires": [
+            [
+                "sd_Dl1Uo3Qx0U50Bxmj"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "generated": true,
+        "serviceName": "pageComponent"
+    },
+    {
+        "id": "sd_Dl1Uo3Qx0U50Bxmj",
+        "type": "Script",
+        "z": "sd_SWBmTWlGFVqlW5A0",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "page.options=[{\n    title:\"Option 1\",\n    price:\"17\",\n    benefitAmount:\"$1,221 \",\n    benefitPeriod:\"5 year\",\n    estimationPeriod:\"30 days\",\n    value: \"Choose Plan\"\n},\n{\n    title:\"Option 2\",\n    price:\"28\",\n    benefitAmount:\"$11,221 \",\n    benefitPeriod:\"5 year\",\n    estimationPeriod:\"90 days\",\n    value: \"Choose Plan\"\n},\n{\n    title:\"Option 3\",\n    price:\"95\",\n    benefitAmount:\"$21,221 \",\n    benefitPeriod:\"To Age 65\",\n    estimationPeriod:\"90 days\",\n     value: \"Choose Plan\"\n},\n]\n\npage.wellBegin=[{\n    image:\"/Web/Images/Dot.png\",\n    paragraph:\"Telehealth\"\n},\n{\n    image:\"/Web/Images/Dot.png\",\n    paragraph:\"Teladoc Mental Health and Dermatology\"\n},\n{\n    image:\"/Web/Images/Dot.png\",\n    paragraph:\"Health Advocate Solutions\"\n},\n{\n    image:\"/Web/Images/Dot.png\",\n    paragraph:\"Dental Discount Plan\"\n},\n{\n    image:\"/Web/Images/Dot.png\",\n    paragraph:\"Vision Discount Plan\"\n},\n{\n    image:\"/Web/Images/Dot.png\",\n    paragraph:\"Retail and Mail-Order Pharmacy Discount\"\n}\n]\npage.safeguard=[\n    {\n    image:\"/Web/Images/Dot.png\",\n    paragraph:\"ID Sanctuary\"\n},\n{\n    image:\"/Web/Images/Dot.png\",\n    paragraph:\"Global Travel Assistance\"\n},\n{\n    image:\"/Web/Images/Dot.png\",\n    paragraph:\"Roadside Assistance\"\n},\n{\n    image:\"/Web/Images/Dot.png\",\n    paragraph:\"Legal Access Services\"\n},\n{\n    image:\"/Web/Images/Dot.png\",\n    paragraph:\"Financial Services\"\n}\n]\npage.choosePlan = \"Choose Plan\";",
+        "functionName": "sd_Dl1Uo3Qx0U50Bxmj",
+        "category": "Function",
+        "x": 345,
+        "y": 40,
+        "wires": [
+            [
+                "sd_zi2GqRbfOdB0Jo08"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "generated": true,
+        "serviceName": "pageComponent"
+    },
+    {
+        "id": "sd_p4SuhEFhQGvI00vE",
+        "type": "PageStart",
+        "z": "sd_SWBmTWlGFVqlW5A0",
+        "viewType": "pages",
+        "nodeType": "start",
+        "name": "Choose Plan",
+        "outputs": 1,
+        "inputVariables": [
+            {
+                "key": "item",
+                "defaultValue": {
+                    "type": "str",
+                    "value": ""
+                },
+                "output": false
+            }
+        ],
+        "localVariables": [],
+        "flow_type": "sync",
+        "functionName": "choosePlan",
+        "category": "General",
+        "x": 65,
+        "y": 180,
+        "wires": [
+            [
+                "sd_1WbLgPiAqDiFyyP0"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "pageComponent"
+    },
+    {
+        "id": "sd_1WbLgPiAqDiFyyP0",
+        "type": "Script",
+        "z": "sd_SWBmTWlGFVqlW5A0",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "// page.choosePlan = \"Choose Plan\"\n\nfor( let i=0 ; i<page.options.length ; i++ ){\n    if(page.options[i].title === bh.input.item ){\n        page.options[i].value = \"Selected\"\n    }else{\n        page.options[i].value = \"Choose Plan\"\n    }\n}\n\n// if(page.choosePlan === \"Choose Plan\"){\n//     page.choosePlan = \"Selected\"\n// }\n// else{\n//     page.choosePlan = \"Choose Plan\"\n// }",
+        "functionName": "sd_1WbLgPiAqDiFyyP0",
+        "category": "Function",
+        "x": 265,
+        "y": 180,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "generated": true
+    },
+    {
+        "id": "sd_DXxHn28h4pIIUcIe",
+        "type": "PageStart",
+        "z": "sd_SWBmTWlGFVqlW5A0",
+        "viewType": "pages",
+        "nodeType": "start",
+        "name": "checkBox",
+        "outputs": 1,
+        "inputVariables": [
+            {
+                "key": "clicked",
+                "defaultValue": {
+                    "type": "str",
+                    "value": ""
+                },
+                "output": false
+            }
+        ],
+        "localVariables": [],
+        "flow_type": "sync",
+        "functionName": "checkBox",
+        "category": "General",
+        "x": 65,
+        "y": 300,
+        "wires": [
+            [
+                "sd_hMil3yOav3Q611dz"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "pageComponent"
+    },
+    {
+        "id": "sd_VzUBBBvu29GvMbOf",
+        "type": "Script",
+        "z": "sd_SWBmTWlGFVqlW5A0",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "// console.log(bh.input.clicked);\nif(page.radio ===\"false\"){\n    page.radio =\"true\" \n}\nconsole.log(page.radio);\n",
+        "functionName": "sd_VzUBBBvu29GvMbOf",
+        "category": "Function",
+        "x": 265,
+        "y": 400,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "generated": true
+    },
+    {
+        "id": "sd_8Zn7nRZsoxR2MIsO",
+        "type": "PageStart",
+        "z": "sd_SWBmTWlGFVqlW5A0",
+        "viewType": "pages",
+        "nodeType": "start",
+        "name": "radioBtn",
+        "outputs": 1,
+        "inputVariables": [
+            {
+                "key": "radio",
+                "defaultValue": {
+                    "type": "str",
+                    "value": ""
+                },
+                "output": false
+            }
+        ],
+        "localVariables": [],
+        "flow_type": "sync",
+        "functionName": "radioBtn",
+        "category": "General",
+        "x": 65,
+        "y": 400,
+        "wires": [
+            [
+                "sd_VzUBBBvu29GvMbOf"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "pageComponent"
+    },
+    {
+        "id": "sd_hMil3yOav3Q611dz",
+        "type": "Script",
+        "z": "sd_SWBmTWlGFVqlW5A0",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "// console.log(bh.input.clicked);\nif(page.clicked  ===\"true\"){\n    page.clicked  = \"false\"\n} else{\n    page.clicked = \"true\"\n}\n console.log(page.clicked);",
+        "functionName": "sd_hMil3yOav3Q611dz",
+        "category": "Function",
+        "x": 265,
+        "y": 300,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "generated": true
+    },
+    {
+        "id": "sd_zi2GqRbfOdB0Jo08",
+        "type": "UseDependency",
+        "z": "sd_SWBmTWlGFVqlW5A0",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "inputs": 1,
+        "outputs": 1,
+        "property": "",
+        "propertyType": "bh",
+        "propertyGv": "bh.",
+        "alias": "",
+        "modules": [
+            {
+                "textIp": "Router",
+                "typedIpValue": {
+                    "type": "this.page",
+                    "value": "router"
+                },
+                "injectable": true
+            },
+            {
+                "textIp": "NavigationEnd",
+                "typedIpValue": {
+                    "type": "this.page",
+                    "value": "navigationEnd"
+                },
+                "injectable": false
+            },
+            {
+                "textIp": "NavigationStart",
+                "typedIpValue": {
+                    "type": "this.page",
+                    "value": "navigationStart"
+                },
+                "injectable": false
+            }
+        ],
+        "import_all": false,
+        "library": "@angular/router",
+        "serviceDesignerType": "pages",
+        "functionName": "sd_zi2GqRbfOdB0Jo08",
+        "category": "Function",
+        "x": 505,
+        "y": 40,
+        "wires": [
+            [
+                "sd_q87uHlWsAStTLH2N"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "generated": true
+    },
+    {
+        "id": "sd_q87uHlWsAStTLH2N",
+        "type": "Script",
+        "z": "sd_SWBmTWlGFVqlW5A0",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "// console.log('page.router', page.router.url);\npage.routerVal = page.router.url;\npage.router.events.subscribe((event) => {\n    if (event instanceof page.navigationEnd) {\n        // Hide loading indicator\n        console.log(event)\n    }\n\n});\nconsole.log('page.router', page.routerVal);\n",
+        "functionName": "sd_q87uHlWsAStTLH2N",
+        "category": "Function",
+        "x": 625,
+        "y": 40,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "generated": true
+    }
+]

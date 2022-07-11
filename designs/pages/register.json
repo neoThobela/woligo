@@ -1,0 +1,219 @@
+[
+    {
+        "id": "sd_CsbHYE6pQEuUvbeq",
+        "type": "tab",
+        "createdDate": "2022-07-07T16:22:02.524Z",
+        "label": "register",
+        "disabled": false,
+        "info": "",
+        "functionSeq": 0,
+        "generateNext": true,
+        "serviceName": "registerComponent"
+    },
+    {
+        "id": "sd_60rUZYNpU0jPCwr2",
+        "type": "OnInit",
+        "z": "sd_CsbHYE6pQEuUvbeq",
+        "viewType": "common",
+        "nodeType": "start",
+        "name": "",
+        "functionName": "sd_60rUZYNpU0jPCwr2",
+        "category": "Lifecycle Events",
+        "x": 45,
+        "y": 80,
+        "wires": [
+            [
+                "sd_NxeWX6CgNB3jOYgp"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "registerComponent"
+    },
+    {
+        "id": "sd_NxeWX6CgNB3jOYgp",
+        "type": "PageVariables",
+        "z": "sd_CsbHYE6pQEuUvbeq",
+        "viewType": "pages",
+        "nodeType": "flow",
+        "name": "",
+        "inputs": 1,
+        "outputs": 1,
+        "operation": "set",
+        "globalVariables": [
+            {
+                "textIp": "mySelect",
+                "typedIpValue": {
+                    "type": "literal",
+                    "value": "[]"
+                }
+            },
+            {
+                "textIp": "registerForm",
+                "typedIpValue": {
+                    "type": "literal",
+                    "value": ""
+                }
+            }
+        ],
+        "functionName": "sd_NxeWX6CgNB3jOYgp",
+        "category": "Function",
+        "x": 185,
+        "y": 80,
+        "wires": [
+            [
+                "sd_wHediAURJbNM3Irf"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "generated": true
+    },
+    {
+        "id": "sd_wHediAURJbNM3Irf",
+        "type": "Script",
+        "z": "sd_CsbHYE6pQEuUvbeq",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "page.registerForm={\n    email:\"\",\n    firstName:\"\",\n    lastName:\"\",\n    gender:\"\",\n    dob:null,\n    state:\"\"\n}\n\npage.mySelect=[\n    {viewValue:\"Mpumalanga\"},\n    {viewValue:\"Gauteng\"},\n    {viewValue:\"Limpopo\"},\n    {viewValue:\"Western Cape\"},\n    {viewValue:\"Eastern Cape\"},\n    {viewValue:\"Northern Cape\"},\n    {viewValue:\"North West\"},\n    {viewValue:\"Free State\"},\n    {viewValue:\"Kwa-Zulu Natal\"}\n\n]",
+        "functionName": "sd_wHediAURJbNM3Irf",
+        "category": "Function",
+        "x": 345,
+        "y": 80,
+        "wires": [
+            [
+                "sd_NjFCI12Ja1D9L3uZ"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "generated": true
+    },
+    {
+        "id": "sd_dSR3NrOmoYali3VH",
+        "type": "PageStart",
+        "z": "sd_CsbHYE6pQEuUvbeq",
+        "viewType": "pages",
+        "nodeType": "start",
+        "name": "register",
+        "outputs": 1,
+        "inputVariables": [
+            {
+                "key": "register",
+                "defaultValue": {
+                    "type": "any",
+                    "value": ""
+                },
+                "output": false
+            }
+        ],
+        "localVariables": [],
+        "flow_type": "sync",
+        "functionName": "register",
+        "category": "General",
+        "x": 80,
+        "y": 240,
+        "wires": [
+            [
+                "sd_jU9jG1OVwpliAKO2"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "registerComponent"
+    },
+    {
+        "id": "sd_jU9jG1OVwpliAKO2",
+        "type": "Script",
+        "z": "sd_CsbHYE6pQEuUvbeq",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "console.log(bh.input.register)",
+        "functionName": "sd_jU9jG1OVwpliAKO2",
+        "category": "Function",
+        "x": 240,
+        "y": 240,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "generated": true
+    },
+    {
+        "id": "sd_NjFCI12Ja1D9L3uZ",
+        "type": "UseDependency",
+        "z": "sd_CsbHYE6pQEuUvbeq",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "inputs": 1,
+        "outputs": 1,
+        "property": "",
+        "propertyType": "bh",
+        "propertyGv": "bh.",
+        "alias": "",
+        "modules": [
+            {
+                "textIp": "Router",
+                "typedIpValue": {
+                    "type": "this.page",
+                    "value": "router"
+                },
+                "injectable": true
+            },
+            {
+                "textIp": "NavigationEnd",
+                "typedIpValue": {
+                    "type": "this.page",
+                    "value": "navigationEnd"
+                },
+                "injectable": false
+            },
+            {
+                "textIp": "NavigationStart",
+                "typedIpValue": {
+                    "type": "this.page",
+                    "value": "navigationStart"
+                },
+                "injectable": false
+            }
+        ],
+        "import_all": false,
+        "library": "@angular/router",
+        "serviceDesignerType": "pages",
+        "functionName": "sd_NjFCI12Ja1D9L3uZ",
+        "category": "Function",
+        "x": 485,
+        "y": 80,
+        "wires": [
+            [
+                "sd_HvHT1dWNK7pYdud5"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "generated": true
+    },
+    {
+        "id": "sd_HvHT1dWNK7pYdud5",
+        "type": "Script",
+        "z": "sd_CsbHYE6pQEuUvbeq",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "// console.log('page.router', page.router.url);\npage.routerVal = page.router.url;\npage.router.events.subscribe((event) => {\n    if (event instanceof page.navigationEnd) {\n        // Hide loading indicator\n        console.log(event)\n    }\n\n});\nconsole.log('page.router', page.routerVal);\n",
+        "functionName": "sd_HvHT1dWNK7pYdud5",
+        "category": "Function",
+        "x": 605,
+        "y": 80,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "generated": true
+    }
+]

@@ -1,0 +1,210 @@
+[
+    {
+        "id": "sd_90r9o8BGj0bugnFg",
+        "type": "tab",
+        "createdDate": "2022-07-05T08:01:05.838Z",
+        "label": "home",
+        "disabled": false,
+        "info": "",
+        "functionSeq": 0,
+        "generateNext": true,
+        "serviceName": "homeComponent"
+    },
+    {
+        "id": "sd_iAVh6Z4jwKdDnEsA",
+        "type": "OnInit",
+        "z": "sd_90r9o8BGj0bugnFg",
+        "viewType": "common",
+        "nodeType": "start",
+        "name": "",
+        "functionName": "sd_iAVh6Z4jwKdDnEsA",
+        "category": "Lifecycle Events",
+        "x": 105,
+        "y": 40,
+        "wires": [
+            [
+                "sd_NaYbrgkWzl2wcsqx"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "homeComponent"
+    },
+    {
+        "id": "sd_NaYbrgkWzl2wcsqx",
+        "type": "PageVariables",
+        "z": "sd_90r9o8BGj0bugnFg",
+        "viewType": "pages",
+        "nodeType": "flow",
+        "name": "",
+        "inputs": 1,
+        "outputs": 1,
+        "operation": "set",
+        "globalVariables": [
+            {
+                "textIp": "btnVal",
+                "typedIpValue": {
+                    "type": "str",
+                    "value": "Preview"
+                }
+            },
+            {
+                "textIp": "routerVal",
+                "typedIpValue": {
+                    "type": "str",
+                    "value": "''"
+                }
+            }
+        ],
+        "functionName": "sd_NaYbrgkWzl2wcsqx",
+        "category": "Function",
+        "x": 305,
+        "y": 40,
+        "wires": [
+            [
+                "sd_oHMuuP1rJGuZeSHc"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "generated": true
+    },
+    {
+        "id": "sd_ZSg2zzPnQehh7CSa",
+        "type": "PageStart",
+        "z": "sd_90r9o8BGj0bugnFg",
+        "viewType": "pages",
+        "nodeType": "start",
+        "name": "changeText",
+        "outputs": 1,
+        "inputVariables": [],
+        "localVariables": [],
+        "flow_type": "sync",
+        "functionName": "changeText",
+        "category": "General",
+        "x": 105,
+        "y": 160,
+        "wires": [
+            [
+                "sd_1L8tX4tHZtJVc4qD"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "homeComponent"
+    },
+    {
+        "id": "sd_1L8tX4tHZtJVc4qD",
+        "type": "Script",
+        "z": "sd_90r9o8BGj0bugnFg",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "\nif(page.btnVal === \"Preview\"){\n page.btnVal = \"Apply Now\"\n}\nelse{\n     page.btnVal = \"Preview\"\n}\n\n",
+        "functionName": "sd_1L8tX4tHZtJVc4qD",
+        "category": "Function",
+        "x": 280,
+        "y": 160,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "generated": true
+    },
+    {
+        "id": "sd_oHMuuP1rJGuZeSHc",
+        "type": "Script",
+        "z": "sd_90r9o8BGj0bugnFg",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "page.btnVal=\"Preview\";",
+        "functionName": "sd_oHMuuP1rJGuZeSHc",
+        "category": "Function",
+        "x": 465,
+        "y": 40,
+        "wires": [
+            [
+                "sd_nd5sMjlINfEqQitf"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "generated": true
+    },
+    {
+        "id": "sd_nd5sMjlINfEqQitf",
+        "type": "UseDependency",
+        "z": "sd_90r9o8BGj0bugnFg",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "inputs": 1,
+        "outputs": 1,
+        "property": "",
+        "propertyType": "bh",
+        "propertyGv": "bh.",
+        "alias": "",
+        "modules": [
+            {
+                "textIp": "Router",
+                "typedIpValue": {
+                    "type": "this.page",
+                    "value": "router"
+                },
+                "injectable": true
+            },
+            {
+                "textIp": "NavigationEnd",
+                "typedIpValue": {
+                    "type": "this.page",
+                    "value": "navigationEnd"
+                },
+                "injectable": false
+            },
+            {
+                "textIp": "NavigationStart",
+                "typedIpValue": {
+                    "type": "this.page",
+                    "value": "navigationStart"
+                },
+                "injectable": false
+            }
+        ],
+        "import_all": false,
+        "library": "@angular/router",
+        "serviceDesignerType": "pages",
+        "functionName": "sd_nd5sMjlINfEqQitf",
+        "category": "Function",
+        "x": 625,
+        "y": 40,
+        "wires": [
+            [
+                "sd_tN5FhXzwFVquRgkS"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "generated": true
+    },
+    {
+        "id": "sd_tN5FhXzwFVquRgkS",
+        "type": "Script",
+        "z": "sd_90r9o8BGj0bugnFg",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "// console.log('page.router', page.router.url);\npage.routerVal = page.router.url;\npage.router.events.subscribe((event) => {\n    if (event instanceof page.navigationEnd) {\n        // Hide loading indicator\n        console.log(event)\n    page.routerVal = event.url\n    }\n\n});\nconsole.log('page.router', page.routerVal);\n",
+        "functionName": "sd_tN5FhXzwFVquRgkS",
+        "category": "Function",
+        "x": 745,
+        "y": 40,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "generated": true
+    }
+]

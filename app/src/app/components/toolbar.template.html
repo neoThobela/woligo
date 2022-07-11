@@ -1,0 +1,46 @@
+<div fxLayout="column wrap" class="borderBottom width100" fxLayoutAlign="center center" [fxShow]="true">
+  <div fxLayout="row wrap" class="width98" fxLayoutAlign="space-between center" [fxShow]="page.routerVal==&apos;/home/quotes&apos; || page.routerVal==&apos;/home/summary_page&apos;">
+    <div fxLayout="column wrap" fxFlex="150px" fxLayoutAlign="start stretch" [fxShow]="true">
+      <mat-icon style="color:white">home</mat-icon>
+    </div>
+    <div fxLayout="column wrap" fxFlex="50px" fxLayoutAlign="start stretch" [fxShow]="true"><img imgSrc="/Web/Images/logo.png"></div>
+    <div fxLayout="column wrap" fxFlex="250px" fxLayoutAlign="start stretch" [fxShow]="true">
+      <div fxLayout="row wrap" class="width100" fxLayoutGap="2em" fxLayoutAlign="space-between center" [fxShow]="true">
+        <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true"><img imgSrc="/Web/Images/reload.png"></div>
+        <div fxLayout="column wrap" fxLayoutAlign="center center" [fxShow]="true">
+          <div fxLayout="row wrap" class="width100" fxLayoutGap="1em" fxLayoutAlign="center center" [fxShow]="true"><label class="fontSize14">
+              Jonh Smith</label><img imgSrc="/Web/Images/js.png"><img imgSrc="/Web/Images/Vector.png" style="width:10px;height:10px"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div fxLayout="row wrap" class="paddingtop20 width98" fxLayoutAlign="space-between center" [fxShow]="page.routerVal==&apos;/home/summary&apos;">
+    <div fxLayout="column wrap" fxFlex="33" fxLayoutAlign="start center" [fxShow]="true">
+      <div fxLayout="row wrap" class="width98" fxLayoutAlign="start center" [fxShow]="true">
+        <div fxLayout="column wrap" class="marginTop5" fxLayoutAlign="start stretch" [fxShow]="true">
+          <mat-icon style="color:white">home</mat-icon>
+        </div>
+      </div>
+    </div>
+    <div fxLayout="column wrap" fxFlex="33" fxLayoutAlign="center center" [fxShow]="true">
+      <div fxLayout="row wrap" class="width98" fxLayoutAlign="start center" [fxShow]="true">
+        <div fxLayout="column wrap" class="marginTop5" fxLayoutAlign="start stretch" [fxShow]="true"><img imgSrc="/Web/Images/logo.png"></div>
+      </div>
+    </div>
+    <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true">
+      <div fxLayout="row wrap" class="width100" fxLayoutGap="1em" fxLayoutAlign="space-between center" [fxShow]="true">
+        <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true"><img imgSrc="/Web/Images/reload.png"></div>
+        <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true"><button mat-button style="height:30px;line-height: 28px;font-weight:small;" class="fontWeight fontSize12 secondary-button" routerLink="/home/register">
+            <mat-icon class="fontSize12 lineHeight1-9">logout</mat-icon>Login or Register
+          </button></div>
+      </div>
+    </div>
+  </div>
+  <div fxLayout="row wrap" class="width98" fxLayoutAlign="space-between center" [fxShow]="page.routerVal==&apos;/home/register&apos;">
+    <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true">
+      <mat-icon style="color:white">home</mat-icon>
+    </div>
+    <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true"><img imgSrc="/Web/Images/logo.png"></div>
+    <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true"><img imgSrc="/Web/Images/reload.png"></div>
+  </div>
+</div>

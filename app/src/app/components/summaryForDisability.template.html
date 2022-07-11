@@ -1,0 +1,63 @@
+<div fxLayout="column wrap" class="marginTop" fxLayoutGap="3em" fxLayoutAlign="center center" [fxShow]="true">
+  <div fxLayout="row wrap" fxLayoutAlign="center center" [fxShow]="true">
+    <h3>
+      Summary for Disabilty Insurance
+    </h3>
+  </div>
+  <div fxLayout="row wrap" class="width100" fxLayoutAlign="center center" [fxShow]="true">
+    <div fxLayout="column wrap" class="disabilityBorder" fxLayoutGap=".6em" fxLayoutAlign="start stretch" [fxShow]="true">
+      <div fxLayout="row wrap" class="margin-bottom2 width100" fxLayoutAlign="start stretch" [fxShow]="true">
+        <div fxLayout="column wrap" class="darkestGrayText fontSize14" fxFlex="80" fxLayoutAlign="start stretch" [fxShow]="true">
+          <p class="fontWeight500">
+            Price Details (Disability)</p>
+        </div>
+        <div fxLayout="column wrap" fxFlex="15" fxLayoutAlign="start stretch" [fxShow]="true">
+          <p class="fontSize14">
+            <a href="#" class="blueText text-decoration">Brochure</a>
+          </p>
+        </div>
+      </div>
+      <div fxLayout="row wrap" class="width100" fxLayoutAlign="start stretch" [fxShow]="true" *ngFor="let item of page.priceDisability">
+        <div fxLayout="column wrap" fxFlex="80" fxLayoutAlign="start stretch" [fxShow]="true">
+          <p style="color:{{item.titleColor}}" class="fontSize14 textDarkGray">
+            {{item.title}}
+          </p>
+        </div>
+        <div fxLayout="column wrap" style="color:{{item.color}}" fxFlex="20" fxLayoutAlign="start stretch" [fxShow]="true">
+          <p class="fontSize14">
+            {{item.description}}
+          </p>
+        </div>
+      </div>
+      <div fxLayout="row wrap" class="topBorder" fxLayoutAlign="start stretch" [fxShow]="true"></div>
+      <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true">
+        <div fxLayout="column wrap" class="width100" fxLayoutGap="1.6em" fxLayoutAlign="start stretch" [fxShow]="true">
+          <p class="fontSize14 darkGreyText">
+            Other Plans</p>
+          <div fxLayout="row wrap" class="margin-bottom2 width100" fxLayoutAlign="space-between center" [fxShow]="true" *ngFor="let item of page.button">
+            <div fxLayout="column wrap" class="fontSize12" fxLayoutAlign="center center" [fxShow]="true"><button mat-raised-button style="height:34px;padding-bottom:10px!important;" class="centerText fontSize12 font secondary-button">
+                <mat-icon class="fontSize14 blueText lineheight1pt5">help_outline</mat-icon>{{item.buttonName}}
+                <mat-icon class="fontSize14  lineheight1pt5">highlight_off</mat-icon>
+              </button></div>
+            <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true">
+              <p class="darkGreyText fontSize14">
+                <a href="#" class="blueText text-decoration">{{item.link}}</a><br>{{item.description}}
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div fxLayout="row wrap" class="topBorder" fxLayoutAlign="start stretch" [fxShow]="true"></div>
+      <div fxLayout="row wrap" class="textDarkGray fontWeight500" fxLayoutAlign="space-between center" [fxShow]="true">
+        <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true">
+          <h4>
+            Total</h4>
+        </div>
+        <div fxLayout="column wrap" class="darkestGrayText" fxLayoutAlign="start stretch" [fxShow]="true">
+          <h2>
+            $56.90 / month</h2>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

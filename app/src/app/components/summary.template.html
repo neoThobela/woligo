@@ -1,0 +1,55 @@
+<div fxLayout="column wrap" class="marginTop width100" fxLayoutGap="2.5em" fxLayoutAlign="center center" [fxShow]="true">
+  <div fxLayout="row wrap" class="width100" fxLayoutAlign="center center" [fxShow]="true">
+    <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true">
+      <div class="centerText circleGreen">
+        <mat-icon> done </mat-icon>
+      </div>
+    </div>
+    <div fxLayout="column wrap" fxLayoutAlign="center center" [fxShow]="true">
+      <div class="greenLine">
+      </div>
+    </div>
+    <div fxLayout="column wrap" fxFlex="32 " fxLayoutAlign="start stretch" [fxShow]="true">
+      <div class="centerText circleGreen">
+        <mat-icon> done </mat-icon>
+      </div>
+    </div>
+    <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true">
+      <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true">
+        <div class="greenLineshort">
+        </div>
+        <div class="orangeLine">
+        </div>
+      </div>
+    </div>
+    <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true">
+      <div class="centerText circleOrange">
+        3</div>
+    </div>
+  </div>
+  <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true">
+    <h2>
+      Summary</h2>
+  </div>
+  <div fxLayout="row wrap" class="width100" fxLayoutAlign="center center" [fxShow]="true">
+    <div fxLayout="column wrap" class="width80" fxLayoutGap="1em" fxLayoutAlign="start stretch" [fxShow]="true" *ngFor="let item of page.summary">
+      <mat-card class="margin-bottom1 width100">
+        <mat-card-content>
+          <div fxLayout="row wrap" class="width98" fxLayoutAlign="space-between center" [fxShow]="true">
+            <div fxLayout="column wrap" fxFlex="33" fxLayoutAlign="start stretch" [fxShow]="true">
+              <p class="fontSize14 textDarkGray fontWeight500">
+                {{item.title}}
+              </p>
+            </div>
+            <div fxLayout="column wrap" fxFlex="32" fxLayoutAlign="start stretch" [fxShow]="true">
+              <p class="fontWeight500 blueText fontSize14">
+                {{item.content}}
+              </p>
+            </div>
+            <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true"><img imgSrc="/Web/Images/edit.png"></div>
+          </div>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </div>
+</div>
