@@ -1,0 +1,211 @@
+[
+    {
+        "id": "sd_5httbDlk33UENCRB",
+        "type": "tab",
+        "createdDate": "2022-07-13T10:21:30.954Z",
+        "label": "fourIcons",
+        "disabled": false,
+        "info": "",
+        "functionSeq": 0,
+        "generateNext": true,
+        "serviceName": "fourIconsComponent"
+    },
+    {
+        "id": "sd_Iq5QMTRKbppo44yf",
+        "type": "OnInit",
+        "z": "sd_5httbDlk33UENCRB",
+        "viewType": "common",
+        "nodeType": "start",
+        "name": "",
+        "functionName": "sd_Iq5QMTRKbppo44yf",
+        "category": "Lifecycle Events",
+        "x": 45,
+        "y": 60,
+        "wires": [
+            [
+                "sd_s4nP5fljZq4gP5qr"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "fourIconsComponent"
+    },
+    {
+        "id": "sd_s4nP5fljZq4gP5qr",
+        "type": "PageVariables",
+        "z": "sd_5httbDlk33UENCRB",
+        "viewType": "pages",
+        "nodeType": "flow",
+        "name": "",
+        "inputs": 1,
+        "outputs": 1,
+        "operation": "set",
+        "globalVariables": [
+            {
+                "textIp": "checkedInsure",
+                "typedIpValue": {
+                    "type": "literal",
+                    "value": "false"
+                }
+            }
+        ],
+        "functionName": "sd_s4nP5fljZq4gP5qr",
+        "category": "Function",
+        "x": 185,
+        "y": 60,
+        "wires": [
+            [
+                "sd_F5cNgZRiBkkvELE0"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "generated": true
+    },
+    {
+        "id": "sd_UvMwhkGHK2D4nFEx",
+        "type": "Script",
+        "z": "sd_5httbDlk33UENCRB",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "\npage.icons=[\n\n{ \"icon\":\"Web/Images/injuredMan.png\",\n\"paragraph\":\"Accident insurance\",\n\"width\":20\n},\n{ \"icon\":\"Web/Images/moniter.png\",\n\"paragraph\":\"Life insurance\",\n\"width\":30\n},\n{ \"icon\":\"Web/Images/discountPlans.png\",\n\"paragraph\":\"Discount plans\",\n\"width\":30\n}\n  \n  ]//my income or family",
+        "functionName": "sd_UvMwhkGHK2D4nFEx",
+        "category": "Function",
+        "x": 405,
+        "y": 60,
+        "wires": [
+            [
+                "sd_hUKgHqZ6h6knVYKk"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "generated": true
+    },
+    {
+        "id": "sd_UTwjUcMWRxcIFYUj",
+        "type": "PageStart",
+        "z": "sd_5httbDlk33UENCRB",
+        "viewType": "pages",
+        "nodeType": "start",
+        "name": "changeColor",
+        "outputs": 1,
+        "inputVariables": [],
+        "localVariables": [],
+        "flow_type": "sync",
+        "functionName": "changeColor",
+        "category": "General",
+        "x": 100,
+        "y": 200,
+        "wires": [
+            [
+                "sd_mySwMU8D3TtIrOj7"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "fourIconsComponent"
+    },
+    {
+        "id": "sd_mySwMU8D3TtIrOj7",
+        "type": "Script",
+        "z": "sd_5httbDlk33UENCRB",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "page.checkedInsure=!page.checkedInsure",
+        "functionName": "sd_mySwMU8D3TtIrOj7",
+        "category": "Function",
+        "x": 285,
+        "y": 200,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "generated": true
+    },
+    {
+        "id": "sd_F5cNgZRiBkkvELE0",
+        "type": "UseDependency",
+        "z": "sd_5httbDlk33UENCRB",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "inputs": 1,
+        "outputs": 1,
+        "property": "",
+        "propertyType": "bh",
+        "propertyGv": "bh.",
+        "alias": "",
+        "modules": [
+            {
+                "textIp": "FormControl",
+                "typedIpValue": {
+                    "type": "this.page",
+                    "value": ""
+                },
+                "injectable": false
+            },
+            {
+                "textIp": "FormGroup",
+                "typedIpValue": {
+                    "type": "this.page",
+                    "value": ""
+                },
+                "injectable": false
+            },
+            {
+                "textIp": "ReactiveFormsModule",
+                "typedIpValue": {
+                    "type": "this.page",
+                    "value": ""
+                },
+                "injectable": false
+            },
+            {
+                "textIp": "Validators",
+                "typedIpValue": {
+                    "type": "this.page",
+                    "value": ""
+                },
+                "injectable": false
+            }
+        ],
+        "import_all": false,
+        "library": "@angular/forms",
+        "serviceDesignerType": "pages",
+        "functionName": "sd_F5cNgZRiBkkvELE0",
+        "category": "Function",
+        "x": 305,
+        "y": 60,
+        "wires": [
+            [
+                "sd_UvMwhkGHK2D4nFEx"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "generated": true
+    },
+    {
+        "id": "sd_hUKgHqZ6h6knVYKk",
+        "type": "Script",
+        "z": "sd_5httbDlk33UENCRB",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": " page.insuranceTypeForm = new FormGroup({\n    DisabilityInsurance: new FormControl('',[Validators.required]),\n  });\nconsole.log(\"form\",page.insuranceTypeForm)",
+        "functionName": "sd_hUKgHqZ6h6knVYKk",
+        "category": "Function",
+        "x": 505,
+        "y": 60,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "generated": true
+    }
+]

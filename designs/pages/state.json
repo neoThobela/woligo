@@ -1,0 +1,168 @@
+[
+    {
+        "id": "sd_3aHneG68rV8R8zSK",
+        "type": "tab",
+        "createdDate": "2022-06-22T18:19:22.005Z",
+        "label": "state",
+        "disabled": false,
+        "info": "",
+        "functionSeq": 0,
+        "generateNext": true,
+        "serviceName": "stateComponent"
+    },
+    {
+        "id": "sd_ma5f0qm5awfQwTmK",
+        "type": "OnInit",
+        "z": "sd_3aHneG68rV8R8zSK",
+        "viewType": "common",
+        "nodeType": "start",
+        "name": "",
+        "functionName": "sd_ma5f0qm5awfQwTmK",
+        "category": "Lifecycle Events",
+        "x": 45,
+        "y": 40,
+        "wires": [
+            [
+                "sd_qANZEqMvR4fFiaBx"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "stateComponent"
+    },
+    {
+        "id": "sd_qANZEqMvR4fFiaBx",
+        "type": "PageVariables",
+        "z": "sd_3aHneG68rV8R8zSK",
+        "viewType": "pages",
+        "nodeType": "flow",
+        "name": "",
+        "inputs": 1,
+        "outputs": 1,
+        "operation": "set",
+        "globalVariables": [
+            {
+                "textIp": "provinces",
+                "typedIpValue": {
+                    "type": "literal",
+                    "value": "[]"
+                }
+            }
+        ],
+        "functionName": "sd_qANZEqMvR4fFiaBx",
+        "category": "Function",
+        "x": 205,
+        "y": 40,
+        "wires": [
+            [
+                "sd_4gsybZxSUMDbGPiP"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "generated": true
+    },
+    {
+        "id": "sd_4gsybZxSUMDbGPiP",
+        "type": "Script",
+        "z": "sd_3aHneG68rV8R8zSK",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "page.mySelect=[\n    {viewValue:\"Mpumalanga\"},\n    {viewValue:\"Gauteng\"},\n    {viewValue:\"Limpopo\"},\n    {viewValue:\"Western Cape\"},\n    {viewValue:\"Eastern Cape\"},\n    {viewValue:\"Northern Cape\"},\n    {viewValue:\"North West\"},\n    {viewValue:\"Free State\"},\n    {viewValue:\"Kwa-Zulu Natal\"}\n\n]",
+        "functionName": "sd_4gsybZxSUMDbGPiP",
+        "category": "Function",
+        "x": 325,
+        "y": 40,
+        "wires": [
+            [
+                "sd_ovZ5am30utUPr3Wg"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "generated": true
+    },
+    {
+        "id": "sd_ovZ5am30utUPr3Wg",
+        "type": "UseDependency",
+        "z": "sd_3aHneG68rV8R8zSK",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "inputs": 1,
+        "outputs": 1,
+        "property": "",
+        "propertyType": "bh",
+        "propertyGv": "bh.",
+        "alias": "",
+        "modules": [
+            {
+                "textIp": "FormControl",
+                "typedIpValue": {
+                    "type": "this.page",
+                    "value": ""
+                },
+                "injectable": false
+            },
+            {
+                "textIp": "FormGroup",
+                "typedIpValue": {
+                    "type": "this.page",
+                    "value": ""
+                },
+                "injectable": false
+            },
+            {
+                "textIp": "ReactiveFormsModule",
+                "typedIpValue": {
+                    "type": "this.page",
+                    "value": ""
+                },
+                "injectable": false
+            },
+            {
+                "textIp": "Validators",
+                "typedIpValue": {
+                    "type": "this.page",
+                    "value": ""
+                },
+                "injectable": false
+            }
+        ],
+        "import_all": false,
+        "library": "@angular/forms",
+        "serviceDesignerType": "pages",
+        "functionName": "sd_ovZ5am30utUPr3Wg",
+        "category": "Function",
+        "x": 465,
+        "y": 40,
+        "wires": [
+            [
+                "sd_vJaQpznwwMLGuHcw"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "generated": true
+    },
+    {
+        "id": "sd_vJaQpznwwMLGuHcw",
+        "type": "Script",
+        "z": "sd_3aHneG68rV8R8zSK",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": " page.stateForm= new FormGroup({\n    state: new FormControl('',[Validators.required]),\n   \n  });\nconsole.log(\"form\",page.stateForm)",
+        "functionName": "sd_vJaQpznwwMLGuHcw",
+        "category": "Function",
+        "x": 565,
+        "y": 40,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "generated": true
+    }
+]

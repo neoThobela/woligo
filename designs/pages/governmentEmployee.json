@@ -1,0 +1,226 @@
+[
+    {
+        "id": "sd_L3ra3dHBI6P6nFwk",
+        "type": "tab",
+        "createdDate": "2022-06-23T12:38:36.637Z",
+        "label": "governmentEmployee",
+        "disabled": false,
+        "info": "",
+        "functionSeq": 0,
+        "generateNext": true,
+        "serviceName": "governmentEmployeeComponent"
+    },
+    {
+        "id": "sd_yI5QjaQksmkg6IqU",
+        "type": "OnInit",
+        "z": "sd_L3ra3dHBI6P6nFwk",
+        "viewType": "common",
+        "nodeType": "start",
+        "name": "",
+        "functionName": "sd_yI5QjaQksmkg6IqU",
+        "category": "Lifecycle Events",
+        "x": 30,
+        "y": 30,
+        "wires": [
+            [
+                "sd_248EJjl1Ewvu7VyT"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "governmentEmployeeComponent"
+    },
+    {
+        "id": "sd_248EJjl1Ewvu7VyT",
+        "type": "PageVariables",
+        "z": "sd_L3ra3dHBI6P6nFwk",
+        "viewType": "pages",
+        "nodeType": "flow",
+        "name": "",
+        "inputs": 1,
+        "outputs": 1,
+        "operation": "set",
+        "globalVariables": [],
+        "functionName": "sd_248EJjl1Ewvu7VyT",
+        "category": "Function",
+        "x": 180,
+        "y": 30,
+        "wires": [
+            [
+                "sd_71lDPQfZiBra6ZrZ"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "generated": true,
+        "serviceName": "governmentEmployeeComponent"
+    },
+    {
+        "id": "sd_71lDPQfZiBra6ZrZ",
+        "type": "UseDependency",
+        "z": "sd_L3ra3dHBI6P6nFwk",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "inputs": 1,
+        "outputs": 1,
+        "property": "",
+        "propertyType": "bh",
+        "propertyGv": "bh.",
+        "alias": "",
+        "modules": [
+            {
+                "textIp": "FormControl",
+                "typedIpValue": {
+                    "type": "this.page",
+                    "value": ""
+                },
+                "injectable": false
+            },
+            {
+                "textIp": "FormGroup",
+                "typedIpValue": {
+                    "type": "this.page",
+                    "value": ""
+                },
+                "injectable": false
+            },
+            {
+                "textIp": "ReactiveFormsModule",
+                "typedIpValue": {
+                    "type": "this.page",
+                    "value": ""
+                },
+                "injectable": false
+            },
+            {
+                "textIp": "Validators",
+                "typedIpValue": {
+                    "type": "this.page",
+                    "value": ""
+                },
+                "injectable": false
+            }
+        ],
+        "import_all": false,
+        "library": "@angular/forms",
+        "serviceDesignerType": "pages",
+        "functionName": "sd_71lDPQfZiBra6ZrZ",
+        "category": "Function",
+        "x": 325,
+        "y": 60,
+        "wires": [
+            [
+                "sd_74Cw0Qrqa3nLCFnG"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "generated": true
+    },
+    {
+        "id": "sd_74Cw0Qrqa3nLCFnG",
+        "type": "Script",
+        "z": "sd_L3ra3dHBI6P6nFwk",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": " page.governmentForm= new FormGroup({\n    governmentEmployee: new FormControl('',[Validators.required])\n  });\nconsole.log(\"form\",page.governmentForm)",
+        "functionName": "sd_74Cw0Qrqa3nLCFnG",
+        "category": "Function",
+        "x": 425,
+        "y": 60,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "generated": true
+    },
+    {
+        "id": "sd_WDBxXNZCiADVnoB2",
+        "type": "Script",
+        "z": "sd_L3ra3dHBI6P6nFwk",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "page.yes = true;\npage.no =false;\n\n\n",
+        "functionName": "sd_WDBxXNZCiADVnoB2",
+        "category": "Function",
+        "x": 245,
+        "y": 200,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "generated": true
+    },
+    {
+        "id": "sd_xNUSdv1L3wmvXohW",
+        "type": "PageStart",
+        "z": "sd_L3ra3dHBI6P6nFwk",
+        "viewType": "pages",
+        "nodeType": "start",
+        "name": "yesFun",
+        "outputs": 1,
+        "inputVariables": [],
+        "localVariables": [],
+        "flow_type": "sync",
+        "functionName": "yesFun",
+        "category": "General",
+        "x": 45,
+        "y": 200,
+        "wires": [
+            [
+                "sd_WDBxXNZCiADVnoB2"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "governmentEmployeeComponent"
+    },
+    {
+        "id": "sd_oSK7BtSLZA6DWTxS",
+        "type": "Script",
+        "z": "sd_L3ra3dHBI6P6nFwk",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "page.no = true;\npage.yes =false;\n\n\n",
+        "functionName": "sd_oSK7BtSLZA6DWTxS",
+        "category": "Function",
+        "x": 245,
+        "y": 300,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "generated": true
+    },
+    {
+        "id": "sd_kecWXLQIvHQhn1Y0",
+        "type": "PageStart",
+        "z": "sd_L3ra3dHBI6P6nFwk",
+        "viewType": "pages",
+        "nodeType": "start",
+        "name": "noFunc",
+        "outputs": 1,
+        "inputVariables": [],
+        "localVariables": [],
+        "flow_type": "sync",
+        "functionName": "noFunc",
+        "category": "General",
+        "x": 45,
+        "y": 300,
+        "wires": [
+            [
+                "sd_oSK7BtSLZA6DWTxS"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "governmentEmployeeComponent"
+    }
+]

@@ -769,6 +769,7 @@
                                         {
                                             "_key": "class",
                                             "_value": [
+                                                "centerText",
                                                 "circleOrange"
                                             ],
                                             "_type": "dav",
@@ -4852,7 +4853,6 @@
                                     "b88b2e1f-6207-c7e2-f910-c7d7b7bd1fbf": {
                                         "paletteKey": "FlexLayoutRow",
                                         "parentEditorKey": "b685a931-a352-eaf8-d27d-171d12d9d9b9",
-                                        "isCommented": "false",
                                         "commentid": null,
                                         "designerReference": [
                                             {
@@ -7161,7 +7161,6 @@
                                         "1bcf9b3b-987d-d256-7f8c-e4ddead306b6": {
                                             "paletteKey": "NG-RadioGroup",
                                             "parentEditorKey": "b88b2e1f-6207-c7e2-f910-c7d7b7bd1fbf",
-                                            "isCommented": "false",
                                             "commentid": null,
                                             "designerReference": [
                                                 {
@@ -7296,7 +7295,6 @@
                                                 "a991ac2d-6351-9178-b9a9-878f8a7e3c70": {
                                                     "paletteKey": "FlexLayoutCol",
                                                     "parentEditorKey": "89973ca5-8d7f-5041-5ae1-f6ede74bbbd0",
-                                                    "isCommented": "false",
                                                     "commentid": null,
                                                     "designerReference": [
                                                         {
@@ -7359,7 +7357,6 @@
                                                         "paletteKey": "Html5",
                                                         "parentEditorKey": "a991ac2d-6351-9178-b9a9-878f8a7e3c70",
                                                         "isAdvancedComponent": true,
-                                                        "isCommented": "false",
                                                         "commentid": null,
                                                         "designerReference": [
                                                             {
@@ -7550,7 +7547,6 @@
                                                             "paletteKey": "html-editor",
                                                             "parentEditorKey": "ae84faae-274d-a522-f577-77fe0f6a5797",
                                                             "isAdvancedChildComponent": true,
-                                                            "isCommented": "false",
                                                             "commentid": null,
                                                             "designerReference": [
                                                                 {
@@ -7577,7 +7573,6 @@
                                                     "4e43e20f-b7bc-fd19-293f-7ef84461ace3": {
                                                         "paletteKey": "FlexLayoutRow",
                                                         "parentEditorKey": "a991ac2d-6351-9178-b9a9-878f8a7e3c70",
-                                                        "isCommented": "false",
                                                         "commentid": null,
                                                         "designerReference": [
                                                             {
@@ -7636,12 +7631,17 @@
                                                                 "_value": "true",
                                                                 "_type": "kv",
                                                                 "_attrDef": "p"
+                                                            },
+                                                            {
+                                                                "_key": "[ngClass]",
+                                                                "_value": "{'selectedClass':page.selectedRadio}",
+                                                                "_type": "kv",
+                                                                "_attrDef": "c"
                                                             }
                                                         ],
                                                         "130bf552-1d99-62ac-f222-8fb49e358986": {
                                                             "paletteKey": "NG-Radio",
                                                             "parentEditorKey": "4e43e20f-b7bc-fd19-293f-7ef84461ace3",
-                                                            "isCommented": "false",
                                                             "commentid": null,
                                                             "designerReference": [
                                                                 {
@@ -7701,9 +7701,17 @@
                                                                 },
                                                                 {
                                                                     "_key": "(change)",
-                                                                    "_value": "",
+                                                                    "_value": "radioRegFun()",
                                                                     "_type": "kv",
-                                                                    "_attrDef": "p"
+                                                                    "_attrDef": "p",
+                                                                    "_customAttributeFlag": "flowpicker",
+                                                                    "objValue": {
+                                                                        "nodeID": "sd_D573ntFYqw8nM3TG",
+                                                                        "functionName": "radioRegFun",
+                                                                        "activeTree": "pages",
+                                                                        "z": "sd_CsbHYE6pQEuUvbeq",
+                                                                        "input": []
+                                                                    }
                                                                 },
                                                                 {
                                                                     "_key": "[labelPosition]",
@@ -7734,7 +7742,6 @@
                                                         "aec1064e-12eb-eae0-114b-5a3c332e09eb": {
                                                             "paletteKey": "NG-image",
                                                             "parentEditorKey": "4e43e20f-b7bc-fd19-293f-7ef84461ace3",
-                                                            "isCommented": "false",
                                                             "commentid": null,
                                                             "designerReference": [
                                                                 {
@@ -7804,7 +7811,6 @@
                                                             "paletteKey": "Html5",
                                                             "parentEditorKey": "4e43e20f-b7bc-fd19-293f-7ef84461ace3",
                                                             "isAdvancedComponent": true,
-                                                            "isCommented": "false",
                                                             "commentid": null,
                                                             "designerReference": [
                                                                 {
@@ -7992,7 +7998,6 @@
                                                                 "paletteKey": "html-editor",
                                                                 "parentEditorKey": "7712d77e-4bff-bdfd-b99f-050b103c0fdd",
                                                                 "isAdvancedChildComponent": true,
-                                                                "isCommented": "false",
                                                                 "commentid": null,
                                                                 "designerReference": [
                                                                     {
@@ -8021,7 +8026,6 @@
                                                 "b0d6b19f-beba-9f41-df83-7c0102f4359c": {
                                                     "paletteKey": "FlexLayoutCol",
                                                     "parentEditorKey": "89973ca5-8d7f-5041-5ae1-f6ede74bbbd0",
-                                                    "isCommented": "false",
                                                     "commentid": null,
                                                     "designerReference": [
                                                         {
@@ -8084,7 +8088,6 @@
                                                         "paletteKey": "Html5",
                                                         "parentEditorKey": "b0d6b19f-beba-9f41-df83-7c0102f4359c",
                                                         "isAdvancedComponent": true,
-                                                        "isCommented": "false",
                                                         "commentid": null,
                                                         "designerReference": [
                                                             {
@@ -8272,7 +8275,6 @@
                                                             "paletteKey": "html-editor",
                                                             "parentEditorKey": "26e21392-b2b2-f81a-9ff4-a3387b35e2e1",
                                                             "isAdvancedChildComponent": true,
-                                                            "isCommented": "false",
                                                             "commentid": null,
                                                             "designerReference": [
                                                                 {
@@ -8299,7 +8301,6 @@
                                                     "a822c073-e8a9-83e1-0e08-ec9cc2e2349b": {
                                                         "paletteKey": "FlexLayoutRow",
                                                         "parentEditorKey": "b0d6b19f-beba-9f41-df83-7c0102f4359c",
-                                                        "isCommented": "false",
                                                         "commentid": null,
                                                         "designerReference": [
                                                             {
@@ -8358,12 +8359,17 @@
                                                                 "_value": "true",
                                                                 "_type": "kv",
                                                                 "_attrDef": "p"
+                                                            },
+                                                            {
+                                                                "_key": "[ngClass]",
+                                                                "_value": "{'selectedClass':page.unselectedRadio}",
+                                                                "_type": "kv",
+                                                                "_attrDef": "c"
                                                             }
                                                         ],
                                                         "a93f689b-5c2e-2615-b351-4095434a462d": {
                                                             "paletteKey": "NG-Radio",
                                                             "parentEditorKey": "a822c073-e8a9-83e1-0e08-ec9cc2e2349b",
-                                                            "isCommented": "false",
                                                             "commentid": null,
                                                             "designerReference": [
                                                                 {
@@ -8423,9 +8429,17 @@
                                                                 },
                                                                 {
                                                                     "_key": "(change)",
-                                                                    "_value": "",
+                                                                    "_value": "radioRegFunFemale()",
                                                                     "_type": "kv",
-                                                                    "_attrDef": "p"
+                                                                    "_attrDef": "p",
+                                                                    "_customAttributeFlag": "flowpicker",
+                                                                    "objValue": {
+                                                                        "nodeID": "sd_LXsO8DGk2B6rlBQk",
+                                                                        "functionName": "radioRegFunFemale",
+                                                                        "activeTree": "pages",
+                                                                        "z": "sd_CsbHYE6pQEuUvbeq",
+                                                                        "input": []
+                                                                    }
                                                                 },
                                                                 {
                                                                     "_key": "[labelPosition]",
@@ -8456,7 +8470,6 @@
                                                         "f97d6221-c94a-6a81-a931-bedd1e1ab5c9": {
                                                             "paletteKey": "NG-image",
                                                             "parentEditorKey": "a822c073-e8a9-83e1-0e08-ec9cc2e2349b",
-                                                            "isCommented": "false",
                                                             "commentid": null,
                                                             "designerReference": [
                                                                 {
@@ -8526,7 +8539,6 @@
                                                             "paletteKey": "Html5",
                                                             "parentEditorKey": "a822c073-e8a9-83e1-0e08-ec9cc2e2349b",
                                                             "isAdvancedComponent": true,
-                                                            "isCommented": "false",
                                                             "commentid": null,
                                                             "designerReference": [
                                                                 {
@@ -8714,7 +8726,6 @@
                                                                 "paletteKey": "html-editor",
                                                                 "parentEditorKey": "dc1f2540-f2b2-78b3-850a-8e5bc3bf0aa9",
                                                                 "isAdvancedChildComponent": true,
-                                                                "isCommented": "false",
                                                                 "commentid": null,
                                                                 "designerReference": [
                                                                     {
@@ -9088,7 +9099,6 @@
                                                 "paletteKey": "NG-DatePicker",
                                                 "parentEditorKey": "50f90b5b-5d1c-0200-6eea-86b2c7a66361",
                                                 "isAdvancedComponent": true,
-                                                "isCommented": "false",
                                                 "commentid": null,
                                                 "designerReference": [
                                                     {
@@ -10079,7 +10089,6 @@
                                     "26a3d228-3a23-d77a-f840-20c08e2eab5d": {
                                         "paletteKey": "FlexLayoutRow",
                                         "parentEditorKey": "b685a931-a352-eaf8-d27d-171d12d9d9b9",
-                                        "isCommented": "false",
                                         "commentid": null,
                                         "designerReference": [
                                             {
@@ -10143,7 +10152,6 @@
                                         "2d88dabf-2e72-c3cf-b890-626b70c91c59": {
                                             "paletteKey": "NG-RaisedButton",
                                             "parentEditorKey": "26a3d228-3a23-d77a-f840-20c08e2eab5d",
-                                            "isCommented": "false",
                                             "commentid": null,
                                             "designerReference": [
                                                 {

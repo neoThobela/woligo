@@ -1,0 +1,250 @@
+[
+    {
+        "id": "sd_Y8tD969fju2JFvRU",
+        "type": "tab",
+        "createdDate": "2022-06-21T12:43:57.483Z",
+        "label": "needComp",
+        "disabled": false,
+        "info": "",
+        "functionSeq": 0,
+        "generateNext": true,
+        "serviceName": "needCompComponent"
+    },
+    {
+        "id": "sd_cA2NOpzG8y0IZ6ZO",
+        "type": "OnInit",
+        "z": "sd_Y8tD969fju2JFvRU",
+        "viewType": "common",
+        "nodeType": "start",
+        "name": "",
+        "inputVariables": [
+            {
+                "key": "selection",
+                "defaultValue": {
+                    "type": "any",
+                    "value": ""
+                }
+            }
+        ],
+        "localVariables": [],
+        "outputVariables": [],
+        "functionName": "sd_cA2NOpzG8y0IZ6ZO",
+        "category": "Lifecycle Events",
+        "x": 45,
+        "y": 60,
+        "wires": [
+            [
+                "sd_68VLm4zp4rvk7eDo"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "needCompComponent"
+    },
+    {
+        "id": "sd_68VLm4zp4rvk7eDo",
+        "type": "PageVariables",
+        "z": "sd_Y8tD969fju2JFvRU",
+        "viewType": "pages",
+        "nodeType": "flow",
+        "name": "",
+        "inputs": 1,
+        "outputs": 1,
+        "operation": "set",
+        "globalVariables": [
+            {
+                "textIp": "icons",
+                "typedIpValue": {
+                    "type": "literal",
+                    "value": "[]"
+                }
+            },
+            {
+                "textIp": "iconColor",
+                "typedIpValue": {
+                    "type": "literal",
+                    "value": ""
+                }
+            },
+            {
+                "textIp": "checked",
+                "typedIpValue": {
+                    "type": "literal",
+                    "value": ""
+                }
+            },
+            {
+                "textIp": "icon",
+                "typedIpValue": {
+                    "type": "literal",
+                    "value": ""
+                }
+            },
+            {
+                "textIp": "checkedBox",
+                "typedIpValue": {
+                    "type": "literal",
+                    "value": "false"
+                }
+            }
+        ],
+        "functionName": "sd_68VLm4zp4rvk7eDo",
+        "category": "Function",
+        "x": 165,
+        "y": 60,
+        "wires": [
+            [
+                "sd_9QIpXwUe9DvfBJBT"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "generated": true
+    },
+    {
+        "id": "sd_9QIpXwUe9DvfBJBT",
+        "type": "Script",
+        "z": "sd_Y8tD969fju2JFvRU",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "console.log('child', this.selection)\npage.icons=[\n// { \"icon\":\"Web/Images/family.png\",\"iconColor\":\"Web/Images/colorFamily.png\",\"paragraph\":\"I need protect my income  or family\"},\n{ \"icon\":\"Web/Images/health.png\",\"paragraph\":\"I need health insurance            \"},\n{ \"icon\":\"Web/Images/business.png\",\"paragraph\":\"I need to protect my business \"}\n  ]//my income or family",
+        "functionName": "sd_9QIpXwUe9DvfBJBT",
+        "category": "Function",
+        "x": 305,
+        "y": 60,
+        "wires": [
+            [
+                "sd_qv9zZAMgFkgsDrx3"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "generated": true
+    },
+    {
+        "id": "sd_jTXzo5rcSz9qP4ie",
+        "type": "PageStart",
+        "z": "sd_Y8tD969fju2JFvRU",
+        "viewType": "pages",
+        "nodeType": "start",
+        "name": "changeIcon",
+        "outputs": 1,
+        "inputVariables": [],
+        "localVariables": [],
+        "flow_type": "sync",
+        "functionName": "changeIcon",
+        "category": "General",
+        "x": 60,
+        "y": 220,
+        "wires": [
+            [
+                "sd_9NFZdZ9WA9zpxEGl"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "needCompComponent"
+    },
+    {
+        "id": "sd_9NFZdZ9WA9zpxEGl",
+        "type": "Script",
+        "z": "sd_Y8tD969fju2JFvRU",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "page.checkedBox =!page.checkedBox",
+        "functionName": "sd_9NFZdZ9WA9zpxEGl",
+        "category": "Function",
+        "x": 200,
+        "y": 240,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "generated": true
+    },
+    {
+        "id": "sd_qv9zZAMgFkgsDrx3",
+        "type": "UseDependency",
+        "z": "sd_Y8tD969fju2JFvRU",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "inputs": 1,
+        "outputs": 1,
+        "property": "",
+        "propertyType": "bh",
+        "propertyGv": "bh.",
+        "alias": "",
+        "modules": [
+            {
+                "textIp": "FormControl",
+                "typedIpValue": {
+                    "type": "this.page",
+                    "value": ""
+                },
+                "injectable": false
+            },
+            {
+                "textIp": "FormGroup",
+                "typedIpValue": {
+                    "type": "this.page",
+                    "value": ""
+                },
+                "injectable": false
+            },
+            {
+                "textIp": "ReactiveFormsModule",
+                "typedIpValue": {
+                    "type": "this.page",
+                    "value": ""
+                },
+                "injectable": false
+            },
+            {
+                "textIp": "Validators",
+                "typedIpValue": {
+                    "type": "this.page",
+                    "value": ""
+                },
+                "injectable": false
+            }
+        ],
+        "import_all": false,
+        "library": "@angular/forms",
+        "serviceDesignerType": "pages",
+        "functionName": "sd_qv9zZAMgFkgsDrx3",
+        "category": "Function",
+        "x": 425,
+        "y": 60,
+        "wires": [
+            [
+                "sd_vD3hGXvlfChplmqA"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "generated": true
+    },
+    {
+        "id": "sd_vD3hGXvlfChplmqA",
+        "type": "Script",
+        "z": "sd_Y8tD969fju2JFvRU",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": " page.needForm= new FormGroup({\n    need: new FormControl('',[Validators.required])\n  });\nconsole.log(\"form\",page.needForm)",
+        "functionName": "sd_vD3hGXvlfChplmqA",
+        "category": "Function",
+        "x": 545,
+        "y": 60,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "generated": true
+    }
+]

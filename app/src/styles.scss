@@ -61,6 +61,43 @@ width:90%;
 .width98{
 width:98%;
 }
+.width257{
+width:257px!important;
+}
+.mat-input-element {
+    caret-color: $orange!important;
+}
+.mat-calendar-body-selected{
+    background-color: #DD601E !important;
+    color: white;
+}
+.mat-form-field-appearance-outline.mat-focused .mat-form-field-outline-thick {
+    color: #E9651F;
+}
+.mat-datepicker-toggle-active {
+    color: #E9651F;
+}
+.mat-error {
+    margin-top: 19px;
+    margin-left: -10px
+}
+.fontSize16{
+    font-size:16px;
+}
+
+.mat-form-field-appearance-outline .mat-form-field-flex {
+    .input{
+        width:300px;
+    }
+
+    
+}
+.mat-form-field-appearance-outline .mat-form-field-outline {
+    .select{
+        width:300px;
+    }
+}
+
 .mat-checkbox-checked.mat-accent .mat-checkbox-background,.mat-checkbox-indeterminate.mat-accent .mat-checkbox-background {
     background-color: $orange;
   }
@@ -69,6 +106,11 @@ width:98%;
   }
   .mat-radio-button.mat-accent.mat-radio-checked .mat-radio-outer-circle {
     border-color: $orange !important;
+}
+.dateStyles{
+  .mat-icon-button {
+    color: $orange!important;
+  }
 }
 .dot{
     width: 10px;
@@ -86,7 +128,7 @@ width:98%;
   color:white !important;
 }
  .mat-form-field:not(.mat-form-field-appearance-legacy) .mat-form-field-suffix .mat-datepicker-toggle-default-icon {
-     color:$lightGrey;
+     color:$orange;
     padding-right: 11px;
  }
   /* width */
@@ -96,7 +138,18 @@ width:98%;
 .fontWeight{
     font-weight: 400;
 }
-
+.orangeText{
+    color:$orange;
+}
+.font400{
+    font-weight:400;
+}
+.mat-form-field-appearance-outline:hover .mat-form-field-outline:hover {
+    color: $orange!important;
+    border: 1px solid;
+    border-radius: 5px;
+    //color: rgba(0,0,0,.12);
+  }
 /* Track */
 ::-webkit-scrollbar-track {
   box-shadow: inset 0 0 5px grey;
@@ -186,11 +239,11 @@ a{
  margin-top: 2em;
 }
 .circleGray{
-    height:30px;
-    width:30px;
+    height:20px;
+    width:20px;
     border-radius: 50%;
     border:1px $lightGrey solid;
-    font-size: 20px;
+    font-size: 12px;
     color:$lightGrey;
     line-height: 1.5;
 }
@@ -207,11 +260,11 @@ a{
     font-size: 20px !important;
 }
 .circleOrange{
-    height:30px;
-    width:30px;
+    height:20px;
+    width:20px;
     border-radius: 50%;
     background-color: $orange;
-    font-size: 20px;
+    font-size: 12px;
     color:white;
     line-height: 1.5;
 }
@@ -236,7 +289,7 @@ bh-page{
 
 .borderTop{
     border-top: #EFEFEF solid 1px;
-    height: 60px;
+    // height: 60px;
 }
 
 p{
@@ -279,7 +332,7 @@ text-decoration: none;
 }
 .heightwhite{
 //  height: calc( 100vh - 110px );
-height: auto;
+height: 83vh;
  border-radius: 10px;
 }
 .toolbarHeight{
@@ -293,10 +346,12 @@ background-color: $white;
 //     height: calc( ( 100vh - 110px ) - ( 50px - 70px ) );
 // }
 .bodyHeight{
-    height: calc( 75vh - 90px);
+    // height: calc( 75vh - 90px);
+    // height:65vh;
+    height:calc(80vh - 98px)
 }
  .mat-form-field-appearance-outline .mat-form-field-infix {
-        padding: 0.3em 0 0.8em 0;
+        padding: 0em 0 0.5em 0;
     }
     .mat-form-field-wrapper {
     padding-bottom: 0px;
@@ -391,7 +446,11 @@ span{
     }
 }
 .centerText{
-    text-align: center;
+    text-align: center!important;
+}
+
+.marginbottom3em{
+    margin-bottom:3em!important;
 }
 .textDarkGray{
     color:$textDarkGray;

@@ -1,0 +1,226 @@
+[
+    {
+        "id": "sd_LMPEuKU3ZmxGom13",
+        "type": "tab",
+        "createdDate": "2022-06-23T12:40:36.843Z",
+        "label": "noicotine",
+        "disabled": false,
+        "info": "",
+        "functionSeq": 0,
+        "generateNext": true,
+        "serviceName": "noicotineComponent"
+    },
+    {
+        "id": "sd_hpoFiCsov4jYrZA4",
+        "type": "OnInit",
+        "z": "sd_LMPEuKU3ZmxGom13",
+        "viewType": "common",
+        "nodeType": "start",
+        "name": "",
+        "functionName": "sd_hpoFiCsov4jYrZA4",
+        "category": "Lifecycle Events",
+        "x": 30,
+        "y": 30,
+        "wires": [
+            [
+                "sd_DzCcjuSyZ0I2i9tc"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "noicotineComponent"
+    },
+    {
+        "id": "sd_DzCcjuSyZ0I2i9tc",
+        "type": "PageVariables",
+        "z": "sd_LMPEuKU3ZmxGom13",
+        "viewType": "pages",
+        "nodeType": "flow",
+        "name": "",
+        "inputs": 1,
+        "outputs": 1,
+        "operation": "set",
+        "globalVariables": [],
+        "functionName": "sd_DzCcjuSyZ0I2i9tc",
+        "category": "Function",
+        "x": 180,
+        "y": 30,
+        "wires": [
+            [
+                "sd_VTCOWEZvwIT4Qjui"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "generated": true,
+        "serviceName": "noicotineComponent"
+    },
+    {
+        "id": "sd_VTCOWEZvwIT4Qjui",
+        "type": "UseDependency",
+        "z": "sd_LMPEuKU3ZmxGom13",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "inputs": 1,
+        "outputs": 1,
+        "property": "",
+        "propertyType": "bh",
+        "propertyGv": "bh.",
+        "alias": "",
+        "modules": [
+            {
+                "textIp": "FormControl",
+                "typedIpValue": {
+                    "type": "this.page",
+                    "value": ""
+                },
+                "injectable": false
+            },
+            {
+                "textIp": "FormGroup",
+                "typedIpValue": {
+                    "type": "this.page",
+                    "value": ""
+                },
+                "injectable": false
+            },
+            {
+                "textIp": "ReactiveFormsModule",
+                "typedIpValue": {
+                    "type": "this.page",
+                    "value": ""
+                },
+                "injectable": false
+            },
+            {
+                "textIp": "Validators",
+                "typedIpValue": {
+                    "type": "this.page",
+                    "value": ""
+                },
+                "injectable": false
+            }
+        ],
+        "import_all": false,
+        "library": "@angular/forms",
+        "serviceDesignerType": "pages",
+        "functionName": "sd_VTCOWEZvwIT4Qjui",
+        "category": "Function",
+        "x": 345,
+        "y": 40,
+        "wires": [
+            [
+                "sd_8olGAiryYMTlTLXi"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "generated": true
+    },
+    {
+        "id": "sd_8olGAiryYMTlTLXi",
+        "type": "Script",
+        "z": "sd_LMPEuKU3ZmxGom13",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": " page.nicotineForm= new FormGroup({\n    nicotine: new FormControl('',[Validators.required])\n  });\nconsole.log(\"form\",page.nicotineForm)",
+        "functionName": "sd_8olGAiryYMTlTLXi",
+        "category": "Function",
+        "x": 525,
+        "y": 40,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "generated": true
+    },
+    {
+        "id": "sd_48hXRcXZJwOk3IbR",
+        "type": "Script",
+        "z": "sd_LMPEuKU3ZmxGom13",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "page.yes = true;\npage.no =false;\n\n\n",
+        "functionName": "sd_48hXRcXZJwOk3IbR",
+        "category": "Function",
+        "x": 285,
+        "y": 200,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "generated": true
+    },
+    {
+        "id": "sd_Gt4p070xJFXHPCG3",
+        "type": "PageStart",
+        "z": "sd_LMPEuKU3ZmxGom13",
+        "viewType": "pages",
+        "nodeType": "start",
+        "name": "yesFun",
+        "outputs": 1,
+        "inputVariables": [],
+        "localVariables": [],
+        "flow_type": "sync",
+        "functionName": "yesFun",
+        "category": "General",
+        "x": 125,
+        "y": 200,
+        "wires": [
+            [
+                "sd_48hXRcXZJwOk3IbR"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "noicotineComponent"
+    },
+    {
+        "id": "sd_x1jqio7XVv4YmILd",
+        "type": "Script",
+        "z": "sd_LMPEuKU3ZmxGom13",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "page.yes = false;\npage.no =true;\n\n\n",
+        "functionName": "sd_x1jqio7XVv4YmILd",
+        "category": "Function",
+        "x": 285,
+        "y": 320,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "generated": true
+    },
+    {
+        "id": "sd_KiA2YlMLQWRoins8",
+        "type": "PageStart",
+        "z": "sd_LMPEuKU3ZmxGom13",
+        "viewType": "pages",
+        "nodeType": "start",
+        "name": "noFunction",
+        "outputs": 1,
+        "inputVariables": [],
+        "localVariables": [],
+        "flow_type": "sync",
+        "functionName": "noFunction",
+        "category": "General",
+        "x": 125,
+        "y": 320,
+        "wires": [
+            [
+                "sd_x1jqio7XVv4YmILd"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "noicotineComponent"
+    }
+]

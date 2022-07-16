@@ -1,0 +1,139 @@
+[
+    {
+        "id": "sd_XWYc3G7hZ1h9ksnS",
+        "type": "tab",
+        "createdDate": "2022-06-23T08:32:07.951Z",
+        "label": "salary",
+        "disabled": false,
+        "info": "",
+        "functionSeq": 0,
+        "generateNext": true,
+        "serviceName": "salaryComponent"
+    },
+    {
+        "id": "sd_mJSMrnB80lhRRqyr",
+        "type": "OnInit",
+        "z": "sd_XWYc3G7hZ1h9ksnS",
+        "viewType": "common",
+        "nodeType": "start",
+        "name": "",
+        "functionName": "sd_mJSMrnB80lhRRqyr",
+        "category": "Lifecycle Events",
+        "x": 30,
+        "y": 30,
+        "wires": [
+            [
+                "sd_AG0N4bDy3CA0o3a5"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "salaryComponent"
+    },
+    {
+        "id": "sd_AG0N4bDy3CA0o3a5",
+        "type": "PageVariables",
+        "z": "sd_XWYc3G7hZ1h9ksnS",
+        "viewType": "pages",
+        "nodeType": "flow",
+        "name": "",
+        "inputs": 1,
+        "outputs": 1,
+        "operation": "set",
+        "globalVariables": [],
+        "functionName": "sd_AG0N4bDy3CA0o3a5",
+        "category": "Function",
+        "x": 180,
+        "y": 30,
+        "wires": [
+            [
+                "sd_nbb1lCUFh2V7lt3r"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "generated": true
+    },
+    {
+        "id": "sd_nbb1lCUFh2V7lt3r",
+        "type": "UseDependency",
+        "z": "sd_XWYc3G7hZ1h9ksnS",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "inputs": 1,
+        "outputs": 1,
+        "property": "",
+        "propertyType": "bh",
+        "propertyGv": "bh.",
+        "alias": "",
+        "modules": [
+            {
+                "textIp": "FormControl",
+                "typedIpValue": {
+                    "type": "this.page",
+                    "value": ""
+                },
+                "injectable": false
+            },
+            {
+                "textIp": "FormGroup",
+                "typedIpValue": {
+                    "type": "this.page",
+                    "value": ""
+                },
+                "injectable": false
+            },
+            {
+                "textIp": "ReactiveFormsModule",
+                "typedIpValue": {
+                    "type": "this.page",
+                    "value": ""
+                },
+                "injectable": false
+            },
+            {
+                "textIp": "Validators",
+                "typedIpValue": {
+                    "type": "this.page",
+                    "value": ""
+                },
+                "injectable": false
+            }
+        ],
+        "import_all": false,
+        "library": "@angular/forms",
+        "serviceDesignerType": "pages",
+        "functionName": "sd_nbb1lCUFh2V7lt3r",
+        "category": "Function",
+        "x": 325,
+        "y": 40,
+        "wires": [
+            [
+                "sd_B3ygWMJPX5CnVBRC"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "generated": true
+    },
+    {
+        "id": "sd_B3ygWMJPX5CnVBRC",
+        "type": "Script",
+        "z": "sd_XWYc3G7hZ1h9ksnS",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": " page.salaryForm= new FormGroup({\n    salary: new FormControl('',[Validators.required]),\n   \n  });\nconsole.log(\"form\",page.salaryForm)",
+        "functionName": "sd_B3ygWMJPX5CnVBRC",
+        "category": "Function",
+        "x": 425,
+        "y": 40,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "generated": true
+    }
+]

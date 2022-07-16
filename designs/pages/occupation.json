@@ -1,0 +1,168 @@
+[
+    {
+        "id": "sd_M0ArE5zsCN3H9nkq",
+        "type": "tab",
+        "createdDate": "2022-06-22T20:28:51.334Z",
+        "label": "occupation",
+        "disabled": false,
+        "info": "",
+        "functionSeq": 0,
+        "generateNext": true,
+        "serviceName": "occupationComponent"
+    },
+    {
+        "id": "sd_G5CDUZ5rS5N1hsNJ",
+        "type": "OnInit",
+        "z": "sd_M0ArE5zsCN3H9nkq",
+        "viewType": "common",
+        "nodeType": "start",
+        "name": "",
+        "functionName": "sd_G5CDUZ5rS5N1hsNJ",
+        "category": "Lifecycle Events",
+        "x": 45,
+        "y": 60,
+        "wires": [
+            [
+                "sd_9cEvbhoYdmTB3EJl"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "occupationComponent"
+    },
+    {
+        "id": "sd_9cEvbhoYdmTB3EJl",
+        "type": "PageVariables",
+        "z": "sd_M0ArE5zsCN3H9nkq",
+        "viewType": "pages",
+        "nodeType": "flow",
+        "name": "",
+        "inputs": 1,
+        "outputs": 1,
+        "operation": "set",
+        "globalVariables": [
+            {
+                "textIp": "mySelect",
+                "typedIpValue": {
+                    "type": "literal",
+                    "value": ""
+                }
+            }
+        ],
+        "functionName": "sd_9cEvbhoYdmTB3EJl",
+        "category": "Function",
+        "x": 195,
+        "y": 60,
+        "wires": [
+            [
+                "sd_GRw2VbS9cDjvGcsQ"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "generated": true
+    },
+    {
+        "id": "sd_a7K76CDySppC55W8",
+        "type": "UseDependency",
+        "z": "sd_M0ArE5zsCN3H9nkq",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "inputs": 1,
+        "outputs": 1,
+        "property": "",
+        "propertyType": "bh",
+        "propertyGv": "bh.",
+        "alias": "",
+        "modules": [
+            {
+                "textIp": "FormControl",
+                "typedIpValue": {
+                    "type": "this.page",
+                    "value": ""
+                },
+                "injectable": false
+            },
+            {
+                "textIp": "FormGroup",
+                "typedIpValue": {
+                    "type": "this.page",
+                    "value": ""
+                },
+                "injectable": false
+            },
+            {
+                "textIp": "ReactiveFormsModule",
+                "typedIpValue": {
+                    "type": "this.page",
+                    "value": ""
+                },
+                "injectable": false
+            },
+            {
+                "textIp": "Validators",
+                "typedIpValue": {
+                    "type": "this.page",
+                    "value": ""
+                },
+                "injectable": false
+            }
+        ],
+        "import_all": false,
+        "library": "@angular/forms",
+        "serviceDesignerType": "pages",
+        "functionName": "sd_a7K76CDySppC55W8",
+        "category": "Function",
+        "x": 405,
+        "y": 60,
+        "wires": [
+            [
+                "sd_Iw2J0gCjxNAHY25L"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "generated": true
+    },
+    {
+        "id": "sd_Iw2J0gCjxNAHY25L",
+        "type": "Script",
+        "z": "sd_M0ArE5zsCN3H9nkq",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": " page.occupationForm= new FormGroup({\n    occupation: new FormControl('',[Validators.required]),\n  });\nconsole.log(\"form\",page.occupationForm)",
+        "functionName": "sd_Iw2J0gCjxNAHY25L",
+        "category": "Function",
+        "x": 525,
+        "y": 60,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "generated": true
+    },
+    {
+        "id": "sd_GRw2VbS9cDjvGcsQ",
+        "type": "Script",
+        "z": "sd_M0ArE5zsCN3H9nkq",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "page.mySelect =[{viewValue :\"Artist\"},{viewValue :\"Business analyst\"}\n,{viewValue :\"Designer\"},{viewValue :\"Entrepreneur\"},{viewValue :\"IT specialist\"},{viewValue :\"Freelancer\"},{viewValue :\"Social Worker\"}\n]",
+        "functionName": "sd_GRw2VbS9cDjvGcsQ",
+        "category": "Function",
+        "x": 300,
+        "y": 60,
+        "wires": [
+            [
+                "sd_a7K76CDySppC55W8"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "generated": true
+    }
+]

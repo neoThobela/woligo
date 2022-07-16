@@ -77,12 +77,42 @@ export class registerComponent {
     }
   }
 
+  radioRegFun(...others) {
+    try {
+      var bh: any = this.__page_injector__
+        .get(SDPageCommonService)
+        .constructFlowObject(this);
+      bh.input = {};
+      bh.local = {};
+      bh = this.sd_KW5cRO9L5D5VPrbJ(bh);
+      //appendnew_next_radioRegFun
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_D573ntFYqw8nM3TG');
+    }
+  }
+
+  radioRegFunFemale(...others) {
+    try {
+      var bh: any = this.__page_injector__
+        .get(SDPageCommonService)
+        .constructFlowObject(this);
+      bh.input = {};
+      bh.local = {};
+      bh = this.sd_GwjoWxENjwaHMWbL(bh);
+      //appendnew_next_radioRegFunFemale
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_LXsO8DGk2B6rlBQk');
+    }
+  }
+
   //appendnew_flow_registerComponent_start
 
   sd_NxeWX6CgNB3jOYgp(bh) {
     try {
       this.page.mySelect = [];
       this.page.registerForm = undefined;
+      this.page.selectedRadio = false;
+      this.page.unselectedRadio = false;
       bh = this.sd_wHediAURJbNM3Irf(bh);
       //appendnew_next_sd_NxeWX6CgNB3jOYgp
       return bh;
@@ -162,6 +192,32 @@ export class registerComponent {
       return bh;
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_jU9jG1OVwpliAKO2');
+    }
+  }
+
+  sd_KW5cRO9L5D5VPrbJ(bh) {
+    try {
+      const page = this.page;
+      page.selectedRadio = true;
+      page.unselectedRadio = false;
+
+      //appendnew_next_sd_KW5cRO9L5D5VPrbJ
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_KW5cRO9L5D5VPrbJ');
+    }
+  }
+
+  sd_GwjoWxENjwaHMWbL(bh) {
+    try {
+      const page = this.page;
+      page.selectedRadio = false;
+      page.unselectedRadio = true;
+
+      //appendnew_next_sd_GwjoWxENjwaHMWbL
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_GwjoWxENjwaHMWbL');
     }
   }
 

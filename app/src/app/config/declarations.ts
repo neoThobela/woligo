@@ -15,6 +15,28 @@ window['neutrinos'] = {
 };
 
 //CORE_REFERENCE_IMPORTS
+//CORE_REFERENCE_IMPORT-dataService
+import { dataService } from '../services/data/data.service';
+//CORE_REFERENCE_IMPORT-employmentHoursComponent
+import { employmentHoursComponent } from '../components/employmentHours.component';
+//CORE_REFERENCE_IMPORT-fourIconsComponent
+import { fourIconsComponent } from '../components/fourIcons.component';
+//CORE_REFERENCE_IMPORT-governmentEmployeeComponent
+import { governmentEmployeeComponent } from '../components/governmentEmployee.component';
+//CORE_REFERENCE_IMPORT-noicotineComponent
+import { noicotineComponent } from '../components/noicotine.component';
+//CORE_REFERENCE_IMPORT-stateComponent
+import { stateComponent } from '../components/state.component';
+//CORE_REFERENCE_IMPORT-occupationComponent
+import { occupationComponent } from '../components/occupation.component';
+//CORE_REFERENCE_IMPORT-dateOfBirthComponent
+import { dateOfBirthComponent } from '../components/dateOfBirth.component';
+//CORE_REFERENCE_IMPORT-salaryComponent
+import { salaryComponent } from '../components/salary.component';
+//CORE_REFERENCE_IMPORT-genderComponent
+import { genderComponent } from '../components/gender.component';
+//CORE_REFERENCE_IMPORT-needCompComponent
+import { needCompComponent } from '../components/needComp.component';
 //CORE_REFERENCE_IMPORT-registerComponent
 import { registerComponent } from '../components/register.component';
 //CORE_REFERENCE_IMPORT-summaryComponent
@@ -59,6 +81,26 @@ export const appDeclarations = [
   PageNotFoundComponent,
   ArtImgSrcDirective,
   //CORE_REFERENCE_PUSH_TO_DEC_ARRAY
+  //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-employmentHoursComponent
+  employmentHoursComponent,
+  //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-fourIconsComponent
+  fourIconsComponent,
+  //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-governmentEmployeeComponent
+  governmentEmployeeComponent,
+  //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-noicotineComponent
+  noicotineComponent,
+  //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-stateComponent
+  stateComponent,
+  //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-occupationComponent
+  occupationComponent,
+  //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-dateOfBirthComponent
+  dateOfBirthComponent,
+  //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-salaryComponent
+  salaryComponent,
+  //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-genderComponent
+  genderComponent,
+  //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-needCompComponent
+  needCompComponent,
   //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-registerComponent
   registerComponent,
   //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-summaryComponent
@@ -88,6 +130,8 @@ export const appProviders = [
   },
   NAuthGuardService,
   //CORE_REFERENCE_PUSH_TO_PRO_ARRAY
+//CORE_REFERENCE_PUSH_TO_PRO_ARRAY-dataService
+dataService,
 ];
 
 /**
@@ -104,6 +148,16 @@ export const appRoutes = [
       { path: 'quotes', component: pageComponent },
       { path: 'summary', component: summaryComponent },
       { path: 'register', component: registerComponent },
+      { path: 'need', component: needCompComponent },
+      { path: 'gender', component: genderComponent },
+      { path: 'salary', component: salaryComponent },
+      { path: 'dob', component: dateOfBirthComponent },
+      { path: 'nicotine', component: noicotineComponent },
+      { path: 'occupation', component: occupationComponent },
+      { path: 'state', component: stateComponent },
+      { path: 'four', component: fourIconsComponent },
+      { path: 'employee', component: governmentEmployeeComponent },
+      { path: 'hours', component: employmentHoursComponent },
     ],
   },
   { path: '', redirectTo: '/home', pathMatch: 'full' },

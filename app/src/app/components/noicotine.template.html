@@ -1,0 +1,38 @@
+<div fxLayout="column wrap" fxLayoutGap="1em" fxLayoutAlign="space-between center" [fxShow]="true">
+  <form [formGroup]="page.nicotineForm">
+    <div fxLayout="column wrap" fxLayoutGap="1em" fxLayoutAlign="space-between center" [fxShow]="true">
+      <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true">
+        <h5 class="fontSize18">
+          Do you use nicotine?
+        </h5>
+      </div>
+      <div fxLayout="row wrap" class="width100" fxLayoutAlign="center center" [fxShow]="true">
+        <mat-radio-group [value]="&apos;governmentEmployee&apos;" class="width100" formControlName="nicotine" [required]="false">
+          <div fxLayout="column wrap" fxLayoutAlign="center center" [fxShow]="true">
+            <div fxLayout="row wrap" style="width:60%" fxLayoutAlign="space-between center" [fxShow]="true">
+              <div fxLayout="column wrap" fxFlex="22" fxLayoutGap="0.5em" fxLayoutAlign="center center" [fxShow]="true">
+                <div fxLayout="row wrap" class="blackText" fxLayoutAlign="center stretch" [fxShow]="true">
+                  <h5 [ngClass]="{&apos;orangeText&apos;:page.yes}" class="fontSize14 font400">
+                    Yes</h5>
+                </div>
+                <div fxLayout="row wrap" fxLayoutAlign="center stretch" [fxShow]="true">
+                  <mat-radio-button [value]="&apos;yes&apos;" [required]="true" name="yes" (change)="yesFun()"></mat-radio-button>
+                </div>
+              </div>
+              <div fxLayout="column wrap" fxFlex="22" fxLayoutGap="0.5em" fxLayoutAlign="center center" [fxShow]="true">
+                <div fxLayout="row wrap" class="blackText" fxLayoutAlign="center stretch" [fxShow]="true">
+                  <h5 [ngClass]="{&apos;orangeText&apos;:page.no}" class="fontSize14 font400">
+                    No</h5>
+                </div>
+                <div fxLayout="row wrap" fxLayoutAlign="center stretch" [fxShow]="true">
+                  <mat-radio-button [value]="&apos;no&apos;" [required]="true" name="no" (change)="noFunction()"></mat-radio-button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </mat-radio-group>
+      </div>
+    </div>
+  </form>
+</div>
+<div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true"></div>

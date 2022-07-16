@@ -1,0 +1,241 @@
+[
+    {
+        "id": "sd_ZTzWdzlL2m81rARD",
+        "type": "tab",
+        "createdDate": "2022-07-15T10:12:05.230Z",
+        "label": "employmentHours",
+        "disabled": false,
+        "info": "",
+        "functionSeq": 0,
+        "generateNext": true,
+        "serviceName": "employmentHoursComponent"
+    },
+    {
+        "id": "sd_eWBLzDveKN5V4Ruk",
+        "type": "OnInit",
+        "z": "sd_ZTzWdzlL2m81rARD",
+        "viewType": "common",
+        "nodeType": "start",
+        "name": "",
+        "functionName": "sd_eWBLzDveKN5V4Ruk",
+        "category": "Lifecycle Events",
+        "x": 30,
+        "y": 30,
+        "wires": [
+            [
+                "sd_Jykt9EsMVShHmfLU"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "employmentHoursComponent"
+    },
+    {
+        "id": "sd_Jykt9EsMVShHmfLU",
+        "type": "PageVariables",
+        "z": "sd_ZTzWdzlL2m81rARD",
+        "viewType": "pages",
+        "nodeType": "flow",
+        "name": "",
+        "inputs": 1,
+        "outputs": 1,
+        "operation": "set",
+        "globalVariables": [
+            {
+                "textIp": "yes",
+                "typedIpValue": {
+                    "type": "literal",
+                    "value": "false"
+                }
+            },
+            {
+                "textIp": "no",
+                "typedIpValue": {
+                    "type": "literal",
+                    "value": "false"
+                }
+            }
+        ],
+        "functionName": "sd_Jykt9EsMVShHmfLU",
+        "category": "Function",
+        "x": 180,
+        "y": 30,
+        "wires": [
+            [
+                "sd_k6oAeJeac85YQhCx"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "generated": true,
+        "serviceName": "employmentHoursComponent"
+    },
+    {
+        "id": "sd_k6oAeJeac85YQhCx",
+        "type": "UseDependency",
+        "z": "sd_ZTzWdzlL2m81rARD",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "inputs": 1,
+        "outputs": 1,
+        "property": "",
+        "propertyType": "bh",
+        "propertyGv": "bh.",
+        "alias": "",
+        "modules": [
+            {
+                "textIp": "FormControl",
+                "typedIpValue": {
+                    "type": "this.page",
+                    "value": ""
+                },
+                "injectable": false
+            },
+            {
+                "textIp": "FormGroup",
+                "typedIpValue": {
+                    "type": "this.page",
+                    "value": ""
+                },
+                "injectable": false
+            },
+            {
+                "textIp": "ReactiveFormsModule",
+                "typedIpValue": {
+                    "type": "this.page",
+                    "value": ""
+                },
+                "injectable": false
+            },
+            {
+                "textIp": "Validators",
+                "typedIpValue": {
+                    "type": "this.page",
+                    "value": ""
+                },
+                "injectable": false
+            }
+        ],
+        "import_all": false,
+        "library": "@angular/forms",
+        "serviceDesignerType": "pages",
+        "functionName": "sd_k6oAeJeac85YQhCx",
+        "category": "Function",
+        "x": 325,
+        "y": 40,
+        "wires": [
+            [
+                "sd_eOC9MAwPFZfkUNRp"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "generated": true
+    },
+    {
+        "id": "sd_eOC9MAwPFZfkUNRp",
+        "type": "Script",
+        "z": "sd_ZTzWdzlL2m81rARD",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": " page.hoursForm = new FormGroup({\n    hours: new FormControl('',[Validators.required]),\n  });\nconsole.log(\"form\",page.hoursForm)",
+        "functionName": "sd_eOC9MAwPFZfkUNRp",
+        "category": "Function",
+        "x": 465,
+        "y": 40,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "generated": true
+    },
+    {
+        "id": "sd_VtGNkgcNuXphL3As",
+        "type": "Script",
+        "z": "sd_ZTzWdzlL2m81rARD",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "page.yes = true;\npage.no =false;\n\n\n",
+        "functionName": "sd_VtGNkgcNuXphL3As",
+        "category": "Function",
+        "x": 225,
+        "y": 180,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "generated": true
+    },
+    {
+        "id": "sd_PRu5IlLPPviprSFQ",
+        "type": "PageStart",
+        "z": "sd_ZTzWdzlL2m81rARD",
+        "viewType": "pages",
+        "nodeType": "start",
+        "name": "yesFun",
+        "outputs": 1,
+        "inputVariables": [],
+        "localVariables": [],
+        "flow_type": "sync",
+        "functionName": "yesFun",
+        "category": "General",
+        "x": 65,
+        "y": 180,
+        "wires": [
+            [
+                "sd_VtGNkgcNuXphL3As"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "employmentHoursComponent"
+    },
+    {
+        "id": "sd_fhwcluh4NQDxP5hY",
+        "type": "Script",
+        "z": "sd_ZTzWdzlL2m81rARD",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "page.no = true;\npage.yes =false;\n\n\n",
+        "functionName": "sd_fhwcluh4NQDxP5hY",
+        "category": "Function",
+        "x": 190,
+        "y": 264.8125,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "generated": true
+    },
+    {
+        "id": "sd_7vjh71mqWHlgQWpB",
+        "type": "PageStart",
+        "z": "sd_ZTzWdzlL2m81rARD",
+        "viewType": "pages",
+        "nodeType": "start",
+        "name": "noFunc",
+        "outputs": 1,
+        "inputVariables": [],
+        "localVariables": [],
+        "flow_type": "sync",
+        "functionName": "noFunc",
+        "category": "General",
+        "x": 30,
+        "y": 264.8125,
+        "wires": [
+            [
+                "sd_fhwcluh4NQDxP5hY"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "employmentHoursComponent"
+    }
+]

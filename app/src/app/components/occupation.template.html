@@ -1,0 +1,18 @@
+<form [formGroup]="page.occupationForm">
+  <div fxLayout="column wrap" fxLayoutGap="1em" fxLayoutAlign="center center" [fxShow]="true">
+    <div fxLayout="row wrap" fxLayoutAlign="center stretch" [fxShow]="true">
+      <h3>
+        what is your occupation?</h3>
+    </div>
+    <div fxLayout="row wrap" class="width100" fxLayoutAlign="center stretch" [fxShow]="true">
+      <mat-form-field [appearance]="&apos;outline&apos;" [floatLabel]="&apos;auto&apos;">
+        <mat-select formControlName="occupation" placeholder="Select your occupation" [required]="false">
+          <ng-template ngFor let-option [ngForOf]="page.mySelect" let-i="index">
+            <mat-option [value]="option.viewValue">{{option.viewValue}}</mat-option>
+          </ng-template>
+        </mat-select>
+
+      </mat-form-field>
+    </div>
+  </div>
+</form>

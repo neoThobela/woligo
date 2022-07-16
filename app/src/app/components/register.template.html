@@ -9,7 +9,7 @@
         <div fxLayout="column wrap" fxLayoutGap="2.5em" fxLayoutAlign="start stretch" [fxShow]="true">
           <div fxLayout="row wrap" class="width80 margin-bottom05" fxLayoutAlign="center center" [fxShow]="true">
             <div fxLayout="column wrap" class="centerText" fxLayoutAlign="start stretch" [fxShow]="true">
-              <div class="circleOrange">
+              <div class="centerText circleOrange">
                 1</div>
             </div>
             <div fxLayout="column wrap" fxLayoutAlign="center center" [fxShow]="true">
@@ -76,8 +76,8 @@
                       <div fxLayout="column wrap" style="width:48%" fxLayoutAlign="start stretch" [fxShow]="true">
                         <div class="darkGreyText fontSize14">
                           Gender At Birth *</div>
-                        <div fxLayout="row wrap" class="border" fxLayoutGap="10px" fxLayoutAlign="start center" [fxShow]="true">
-                          <mat-radio-button [value]="&apos;male&apos;" [required]="true" name="male"></mat-radio-button><img imgSrc="/Web/Images/male.png">
+                        <div fxLayout="row wrap" class="border" fxLayoutGap="10px" fxLayoutAlign="start center" [fxShow]="true" [ngClass]="{&apos;selectedClass&apos;:page.selectedRadio}">
+                          <mat-radio-button [value]="&apos;male&apos;" [required]="true" name="male" (change)="radioRegFun()"></mat-radio-button><img imgSrc="/Web/Images/male.png">
                           <div>
                             Male</div>
                         </div>
@@ -85,8 +85,8 @@
                       <div fxLayout="column wrap" style="width:48%" fxLayoutAlign="start stretch" [fxShow]="true">
                         <div style="color:white">
                           State *</div>
-                        <div fxLayout="row wrap" class="border" fxLayoutGap="10px" fxLayoutAlign="start center" [fxShow]="true">
-                          <mat-radio-button [value]="&apos;female&apos;" [required]="true" name="female"></mat-radio-button><img imgSrc="/Web/Images/female.png">
+                        <div fxLayout="row wrap" class="border" fxLayoutGap="10px" fxLayoutAlign="start center" [fxShow]="true" [ngClass]="{&apos;selectedClass&apos;:page.unselectedRadio}">
+                          <mat-radio-button [value]="&apos;female&apos;" [required]="true" name="female" (change)="radioRegFunFemale()"></mat-radio-button><img imgSrc="/Web/Images/female.png">
                           <div>
                             Female</div>
                         </div>

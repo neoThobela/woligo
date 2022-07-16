@@ -1,0 +1,16 @@
+<form [formGroup]="page.dobForm">
+  <div fxLayout="column wrap" fxLayoutGap="1em" fxLayoutAlign="center center" [fxShow]="true">
+    <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true">
+      <h3>
+        What is your date of birth</h3>
+    </div>
+    <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true">
+      <mat-form-field style="width:330px" class="input dateStyles" [appearance]="&apos;outline&apos;" (click)="date(page.dob)">
+        <input matInput placeholder="mm/dd/yyyy " [matDatepicker]="picker" formControlName="dob" (dateInput)="true" [required]="true" [disabled]="true">
+        <mat-datepicker-toggle matSuffix [for]="picker" disabled="false"></mat-datepicker-toggle>
+        <mat-datepicker #picker [disabled]="false" startView="month" touchUi="false"></mat-datepicker>
+        <mat-error align="start" *ngIf="page.dobForm.invalid">Enter date of birth</mat-error>
+      </mat-form-field>
+    </div>
+  </div>
+</form>

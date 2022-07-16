@@ -1,0 +1,34 @@
+<form [formGroup]="page.insuranceTypeForm">
+  <div fxLayout="column wrap" fxLayoutGap=".5em" fxLayoutAlign="center center" [fxShow]="true">
+    <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true">
+      <div class="fontSize18 fontWeight500">
+        How can we help you?</div>
+    </div>
+    <div fxLayout="row wrap" class="margin-bottom2" fxLayoutGap="2em" fxLayoutAlign="start stretch" [fxShow]="true">
+      <div class="fontSize14 lightGreyText">
+        Select all that apply</div>
+    </div>
+    <div fxLayout="row wrap" fxLayoutAlign="space-evenly end" [fxShow]="true">
+      <div fxLayout="column wrap" class="centerText fitContent" fxFlex="170px" fxLayoutGap="1em" fxLayoutAlign="center end" [fxShow]="true">
+        <div fxLayout="row wrap" class="myGrayText width100" fxLayoutAlign="center center" [fxShow]="true"><img imgSrc="Web/Images/disabilityInsure.png" *ngIf="!page.checkedInsure"><img imgSrc="Web/Images/colorHand.png" *ngIf="page.checkedInsure"></div>
+        <div fxLayout="row wrap" class="width100" fxLayoutAlign="center center" [fxShow]="true"><label class="fontSize14 centerText darkestGrayText">
+            Disability insurance</label>
+          <mat-icon class="lineHeight1-8 fontSize14 lightGreyText">help_outline</mat-icon>
+        </div>
+        <div fxLayout="row wrap" class="width100" fxLayoutAlign="center center" [fxShow]="true">
+          <mat-checkbox (change)="changeColor()" value="&apos;Disability&apos;" [required]="true" formControlName="DisabilityInsurance"></mat-checkbox>
+        </div>
+      </div>
+      <div fxLayout="column wrap" class="centerText fitContent" fxFlex="170px" fxLayoutGap="1em" fxLayoutAlign="center end" [fxShow]="true" *ngFor="let icon of page.icons">
+        <div fxLayout="row wrap" class="myGrayText width100" fxLayoutAlign="center center" [fxShow]="true"><img imgSrc="{{icon.icon}}"></div>
+        <div fxLayout="row wrap" class="width100" fxLayoutAlign="center center" [fxShow]="true"><label class="fontSize14 centerText darkestGrayText">
+            {{icon.paragraph}}</label>
+          <mat-icon class="lineHeight1-8 fontSize14 lightGreyText">help_outline</mat-icon>
+        </div>
+        <div fxLayout="row wrap" class="width100" fxLayoutAlign="center center" [fxShow]="true">
+          <mat-checkbox value="{{icon.paragraph}}" [required]="true"></mat-checkbox>
+        </div>
+      </div>
+    </div>
+  </div>
+</form>

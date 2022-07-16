@@ -19,6 +19,46 @@
                 {
                     "component": "registerComponent",
                     "path": "register"
+                },
+                {
+                    "component": "needCompComponent",
+                    "path": "need"
+                },
+                {
+                    "path": "gender",
+                    "component": "genderComponent"
+                },
+                {
+                    "path": "salary",
+                    "component": "salaryComponent"
+                },
+                {
+                    "component": "dateOfBirthComponent",
+                    "path": "dob"
+                },
+                {
+                    "component": "noicotineComponent",
+                    "path": "nicotine"
+                },
+                {
+                    "component": "occupationComponent",
+                    "path": "occupation"
+                },
+                {
+                    "path": "state",
+                    "component": "stateComponent"
+                },
+                {
+                    "component": "fourIconsComponent",
+                    "path": "four"
+                },
+                {
+                    "component": "governmentEmployeeComponent",
+                    "path": "employee"
+                },
+                {
+                    "component": "employmentHoursComponent",
+                    "path": "hours"
                 }
             ]
         },
