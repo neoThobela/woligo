@@ -120,134 +120,6 @@
                     "_attrDef": "p"
                 }
             ],
-            "100e7d08-f4b3-1c9f-233c-f335e05d0411": {
-                "paletteKey": "FlexLayoutRow",
-                "parentEditorKey": "05ceb4d1-4d4b-bbad-a19b-e9952fd6fff8",
-                "commentid": null,
-                "designerReference": [
-                    {
-                        "_key": "componentLabel",
-                        "_value": "Row",
-                        "_type": "kv",
-                        "_attrDef": "p",
-                        "_useAsLabel": true
-                    },
-                    {
-                        "_key": "style",
-                        "_value": "",
-                        "_type": "kv",
-                        "_attrDef": "p"
-                    },
-                    {
-                        "_key": "class",
-                        "_value": [
-                            "width100"
-                        ],
-                        "_type": "dav",
-                        "_attrDef": "p"
-                    },
-                    {
-                        "_key": "fxFlex",
-                        "_value": "",
-                        "_type": "kv",
-                        "_attrDef": "p"
-                    },
-                    {
-                        "_key": "fxLayoutGap",
-                        "_value": "",
-                        "_type": "kv",
-                        "_attrDef": "p"
-                    },
-                    {
-                        "_key": "wrap",
-                        "_value": "wrap",
-                        "_type": "a",
-                        "_attrDef": "p"
-                    },
-                    {
-                        "_key": "layoutAlign",
-                        "_value": "start",
-                        "_type": "a",
-                        "_attrDef": "p"
-                    },
-                    {
-                        "_key": "pLayoutAlign",
-                        "_value": "stretch",
-                        "_type": "a",
-                        "_attrDef": "p"
-                    },
-                    {
-                        "_key": "[fxShow]",
-                        "_value": "true",
-                        "_type": "kv",
-                        "_attrDef": "p"
-                    }
-                ],
-                "33b9d5cd-4d14-931a-d9b6-2263d79cb90e": {
-                    "paletteKey": "FlexLayoutCol",
-                    "parentEditorKey": "100e7d08-f4b3-1c9f-233c-f335e05d0411",
-                    "commentid": null,
-                    "designerReference": [
-                        {
-                            "_key": "componentLabel",
-                            "_value": "Column",
-                            "_type": "kv",
-                            "_attrDef": "p",
-                            "_useAsLabel": true
-                        },
-                        {
-                            "_key": "style",
-                            "_value": "",
-                            "_type": "kv",
-                            "_attrDef": "p"
-                        },
-                        {
-                            "_key": "class",
-                            "_value": [
-                                "width100"
-                            ],
-                            "_type": "dav",
-                            "_attrDef": "p"
-                        },
-                        {
-                            "_key": "fxFlex",
-                            "_value": "",
-                            "_type": "kv",
-                            "_attrDef": "p"
-                        },
-                        {
-                            "_key": "fxLayoutGap",
-                            "_value": "",
-                            "_type": "kv",
-                            "_attrDef": "p"
-                        },
-                        {
-                            "_key": "wrap",
-                            "_value": "wrap",
-                            "_type": "a",
-                            "_attrDef": "p"
-                        },
-                        {
-                            "_key": "layoutAlign",
-                            "_value": "center",
-                            "_type": "a",
-                            "_attrDef": "p"
-                        },
-                        {
-                            "_key": "pLayoutAlign",
-                            "_value": "center",
-                            "_type": "a",
-                            "_attrDef": "p"
-                        },
-                        {
-                            "_key": "[fxShow]",
-                            "_value": "true",
-                            "_type": "kv",
-                            "_attrDef": "p"
-                        }
-                    ]
-                }
-            },
             "f44b4a89-477b-9eb2-ac29-1a4fe6ce8514": {
                 "paletteKey": "FlexLayoutRow",
                 "parentEditorKey": "05ceb4d1-4d4b-bbad-a19b-e9952fd6fff8",
@@ -1207,6 +1079,19 @@
                                 "_value": "true",
                                 "_type": "kv",
                                 "_attrDef": "p"
+                            },
+                            {
+                                "_key": "(click)",
+                                "_value": "sd_do0njk6nVTUIwNTL()",
+                                "_type": "kv",
+                                "_attrDef": "c",
+                                "objValue": {
+                                    "nodeID": "sd_do0njk6nVTUIwNTL",
+                                    "functionName": "sd_do0njk6nVTUIwNTL",
+                                    "activeTree": "pages",
+                                    "z": "sd_Y8tD969fju2JFvRU",
+                                    "input": []
+                                }
                             }
                         ],
                         "e2bb0ceb-0adf-ac2d-725d-bf721c9ecc7d": {
@@ -1494,7 +1379,6 @@
                         "10de8658-57a8-eee9-e25a-b55fd258c0e3": {
                             "paletteKey": "NG-checkbox",
                             "parentEditorKey": "14a5c376-c893-fed8-a8da-9196ddea9d0c",
-                            "isCommented": "false",
                             "commentid": null,
                             "designerReference": [
                                 {

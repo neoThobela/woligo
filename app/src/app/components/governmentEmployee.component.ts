@@ -8,6 +8,7 @@ import {
   Input,
   Output,
   EventEmitter,
+  AfterContentChecked,
 } from '@angular/core'; //_splitter_
 import { SDBaseService } from 'app/n-services/SDBaseService'; //_splitter_
 import { SDPageCommonService } from 'app/n-services/sd-page-common.service'; //_splitter_
@@ -18,6 +19,7 @@ import {
   ReactiveFormsModule,
   Validators,
 } from '@angular/forms'; //_splitter_
+import { shareformService } from 'app/services/shareform/shareform.service'; //_splitter_
 //append_imports_end
 
 @Component({
@@ -27,7 +29,7 @@ import {
     //appendnew_element_providers
   ],
 })
-export class governmentEmployeeComponent {
+export class governmentEmployeeComponent implements AfterContentChecked {
   page: any = { dep: {} };
   constructor(
     private __page_injector__: Injector,
@@ -94,6 +96,18 @@ export class governmentEmployeeComponent {
     }
   }
 
+  ngAfterContentChecked() {
+    try {
+      var bh: any = this.__page_injector__
+        .get(SDPageCommonService)
+        .constructFlowObject(this);
+      bh = this.sd_8TaIirQOcsrBYUr0(bh);
+      //appendnew_next_ngAfterContentChecked
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_2cnt5zg2dkdDDduv');
+    }
+  }
+
   //appendnew_flow_governmentEmployeeComponent_start
 
   sd_248EJjl1Ewvu7VyT(bh) {
@@ -153,6 +167,31 @@ export class governmentEmployeeComponent {
       return bh;
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_oSK7BtSLZA6DWTxS');
+    }
+  }
+
+  sd_8TaIirQOcsrBYUr0(bh) {
+    try {
+      this.page.shareform = this.__page_injector__.get(shareformService);
+      bh = this.sd_kNcgjCg5QfuovAPQ(bh);
+      //appendnew_next_sd_8TaIirQOcsrBYUr0
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_8TaIirQOcsrBYUr0');
+    }
+  }
+
+  sd_kNcgjCg5QfuovAPQ(bh) {
+    try {
+      const page = this.page;
+      page.shareform.myForm = page.governmentForm.status;
+      page.shareform.data.governmentEmployee =
+        page.governmentForm.controls.governmentEmployee.value;
+      console.log(page.shareform.data.government);
+      //appendnew_next_sd_kNcgjCg5QfuovAPQ
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_kNcgjCg5QfuovAPQ');
     }
   }
 

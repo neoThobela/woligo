@@ -13,17 +13,16 @@ import {
 import { SDBaseService } from 'app/n-services/SDBaseService'; //_splitter_
 import { SDPageCommonService } from 'app/n-services/sd-page-common.service'; //_splitter_
 import { __NEU_ServiceInvokerService__ } from 'app/n-services/service-caller.service'; //_splitter_
-import { Router, NavigationEnd, NavigationStart } from '@angular/router'; //_splitter_
 //append_imports_end
 
 @Component({
-  selector: 'bh-toolbar',
-  templateUrl: './toolbar.template.html',
+  selector: 'bh-needHelpDialog',
+  templateUrl: './needHelpDialog.template.html',
   providers: [
     //appendnew_element_providers
   ],
 })
-export class toolbarComponent {
+export class needHelpDialogComponent {
   page: any = { dep: {} };
   constructor(
     private __page_injector__: Injector,
@@ -40,7 +39,7 @@ export class toolbarComponent {
       .get(SDPageCommonService)
       .constructFlowObject(this);
     {
-      this.sd_plBRezOeIZFfYsGD(bh);
+      this.sd_9K2AMV2zmfSjXFNT(bh);
     }
   }
 
@@ -52,59 +51,24 @@ export class toolbarComponent {
     //append_listeners
   }
 
-  sd_plBRezOeIZFfYsGD(bh) {
+  sd_9K2AMV2zmfSjXFNT(bh) {
     try {
-      bh = this.sd_01uWBFUD8noaLAkU(bh);
-      //appendnew_next_sd_plBRezOeIZFfYsGD
+      bh = this.sd_RJRD7jXt5WHf6vSb(bh);
+      //appendnew_next_sd_9K2AMV2zmfSjXFNT
       return bh;
     } catch (e) {
-      return this.errorHandler(bh, e, 'sd_plBRezOeIZFfYsGD');
+      return this.errorHandler(bh, e, 'sd_9K2AMV2zmfSjXFNT');
     }
   }
 
-  //appendnew_flow_toolbarComponent_start
+  //appendnew_flow_needHelpDialogComponent_start
 
-  sd_01uWBFUD8noaLAkU(bh) {
+  sd_RJRD7jXt5WHf6vSb(bh) {
     try {
-      this.page.routerVal = undefined;
-      bh = this.sd_zGxcqRBN5GClLJcL(bh);
-      //appendnew_next_sd_01uWBFUD8noaLAkU
+      //appendnew_next_sd_RJRD7jXt5WHf6vSb
       return bh;
     } catch (e) {
-      return this.errorHandler(bh, e, 'sd_01uWBFUD8noaLAkU');
-    }
-  }
-
-  sd_zGxcqRBN5GClLJcL(bh) {
-    try {
-      this.page.router = this.__page_injector__.get(Router);
-      this.page.navigationEnd = NavigationEnd;
-      this.page.navigationStart = NavigationStart;
-      bh = this.sd_YwxVNFGjd7gqxxL1(bh);
-      //appendnew_next_sd_zGxcqRBN5GClLJcL
-      return bh;
-    } catch (e) {
-      return this.errorHandler(bh, e, 'sd_zGxcqRBN5GClLJcL');
-    }
-  }
-
-  sd_YwxVNFGjd7gqxxL1(bh) {
-    try {
-      const page = this.page; // console.log('page.router', page.router.url);
-      page.routerVal = page.router.url;
-      page.router.events.subscribe((event) => {
-        if (event instanceof page.navigationEnd) {
-          // Hide loading indicator
-          console.log(event);
-          page.routerVal = event.url;
-        }
-      });
-      console.log('page.router', page.routerVal);
-
-      //appendnew_next_sd_YwxVNFGjd7gqxxL1
-      return bh;
-    } catch (e) {
-      return this.errorHandler(bh, e, 'sd_YwxVNFGjd7gqxxL1');
+      return this.errorHandler(bh, e, 'sd_RJRD7jXt5WHf6vSb');
     }
   }
 
@@ -130,5 +94,5 @@ export class toolbarComponent {
       throw e;
     }
   }
-  //appendnew_flow_toolbarComponent_Catch
+  //appendnew_flow_needHelpDialogComponent_Catch
 }

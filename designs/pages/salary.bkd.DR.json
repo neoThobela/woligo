@@ -260,7 +260,9 @@
                             },
                             {
                                 "_key": "class",
-                                "_value": "",
+                                "_value": [
+                                    "fontSize18"
+                                ],
                                 "_type": "dav",
                                 "_attrDef": "p"
                             },
@@ -530,7 +532,7 @@
                         "designerReference": [
                             {
                                 "_key": "style",
-                                "_value": "width:300px",
+                                "_value": "width:370px",
                                 "_type": "kv",
                                 "_attrDef": "p"
                             },
@@ -542,7 +544,7 @@
                             },
                             {
                                 "_key": "placeholder",
-                                "_value": "$1,200",
+                                "_value": "Enter your income",
                                 "_type": "kv",
                                 "_attrDef": "p",
                                 "_useAsLabel": true
@@ -628,7 +630,32 @@
                             },
                             {
                                 "_key": "matError",
-                                "_value": [],
+                                "_value": [
+                                    {
+                                        "input1": "page.salaryForm.required",
+                                        "input2": "Enter your Salary",
+                                        "toggle": {
+                                            "toggleData": [],
+                                            "selected": "start"
+                                        }
+                                    },
+                                    {
+                                        "input1": "page.salaryForm.controls.salary.errors?.pattern",
+                                        "input2": "Enter a number",
+                                        "toggle": {
+                                            "toggleData": [],
+                                            "selected": "start"
+                                        }
+                                    },
+                                    {
+                                        "input1": "page.salaryForm.controls.salary.errors?.min",
+                                        "input2": "the gross salary should be $1,200 or greater",
+                                        "toggle": {
+                                            "toggleData": [],
+                                            "selected": "start"
+                                        }
+                                    }
+                                ],
                                 "_type": "a",
                                 "_attrDef": "p",
                                 "_visibility": true

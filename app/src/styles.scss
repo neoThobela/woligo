@@ -77,6 +77,10 @@ width:257px!important;
 .mat-datepicker-toggle-active {
     color: #E9651F;
 }
+.mat-option.mat-active{
+    background-color: #E9651F !important;
+    color:white
+}
 .mat-error {
     margin-top: 19px;
     margin-left: -10px
@@ -107,11 +111,11 @@ width:257px!important;
   .mat-radio-button.mat-accent.mat-radio-checked .mat-radio-outer-circle {
     border-color: $orange !important;
 }
-.dateStyles{
-  .mat-icon-button {
-    color: $orange!important;
-  }
-}
+// .dateStyles{
+//   .mat-icon-button {
+//     color: $orange!important;
+//   }
+// }
 .dot{
     width: 10px;
     height: 10px;
@@ -128,8 +132,11 @@ width:257px!important;
   color:white !important;
 }
  .mat-form-field:not(.mat-form-field-appearance-legacy) .mat-form-field-suffix .mat-datepicker-toggle-default-icon {
-     color:$orange;
+     color:$lightGrey;
     padding-right: 11px;
+ }
+ .mat-form-field-type-mat-select:not(.mat-form-field-disabled) .mat-form-field-flex{
+     width:330px;
  }
   /* width */
 ::-webkit-scrollbar {
@@ -161,10 +168,21 @@ width:257px!important;
   background: $orange;
   border-radius: 10px;
 } 
-
+.lightgraybg{
+ background-color: #F8F8F8;
+}
+.orangeBg{
+    background-color: $orange;
+}
+.mat-dialog-container{
+    padding:0px!important;
+}
 button:disabled{
    background:rgba(233, 101, 31, 0.65)!important;
    color:white !important;
+}
+.width400{
+    width:400px;
 }
 .secondBorder{
      border: 1px solid $lightGrey ;
@@ -202,6 +220,7 @@ button:disabled{
 .darkestGrayText{
     color:$darkestGray;
 }
+
 .marginTop5{
     margin-top: 5px;
 }
@@ -258,6 +277,15 @@ a{
 }
 .stepper{
     font-size: 20px !important;
+}
+.circleOrangeSum{
+    height:30px;
+    width:30px;
+    border-radius: 50%;
+    background-color: $orange;
+    font-size: 16px;
+    color:white;
+    line-height: 1.89;
 }
 .circleOrange{
     height:20px;

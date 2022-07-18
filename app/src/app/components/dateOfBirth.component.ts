@@ -8,6 +8,7 @@ import {
   Input,
   Output,
   EventEmitter,
+  AfterContentChecked,
 } from '@angular/core'; //_splitter_
 import { SDBaseService } from 'app/n-services/SDBaseService'; //_splitter_
 import { SDPageCommonService } from 'app/n-services/sd-page-common.service'; //_splitter_
@@ -17,7 +18,10 @@ import {
   FormGroup,
   ReactiveFormsModule,
   Validators,
+  ValidationErrors,
 } from '@angular/forms'; //_splitter_
+import { NgxAgeValidator } from 'ngx-age-validator'; //_splitter_
+import { shareformService } from 'app/services/shareform/shareform.service'; //_splitter_
 //append_imports_end
 
 @Component({
@@ -27,7 +31,7 @@ import {
     //appendnew_element_providers
   ],
 })
-export class dateOfBirthComponent {
+export class dateOfBirthComponent implements AfterContentChecked {
   page: any = { dep: {} };
   constructor(
     private __page_injector__: Injector,
@@ -80,6 +84,32 @@ export class dateOfBirthComponent {
     }
   }
 
+  sd_zkKwY7Eppd7zRX8K(dob: any = undefined, ...others) {
+    try {
+      var bh: any = this.__page_injector__
+        .get(SDPageCommonService)
+        .constructFlowObject(this);
+      bh.input = { dob: dob };
+      bh.local = {};
+      bh = this.sd_Vz5Nd5Ir2x3gbzQm(bh);
+      //appendnew_next_sd_zkKwY7Eppd7zRX8K
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_zkKwY7Eppd7zRX8K');
+    }
+  }
+
+  ngAfterContentChecked() {
+    try {
+      var bh: any = this.__page_injector__
+        .get(SDPageCommonService)
+        .constructFlowObject(this);
+      bh = this.sd_OcXEx2uExoOFVBcm(bh);
+      //appendnew_next_ngAfterContentChecked
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_GITQTOhxGnvoYsv3');
+    }
+  }
+
   //appendnew_flow_dateOfBirthComponent_start
 
   sd_72pIuvLMX3qRrrEK(bh) {
@@ -95,7 +125,7 @@ export class dateOfBirthComponent {
 
   sd_BtdHckZVCV5498OL(bh) {
     try {
-      bh = this.sd_cEm6zR4Xgj9BEX8O(bh);
+      bh = this.sd_B7aF1oBUAUMfHKPc(bh);
       //appendnew_next_sd_BtdHckZVCV5498OL
       return bh;
     } catch (e) {
@@ -103,17 +133,64 @@ export class dateOfBirthComponent {
     }
   }
 
+  sd_B7aF1oBUAUMfHKPc(bh) {
+    try {
+      bh = this.sd_AcP0HYzuCAafET7E(bh);
+      //appendnew_next_sd_B7aF1oBUAUMfHKPc
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_B7aF1oBUAUMfHKPc');
+    }
+  }
+
+  sd_AcP0HYzuCAafET7E(bh) {
+    try {
+      bh = this.sd_cEm6zR4Xgj9BEX8O(bh);
+      //appendnew_next_sd_AcP0HYzuCAafET7E
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_AcP0HYzuCAafET7E');
+    }
+  }
+
   sd_cEm6zR4Xgj9BEX8O(bh) {
     try {
       const page = this.page;
       page.dobForm = new FormGroup({
-        dob: new FormControl('', [Validators.required]),
+        dob: new FormControl(null, [
+          NgxAgeValidator(18, 60),
+          Validators.required,
+        ]),
       });
       console.log('form', page.dobForm);
+      bh = this.sd_HJsKUlh6AW6s65yQ(bh);
       //appendnew_next_sd_cEm6zR4Xgj9BEX8O
       return bh;
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_cEm6zR4Xgj9BEX8O');
+    }
+  }
+
+  sd_HJsKUlh6AW6s65yQ(bh) {
+    try {
+      const page = this.page;
+      page.dobForm.controls.dob.valueChanges.subscribe(() => {
+        const controlErrors: ValidationErrors | null =
+          page.dobForm.controls.dob.errors;
+        if (controlErrors != null) {
+          Object.keys(controlErrors).forEach((keyError) => {
+            console.log(
+              ' keyError: ' + keyError + ', err value: ',
+              controlErrors[keyError]
+            );
+          });
+        }
+      });
+
+      //appendnew_next_sd_HJsKUlh6AW6s65yQ
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_HJsKUlh6AW6s65yQ');
     }
   }
 
@@ -130,6 +207,40 @@ export class dateOfBirthComponent {
       return bh;
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_C4PQayqwlhKalz1H');
+    }
+  }
+
+  sd_Vz5Nd5Ir2x3gbzQm(bh) {
+    try {
+      bh.pageOutput.emitValue.emit(this.page.dobForm.value);
+      //appendnew_next_sd_Vz5Nd5Ir2x3gbzQm
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_Vz5Nd5Ir2x3gbzQm');
+    }
+  }
+
+  sd_OcXEx2uExoOFVBcm(bh) {
+    try {
+      this.page.shareform = this.__page_injector__.get(shareformService);
+      bh = this.sd_KXhwJGYqpAdYEHP6(bh);
+      //appendnew_next_sd_OcXEx2uExoOFVBcm
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_OcXEx2uExoOFVBcm');
+    }
+  }
+
+  sd_KXhwJGYqpAdYEHP6(bh) {
+    try {
+      const page = this.page;
+      page.shareform.myForm = page.dobForm.status;
+      page.shareform.data.dob = page.dobForm.controls.dob.value;
+      console.log(page.shareform.data.dob);
+      //appendnew_next_sd_KXhwJGYqpAdYEHP6
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_KXhwJGYqpAdYEHP6');
     }
   }
 

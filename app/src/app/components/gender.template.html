@@ -9,21 +9,21 @@
         <div fxLayout="row wrap" style="    width: 355px;" fxLayoutAlign="center center" [fxShow]="true" ngClass.xs="width60">
           <mat-radio-group [value]="&apos;gender&apos;" class="width100" formControlName="gender" [required]="false">
             <div fxLayout="column wrap" class="width100" fxLayoutAlign="center center" [fxShow]="true">
-              <div fxLayout="row wrap" class="width100" fxLayoutGap="2em" fxLayoutAlign="center center" [fxShow]="true">
+              <div fxLayout="row wrap" class="width100" fxLayoutGap="1em" fxLayoutAlign="center center" [fxShow]="true">
                 <div fxLayout="column wrap" fxFlex="30" fxLayoutGap="0.5em" fxLayoutAlign="center center" [fxShow]="true">
-                  <div fxLayout="row wrap" class="myGrayText" fxLayoutAlign="center stretch" [fxShow]="true"><img imgSrc="/Web/Images/colorMale.png" style="width:28px;height:34px" *ngIf="page.changeGender" width="50px"><img imgSrc="/Web/Images/boy.png" style="width:28px;height:34px" *ngIf="!page.changeGender"></div>
+                  <div fxLayout="row wrap" class="myGrayText" fxLayoutAlign="center stretch" [fxShow]="true"><img imgSrc="/Web/Images/colorMale.png" style="width:38px;height:44px" *ngIf="page.changeGender" width="50px"><img imgSrc="/Web/Images/boy.png" style="width:38px;height:44px" *ngIf="!page.changeGender"></div>
                   <div fxLayout="row wrap" class="blackText" fxLayoutAlign="center stretch" [fxShow]="true"><label [ngClass]="{orangeText:page.changeGender}" class="fontSize14">
                       Male</label></div>
                   <div fxLayout="row wrap" fxLayoutAlign="center stretch" [fxShow]="true">
-                    <mat-radio-button [value]="&apos;male&apos;" [required]="true" name="male" (change)="changeGenderfunc()" [checked]="false"></mat-radio-button>
+                    <mat-radio-button [value]="&apos;Male&apos;" [required]="true" name="male" (change)="changeGenderfunc()" [checked]="false"></mat-radio-button>
                   </div>
                 </div>
                 <div fxLayout="column wrap" fxFlex="30" fxLayoutGap="0.5em" fxLayoutAlign="center center" [fxShow]="true">
-                  <div fxLayout="row wrap" class="myGrayText" fxLayoutAlign="center stretch" [fxShow]="true"><img imgSrc="/Web/Images/orangeFemale.png" style="width:28px;height:34px" *ngIf="page.changeFemale"><img imgSrc="/Web/Images/girl.png" style="width:28px;height:34px" *ngIf="!page.changeFemale"></div>
+                  <div fxLayout="row wrap" class="myGrayText" fxLayoutAlign="center stretch" [fxShow]="true"><img imgSrc="/Web/Images/orangeFemale.png" style="width:38px;height:44px" *ngIf="page.changeFemale"><img imgSrc="/Web/Images/girl.png" style="width:38px;height:44px" *ngIf="!page.changeFemale"></div>
                   <div fxLayout="row wrap" class="blackText" fxLayoutAlign="center stretch" [fxShow]="true"><label [ngClass]="{orangeText:page.changeFemale}" class="fontSize14">
                       Female</label></div>
                   <div fxLayout="row wrap" fxLayoutAlign="center stretch" [fxShow]="true">
-                    <mat-radio-button [value]="&apos;female&apos;" [required]="true" name="female" (change)="changeFemaleFunct()"></mat-radio-button>
+                    <mat-radio-button [value]="&apos;Female&apos;" [required]="true" name="female" (change)="changeFemaleFunct()"></mat-radio-button>
                   </div>
                 </div>
               </div>
@@ -35,19 +35,19 @@
             <div fxLayout="column wrap" class="width100" fxLayoutGap="1em" fxLayoutAlign="center center" [fxShow]="true">
               <h4>
                 Are you looking for maternity leave coverage?</h4>
-              <div fxLayout="row wrap" class="width100" fxLayoutGap="3.5em" fxLayoutAlign="center center" [fxShow]="true">
+              <div fxLayout="row wrap" class="width100" fxLayoutGap="2.5em" fxLayoutAlign="center center" [fxShow]="true">
                 <div fxLayout="column wrap" fxFlex="22" fxLayoutGap="0.5em" fxLayoutAlign="center center" [fxShow]="true">
                   <div fxLayout="row wrap" class="blackText" fxLayoutAlign="center center" [fxShow]="true"><label [ngClass]="{&apos;orangeText&apos;:page.yes}" class="font400 fontSize14">
                       Yes</label></div>
                   <div fxLayout="row wrap" fxLayoutAlign="center stretch" [fxShow]="true">
-                    <mat-radio-button [value]="&apos;yes&apos;" [required]="true" name="yes" (change)="yesFun()" [checked]="false"></mat-radio-button>
+                    <mat-radio-button [value]="&apos;Yes&apos;" [required]="true" name="yes" (change)="yesFun()" [checked]="false"></mat-radio-button>
                   </div>
                 </div>
                 <div fxLayout="column wrap" fxFlex="22" fxLayoutGap="0.5em" fxLayoutAlign="center center" [fxShow]="true">
                   <div fxLayout="row wrap" class="blackText" fxLayoutAlign="center stretch" [fxShow]="true"><label [ngClass]="{&apos;orangeText&apos;:page.no}" class="font400 fontSize14">
                       No</label></div>
                   <div fxLayout="row wrap" fxLayoutAlign="center stretch" [fxShow]="true">
-                    <mat-radio-button [value]="&apos;no&apos;" [required]="true" name="no" (change)="noFunc()"></mat-radio-button>
+                    <mat-radio-button [value]="&apos;No&apos;" [required]="true" name="no" (change)="noFunc()"></mat-radio-button>
                   </div>
                 </div>
               </div>

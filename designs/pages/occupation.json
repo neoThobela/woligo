@@ -60,7 +60,8 @@
         ],
         "__n_excludedFromValidation__": {},
         "generateNext": false,
-        "generated": true
+        "generated": true,
+        "serviceName": "occupationComponent"
     },
     {
         "id": "sd_a7K76CDySppC55W8",
@@ -160,6 +161,127 @@
             [
                 "sd_a7K76CDySppC55W8"
             ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "generated": true
+    },
+    {
+        "id": "sd_hFjItBTKUqp0g9SD",
+        "type": "UseDependency",
+        "z": "sd_M0ArE5zsCN3H9nkq",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "inputs": 1,
+        "outputs": 1,
+        "property": "",
+        "propertyType": "bh",
+        "propertyGv": "bh.",
+        "alias": "",
+        "modules": [
+            {
+                "textIp": "shareformService",
+                "typedIpValue": {
+                    "type": "this.page",
+                    "value": "shareform"
+                },
+                "injectable": true
+            }
+        ],
+        "import_all": false,
+        "library": "app/services/shareform/shareform.service",
+        "serviceDesignerType": "pages",
+        "functionName": "sd_hFjItBTKUqp0g9SD",
+        "category": "Function",
+        "x": 265,
+        "y": 180.8125,
+        "wires": [
+            [
+                "sd_KSyZ7Pny284fddWn"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "generated": true
+    },
+    {
+        "id": "sd_Ur9FZvLLn6VOoeU2",
+        "type": "AfterContentChecked",
+        "z": "sd_M0ArE5zsCN3H9nkq",
+        "viewType": "common",
+        "nodeType": "start",
+        "name": "After Content Checked",
+        "functionName": "ngAfterContentChecked",
+        "category": "Lifecycle Events",
+        "x": 100,
+        "y": 180.8125,
+        "wires": [
+            [
+                "sd_hFjItBTKUqp0g9SD"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "occupationComponent"
+    },
+    {
+        "id": "sd_KSyZ7Pny284fddWn",
+        "type": "Script",
+        "z": "sd_M0ArE5zsCN3H9nkq",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "page.shareform.myForm=page.occupationForm.status\npage.shareform.data.occupation=page.occupationForm.controls.occupation.value\nconsole.log(page.shareform.data.occupation)",
+        "functionName": "sd_KSyZ7Pny284fddWn",
+        "category": "Function",
+        "x": 445,
+        "y": 180.8125,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "generated": true
+    },
+    {
+        "id": "sd_4F5rc1FDrDBP6d4K",
+        "type": "PageStart",
+        "z": "sd_M0ArE5zsCN3H9nkq",
+        "viewType": "pages",
+        "nodeType": "start",
+        "name": "show",
+        "outputs": 1,
+        "inputVariables": [],
+        "localVariables": [],
+        "flow_type": "sync",
+        "functionName": "show",
+        "category": "General",
+        "x": 100,
+        "y": 300,
+        "wires": [
+            [
+                "sd_YoivaSpXCksL88o5"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "occupationComponent"
+    },
+    {
+        "id": "sd_YoivaSpXCksL88o5",
+        "type": "Script",
+        "z": "sd_M0ArE5zsCN3H9nkq",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "",
+        "functionName": "sd_YoivaSpXCksL88o5",
+        "category": "Function",
+        "x": 240,
+        "y": 300,
+        "wires": [
+            []
         ],
         "__n_excludedFromValidation__": {},
         "generateNext": false,

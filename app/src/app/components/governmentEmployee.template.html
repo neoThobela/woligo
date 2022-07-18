@@ -8,14 +8,14 @@
     <div fxLayout="row wrap" class="width100" fxLayoutAlign="center center" [fxShow]="true">
       <mat-radio-group [value]="&apos;governmentEmployee&apos;" class="width100" formControlName="governmentEmployee" [required]="false">
         <div fxLayout="column wrap" fxLayoutAlign="center center" [fxShow]="true">
-          <div fxLayout="row wrap" style="width:60%" fxLayoutAlign="space-between center" [fxShow]="true">
+          <div fxLayout="row wrap" style="width:50%" fxLayoutGap="3.2em" fxLayoutAlign="center center" [fxShow]="true">
             <div fxLayout="column wrap" fxFlex="22" fxLayoutGap="0.5em" fxLayoutAlign="center center" [fxShow]="true">
               <div fxLayout="row wrap" class="blackText" fxLayoutAlign="center stretch" [fxShow]="true">
                 <h5 [ngClass]="{&apos;orangeText&apos;:page.yes}" class="fontSize14 font400">
                   Yes</h5>
               </div>
               <div fxLayout="row wrap" fxLayoutAlign="center stretch" [fxShow]="true">
-                <mat-radio-button [value]="&apos;yes&apos;" [required]="true" name="yes" (change)="yesFun()"></mat-radio-button>
+                <mat-radio-button [value]="&apos;Yes&apos;" [required]="true" name="yes" (change)="yesFun()"></mat-radio-button>
               </div>
             </div>
             <div fxLayout="column wrap" fxFlex="22" fxLayoutGap="0.5em" fxLayoutAlign="center center" [fxShow]="true">
@@ -24,7 +24,7 @@
                   No</h5>
               </div>
               <div fxLayout="row wrap" fxLayoutAlign="center stretch" [fxShow]="true">
-                <mat-radio-button [value]="&apos;no&apos;" [required]="true" name="no" (change)="noFunc()"></mat-radio-button>
+                <mat-radio-button [value]="&apos;No&apos;" [required]="true" name="no" (change)="noFunc()"></mat-radio-button>
               </div>
             </div>
           </div>

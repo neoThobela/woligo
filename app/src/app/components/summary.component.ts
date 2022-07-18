@@ -8,10 +8,14 @@ import {
   Input,
   Output,
   EventEmitter,
+  AfterContentChecked,
+  Pipe,
+  PipeTransform,
 } from '@angular/core'; //_splitter_
 import { SDBaseService } from 'app/n-services/SDBaseService'; //_splitter_
 import { SDPageCommonService } from 'app/n-services/sd-page-common.service'; //_splitter_
 import { __NEU_ServiceInvokerService__ } from 'app/n-services/service-caller.service'; //_splitter_
+import { shareformService } from 'app/services/shareform/shareform.service'; //_splitter_
 import { Router, NavigationEnd, NavigationStart } from '@angular/router'; //_splitter_
 //append_imports_end
 
@@ -66,7 +70,7 @@ export class summaryComponent {
   sd_5IJ7DiEuM1ybwDCH(bh) {
     try {
       this.page.summary = undefined;
-      bh = this.sd_f1NdOgy88VuN0XXG(bh);
+      bh = this.sd_0WRKsukb2tyhGbtu(bh);
       //appendnew_next_sd_5IJ7DiEuM1ybwDCH
       return bh;
     } catch (e) {
@@ -74,54 +78,94 @@ export class summaryComponent {
     }
   }
 
+  sd_0WRKsukb2tyhGbtu(bh) {
+    try {
+      this.page.shareform = this.__page_injector__.get(shareformService);
+      bh = this.sd_f1NdOgy88VuN0XXG(bh);
+      //appendnew_next_sd_0WRKsukb2tyhGbtu
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_0WRKsukb2tyhGbtu');
+    }
+  }
+
   sd_f1NdOgy88VuN0XXG(bh) {
     try {
-      const page = this.page;
+      const page = this.page; // page.summary=[{
+      //     title:"Protection type",
+      //     content:"Protect income or family"
+      // },
+      // {
+      //     title:"Insurance type",
+      //     content:"Disability"
+      // },
+      // {
+      //     title:"Date of birth",
+      //     content:"01/01/1985"
+      // },
+      // {
+      //     title:"Gender at birth",
+      //     content:"Female"
+      // },
+      // {
+      //     title:"Maternity leave coverage?",
+      //     content:"No"
+      // },
+      // {
+      //     title:"State",
+      //     content:"Tennessee"
+      // },
+      // {
+      //     title:"Occupation category",
+      //     content:"Artist"
+      // },
+      // {
+      //     title:"Are you employed full-time and work at least 30 hours per week?",
+      //     content:"Yes"
+      // },
+      // {
+      //     title:"Monthly Gross Income",
+      //     content:"$1,200"
+      // },
+      // {
+      //     title:"Government employee",
+      //     content:"No"
+      // },
+      // {
+      //     title:"Do you use nicotine?",
+      //     content:"No"
+      // }
+      // ]
       page.summary = [
-        {
-          title: 'Protection type',
-          content: 'Protect income or family',
-        },
-        {
-          title: 'Insurance type',
-          content: 'Disability',
-        },
-        {
-          title: 'Date of birth',
-          content: '01/01/1985',
-        },
-        {
-          title: 'Gender at birth',
-          content: 'Female',
-        },
+        { title: 'Protection type', content: 'Protect income or family' },
+        { title: 'Insurance type', content: 'Disability Insurance' },
+        { title: 'Date of birth', content: page.shareform.data.dob },
+        { title: 'Gender at birth', content: page.shareform.data.gender },
         {
           title: 'Maternity leave coverage?',
-          content: 'No',
+          content: page.shareform.data.maternity,
         },
-        {
-          title: 'State',
-          content: 'Tennessee',
-        },
+        { title: 'State', content: page.shareform.data.state },
         {
           title: 'Occupation category',
-          content: 'Artist',
+          content: page.shareform.data.occupation,
         },
         {
           title:
             'Are you employed full-time and work at least 30 hours per week?',
-          content: 'Yes',
+          content: page.shareform.data.hours,
         },
         {
           title: 'Monthly Gross Income',
-          content: '$1,200',
+          content: '$' + page.shareform.data.salary,
         },
         {
           title: 'Government employee',
-          content: 'No',
+          content: page.shareform.data.governmentEmployee,
         },
         {
           title: 'Do you use nicotine?',
-          content: 'No',
+          content: page.shareform.data.nicotine,
         },
       ];
       bh = this.sd_4E7S5LJSKKYQKqcc(bh);

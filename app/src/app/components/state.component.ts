@@ -8,6 +8,7 @@ import {
   Input,
   Output,
   EventEmitter,
+  AfterContentChecked,
 } from '@angular/core'; //_splitter_
 import { SDBaseService } from 'app/n-services/SDBaseService'; //_splitter_
 import { SDPageCommonService } from 'app/n-services/sd-page-common.service'; //_splitter_
@@ -18,6 +19,7 @@ import {
   ReactiveFormsModule,
   Validators,
 } from '@angular/forms'; //_splitter_
+import { shareformService } from 'app/services/shareform/shareform.service'; //_splitter_
 //append_imports_end
 
 @Component({
@@ -27,7 +29,7 @@ import {
     //appendnew_element_providers
   ],
 })
-export class stateComponent {
+export class stateComponent implements AfterContentChecked {
   page: any = { dep: {} };
   constructor(
     private __page_injector__: Injector,
@@ -63,6 +65,18 @@ export class stateComponent {
       return bh;
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_ma5f0qm5awfQwTmK');
+    }
+  }
+
+  ngAfterContentChecked() {
+    try {
+      var bh: any = this.__page_injector__
+        .get(SDPageCommonService)
+        .constructFlowObject(this);
+      bh = this.sd_MBDcr98NXT9UdSLY(bh);
+      //appendnew_next_ngAfterContentChecked
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_IGgIdjhsOgntwKAy');
     }
   }
 
@@ -122,6 +136,30 @@ export class stateComponent {
       return bh;
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_vJaQpznwwMLGuHcw');
+    }
+  }
+
+  sd_MBDcr98NXT9UdSLY(bh) {
+    try {
+      this.page.shareform = this.__page_injector__.get(shareformService);
+      bh = this.sd_xj135eBWL2U6887S(bh);
+      //appendnew_next_sd_MBDcr98NXT9UdSLY
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_MBDcr98NXT9UdSLY');
+    }
+  }
+
+  sd_xj135eBWL2U6887S(bh) {
+    try {
+      const page = this.page;
+      page.shareform.myForm = page.stateForm.status;
+      page.shareform.data.state = page.stateForm.controls.state.value;
+      console.log(page.shareform.data.state);
+      //appendnew_next_sd_xj135eBWL2U6887S
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_xj135eBWL2U6887S');
     }
   }
 

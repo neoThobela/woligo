@@ -58,7 +58,7 @@
         ],
         "functionName": "sd_NaYbrgkWzl2wcsqx",
         "category": "Function",
-        "x": 305,
+        "x": 225,
         "y": 40,
         "wires": [
             [
@@ -67,7 +67,8 @@
         ],
         "__n_excludedFromValidation__": {},
         "generateNext": false,
-        "generated": true
+        "generated": true,
+        "serviceName": "homeComponent"
     },
     {
         "id": "sd_ZSg2zzPnQehh7CSa",
@@ -122,7 +123,7 @@
         "script": "page.btnVal=\"Preview\";",
         "functionName": "sd_oHMuuP1rJGuZeSHc",
         "category": "Function",
-        "x": 465,
+        "x": 385,
         "y": 40,
         "wires": [
             [
@@ -177,7 +178,7 @@
         "serviceDesignerType": "pages",
         "functionName": "sd_nd5sMjlINfEqQitf",
         "category": "Function",
-        "x": 625,
+        "x": 525,
         "y": 40,
         "wires": [
             [
@@ -198,11 +199,238 @@
         "script": "// console.log('page.router', page.router.url);\npage.routerVal = page.router.url;\npage.router.events.subscribe((event) => {\n    if (event instanceof page.navigationEnd) {\n        // Hide loading indicator\n        console.log(event)\n    page.routerVal = event.url\n    }\n\n});\nconsole.log('page.router', page.routerVal);\n",
         "functionName": "sd_tN5FhXzwFVquRgkS",
         "category": "Function",
-        "x": 745,
+        "x": 665,
+        "y": 40,
+        "wires": [
+            [
+                "sd_JpYMcXfqWCoAMkv4"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "generated": true
+    },
+    {
+        "id": "sd_JpYMcXfqWCoAMkv4",
+        "type": "UseDependency",
+        "z": "sd_90r9o8BGj0bugnFg",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "inputs": 1,
+        "outputs": 1,
+        "property": "",
+        "propertyType": "bh",
+        "propertyGv": "bh.",
+        "alias": "",
+        "modules": [
+            {
+                "textIp": "shareformService",
+                "typedIpValue": {
+                    "type": "this.page",
+                    "value": "shareform"
+                },
+                "injectable": true
+            }
+        ],
+        "import_all": false,
+        "library": "app/services/shareform/shareform.service",
+        "serviceDesignerType": "pages",
+        "functionName": "sd_JpYMcXfqWCoAMkv4",
+        "category": "Function",
+        "x": 780,
         "y": 40,
         "wires": [
             []
         ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "generated": true
+    },
+    {
+        "id": "sd_rLZ5b1P6VEE25nVb",
+        "type": "PageStart",
+        "z": "sd_90r9o8BGj0bugnFg",
+        "viewType": "pages",
+        "nodeType": "start",
+        "name": "",
+        "outputs": 1,
+        "inputVariables": [
+            {
+                "key": "data",
+                "defaultValue": {
+                    "type": "any",
+                    "value": ""
+                },
+                "output": false
+            }
+        ],
+        "localVariables": [],
+        "flow_type": "sync",
+        "functionName": "sd_rLZ5b1P6VEE25nVb",
+        "category": "General",
+        "x": 120,
+        "y": 280,
+        "wires": [
+            [
+                "sd_UokGhsz284oYG6qK"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "homeComponent"
+    },
+    {
+        "id": "sd_UokGhsz284oYG6qK",
+        "type": "OpenDialog",
+        "z": "sd_90r9o8BGj0bugnFg",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "outputs": 4,
+        "flow": {
+            "flowId": "sd_1f1RQRFiOOiylvG1",
+            "label": "needHelpDialog"
+        },
+        "relativePath": "./needHelpDialog",
+        "data": "this.page",
+        "ariaDescribedBy": "this.page",
+        "ariaLabel": "this.page",
+        "ariaLabelledBy": "this.page",
+        "autoFocus": "this.page",
+        "backdropClass": "this.page",
+        "closeOnNavigation": "this.page",
+        "direction": "this.page",
+        "disableClose": "this.page",
+        "hasBackdrop": "this.page",
+        "height": "this.page",
+        "maxHeight": "this.page",
+        "minHeight": "this.page",
+        "width": "this.page",
+        "maxWidth": "this.page",
+        "minWidth": "this.page",
+        "panelClass": "this.page",
+        "position": "this.page",
+        "restoreFocus": "this.page",
+        "role": "this.page",
+        "resultMapping": "this.page",
+        "functionName": "sd_UokGhsz284oYG6qK",
+        "category": "Dialog",
+        "x": 325,
+        "y": 280,
+        "wires": [
+            [],
+            [],
+            [],
+            []
+        ],
+        "__ssdTypeInputs__": {
+            "data": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "ariaDescribedBy": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "ariaLabel": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "ariaLabelledBy": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "autoFocus": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "backdropClass": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "closeOnNavigation": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "direction": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "disableClose": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "hasBackdrop": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "height": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "maxHeight": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "minHeight": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "width": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "maxWidth": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "minWidth": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "panelClass": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "position": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "restoreFocus": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "role": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "resultMapping": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            }
+        },
         "__n_excludedFromValidation__": {},
         "generateNext": false,
         "generated": true

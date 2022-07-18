@@ -99,7 +99,8 @@
         ],
         "__n_excludedFromValidation__": {},
         "generateNext": false,
-        "generated": true
+        "generated": true,
+        "serviceName": "needCompComponent"
     },
     {
         "id": "sd_9QIpXwUe9DvfBJBT",
@@ -108,7 +109,7 @@
         "viewType": "common",
         "nodeType": "flow",
         "name": "",
-        "script": "console.log('child', this.selection)\npage.icons=[\n// { \"icon\":\"Web/Images/family.png\",\"iconColor\":\"Web/Images/colorFamily.png\",\"paragraph\":\"I need protect my income  or family\"},\n{ \"icon\":\"Web/Images/health.png\",\"paragraph\":\"I need health insurance            \"},\n{ \"icon\":\"Web/Images/business.png\",\"paragraph\":\"I need to protect my business \"}\n  ]//my income or family",
+        "script": "\npage.icons=[\n// { \"icon\":\"Web/Images/family.png\",\"iconColor\":\"Web/Images/colorFamily.png\",\"paragraph\":\"I need protect my income  or family\"},\n{ \"icon\":\"Web/Images/health.png\",\"paragraph\":\"I need health insurance            \"},\n{ \"icon\":\"Web/Images/business.png\",\"paragraph\":\"I need to protect my business \"}\n  ]//my income or family",
         "functionName": "sd_9QIpXwUe9DvfBJBT",
         "category": "Function",
         "x": 305,
@@ -120,7 +121,8 @@
         ],
         "__n_excludedFromValidation__": {},
         "generateNext": false,
-        "generated": true
+        "generated": true,
+        "serviceName": "needCompComponent"
     },
     {
         "id": "sd_jTXzo5rcSz9qP4ie",
@@ -156,8 +158,8 @@
         "script": "page.checkedBox =!page.checkedBox",
         "functionName": "sd_9NFZdZ9WA9zpxEGl",
         "category": "Function",
-        "x": 200,
-        "y": 240,
+        "x": 205,
+        "y": 220,
         "wires": [
             []
         ],
@@ -243,6 +245,272 @@
         "wires": [
             []
         ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "generated": true
+    },
+    {
+        "id": "sd_KaopWNo7UMhyZhjk",
+        "type": "UseDependency",
+        "z": "sd_Y8tD969fju2JFvRU",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "inputs": 1,
+        "outputs": 1,
+        "property": "",
+        "propertyType": "bh",
+        "propertyGv": "bh.",
+        "alias": "",
+        "modules": [
+            {
+                "textIp": "shareformService",
+                "typedIpValue": {
+                    "type": "this.page",
+                    "value": "shareform"
+                },
+                "injectable": true
+            }
+        ],
+        "import_all": false,
+        "library": "app/services/shareform/shareform.service",
+        "serviceDesignerType": "pages",
+        "functionName": "sd_KaopWNo7UMhyZhjk",
+        "category": "Function",
+        "x": 245,
+        "y": 360,
+        "wires": [
+            [
+                "sd_YGhJ5vQEFpm3uexH"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "generated": true
+    },
+    {
+        "id": "sd_jP6L1DObxyFW5CPR",
+        "type": "AfterContentChecked",
+        "z": "sd_Y8tD969fju2JFvRU",
+        "viewType": "common",
+        "nodeType": "start",
+        "name": "After Content Checked",
+        "functionName": "ngAfterContentChecked",
+        "category": "Lifecycle Events",
+        "x": 80,
+        "y": 360,
+        "wires": [
+            [
+                "sd_KaopWNo7UMhyZhjk"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "needCompComponent"
+    },
+    {
+        "id": "sd_YGhJ5vQEFpm3uexH",
+        "type": "Script",
+        "z": "sd_Y8tD969fju2JFvRU",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "page.shareform.myForm=page.needForm.status",
+        "functionName": "sd_YGhJ5vQEFpm3uexH",
+        "category": "Function",
+        "x": 425,
+        "y": 360,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "generated": true
+    },
+    {
+        "id": "sd_do0njk6nVTUIwNTL",
+        "type": "PageStart",
+        "z": "sd_Y8tD969fju2JFvRU",
+        "viewType": "pages",
+        "nodeType": "start",
+        "name": "",
+        "outputs": 1,
+        "inputVariables": [
+            {
+                "key": "data",
+                "defaultValue": {
+                    "type": "any",
+                    "value": ""
+                },
+                "output": false
+            }
+        ],
+        "localVariables": [],
+        "flow_type": "sync",
+        "functionName": "sd_do0njk6nVTUIwNTL",
+        "category": "General",
+        "x": 365,
+        "y": 240,
+        "wires": [
+            [
+                "sd_DNt7aC77xKdRn0qi"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "needCompComponent"
+    },
+    {
+        "id": "sd_DNt7aC77xKdRn0qi",
+        "type": "OpenDialog",
+        "z": "sd_Y8tD969fju2JFvRU",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "outputs": 4,
+        "flow": {
+            "flowId": "sd_5KMiQBQ43gQfCnVG",
+            "label": "dialogBox"
+        },
+        "relativePath": "./dialogBox",
+        "data": "this.page",
+        "ariaDescribedBy": "this.page",
+        "ariaLabel": "this.page",
+        "ariaLabelledBy": "this.page",
+        "autoFocus": "this.page",
+        "backdropClass": "this.page",
+        "closeOnNavigation": "this.page",
+        "direction": "this.page",
+        "disableClose": "this.page",
+        "hasBackdrop": "this.page",
+        "height": "this.page",
+        "maxHeight": "this.page",
+        "minHeight": "this.page",
+        "width": "this.page",
+        "maxWidth": "this.page",
+        "minWidth": "this.page",
+        "panelClass": "this.page",
+        "position": "this.page",
+        "restoreFocus": "this.page",
+        "role": "this.page",
+        "resultMapping": "this.page",
+        "functionName": "sd_DNt7aC77xKdRn0qi",
+        "category": "Dialog",
+        "x": 570,
+        "y": 240,
+        "wires": [
+            [],
+            [],
+            [],
+            []
+        ],
+        "__ssdTypeInputs__": {
+            "data": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "ariaDescribedBy": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "ariaLabel": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "ariaLabelledBy": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "autoFocus": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "backdropClass": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "closeOnNavigation": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "direction": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "disableClose": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "hasBackdrop": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "height": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "maxHeight": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "minHeight": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "width": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "maxWidth": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "minWidth": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "panelClass": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "position": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "restoreFocus": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "role": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "resultMapping": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            }
+        },
         "__n_excludedFromValidation__": {},
         "generateNext": false,
         "generated": true

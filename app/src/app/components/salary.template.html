@@ -2,13 +2,15 @@
   <form [formGroup]="page.salaryForm">
     <div fxLayout="column wrap" class="width100" fxLayoutGap="1em" fxLayoutAlign="center center" [fxShow]="true">
       <div fxLayout="row wrap" fxLayoutAlign="center stretch" [fxShow]="true">
-        <h3>
+        <h3 class="fontSize18">
           What is your monthly gross income?</h3>
       </div>
       <div fxLayout="row wrap" fxLayoutAlign="center stretch" [fxShow]="true">
-        <mat-form-field style="width:300px" [appearance]="&apos;outline&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
-          <input matInput placeholder="$1,200" [required]="false" formControlName="salary">
-
+        <mat-form-field style="width:370px" [appearance]="&apos;outline&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
+          <input matInput placeholder="Enter your income" [required]="false" formControlName="salary">
+          <mat-error align="start" *ngIf="page.salaryForm.required">Enter your Salary</mat-error>
+          <mat-error align="start" *ngIf="page.salaryForm.controls.salary.errors?.pattern">Enter a number</mat-error>
+          <mat-error align="start" *ngIf="page.salaryForm.controls.salary.errors?.min">the gross salary should be $1,200 or greater</mat-error>
         </mat-form-field>
       </div>
     </div>

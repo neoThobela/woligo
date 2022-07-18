@@ -60,7 +60,8 @@
         ],
         "__n_excludedFromValidation__": {},
         "generateNext": false,
-        "generated": true
+        "generated": true,
+        "serviceName": "fourIconsComponent"
     },
     {
         "id": "sd_UvMwhkGHK2D4nFEx",
@@ -81,7 +82,8 @@
         ],
         "__n_excludedFromValidation__": {},
         "generateNext": false,
-        "generated": true
+        "generated": true,
+        "serviceName": "fourIconsComponent"
     },
     {
         "id": "sd_UTwjUcMWRxcIFYUj",
@@ -204,6 +206,272 @@
         "wires": [
             []
         ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "generated": true
+    },
+    {
+        "id": "sd_pPMYr9IyU7DSpdu2",
+        "type": "UseDependency",
+        "z": "sd_5httbDlk33UENCRB",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "inputs": 1,
+        "outputs": 1,
+        "property": "",
+        "propertyType": "bh",
+        "propertyGv": "bh.",
+        "alias": "",
+        "modules": [
+            {
+                "textIp": "shareformService",
+                "typedIpValue": {
+                    "type": "this.page",
+                    "value": "shareform"
+                },
+                "injectable": true
+            }
+        ],
+        "import_all": false,
+        "library": "app/services/shareform/shareform.service",
+        "serviceDesignerType": "pages",
+        "functionName": "sd_pPMYr9IyU7DSpdu2",
+        "category": "Function",
+        "x": 285,
+        "y": 320,
+        "wires": [
+            [
+                "sd_SfpspZIOeG3qWdlr"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "generated": true
+    },
+    {
+        "id": "sd_aGVRYNMAwl1XH4CL",
+        "type": "AfterContentChecked",
+        "z": "sd_5httbDlk33UENCRB",
+        "viewType": "common",
+        "nodeType": "start",
+        "name": "After Content Checked",
+        "functionName": "ngAfterContentChecked",
+        "category": "Lifecycle Events",
+        "x": 120,
+        "y": 320,
+        "wires": [
+            [
+                "sd_pPMYr9IyU7DSpdu2"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "fourIconsComponent"
+    },
+    {
+        "id": "sd_SfpspZIOeG3qWdlr",
+        "type": "Script",
+        "z": "sd_5httbDlk33UENCRB",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "page.shareform.myForm=page.insuranceTypeForm.status\n// page.shareform.data.insuranceType=page.insuranceTypeForm.controls.insuranceType\n// console.log(page.shareform.data.insuranceType)",
+        "functionName": "sd_SfpspZIOeG3qWdlr",
+        "category": "Function",
+        "x": 465,
+        "y": 320,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "generated": true
+    },
+    {
+        "id": "sd_G6zVN8ZQ7buWO36w",
+        "type": "PageStart",
+        "z": "sd_5httbDlk33UENCRB",
+        "viewType": "pages",
+        "nodeType": "start",
+        "name": "",
+        "outputs": 1,
+        "inputVariables": [
+            {
+                "key": "data",
+                "defaultValue": {
+                    "type": "any",
+                    "value": ""
+                },
+                "output": false
+            }
+        ],
+        "localVariables": [],
+        "flow_type": "sync",
+        "functionName": "sd_G6zVN8ZQ7buWO36w",
+        "category": "General",
+        "x": 487,
+        "y": 201.8125,
+        "wires": [
+            [
+                "sd_bSFnTPY1Ak5rXWYM"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "fourIconsComponent"
+    },
+    {
+        "id": "sd_bSFnTPY1Ak5rXWYM",
+        "type": "OpenDialog",
+        "z": "sd_5httbDlk33UENCRB",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "outputs": 4,
+        "flow": {
+            "flowId": "sd_5KMiQBQ43gQfCnVG",
+            "label": "dialogBox"
+        },
+        "relativePath": "./dialogBox",
+        "data": "this.page",
+        "ariaDescribedBy": "this.page",
+        "ariaLabel": "this.page",
+        "ariaLabelledBy": "this.page",
+        "autoFocus": "this.page",
+        "backdropClass": "this.page",
+        "closeOnNavigation": "this.page",
+        "direction": "this.page",
+        "disableClose": "this.page",
+        "hasBackdrop": "this.page",
+        "height": "this.page",
+        "maxHeight": "this.page",
+        "minHeight": "this.page",
+        "width": "this.page",
+        "maxWidth": "this.page",
+        "minWidth": "this.page",
+        "panelClass": "this.page",
+        "position": "this.page",
+        "restoreFocus": "this.page",
+        "role": "this.page",
+        "resultMapping": "this.page",
+        "functionName": "sd_bSFnTPY1Ak5rXWYM",
+        "category": "Dialog",
+        "x": 692,
+        "y": 201.8125,
+        "wires": [
+            [],
+            [],
+            [],
+            []
+        ],
+        "__ssdTypeInputs__": {
+            "data": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "ariaDescribedBy": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "ariaLabel": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "ariaLabelledBy": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "autoFocus": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "backdropClass": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "closeOnNavigation": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "direction": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "disableClose": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "hasBackdrop": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "height": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "maxHeight": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "minHeight": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "width": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "maxWidth": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "minWidth": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "panelClass": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "position": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "restoreFocus": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "role": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "resultMapping": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            }
+        },
         "__n_excludedFromValidation__": {},
         "generateNext": false,
         "generated": true

@@ -22,8 +22,8 @@
         "outputVariables": [],
         "functionName": "sd_fu8rUxxyJfPaP6hF",
         "category": "Lifecycle Events",
-        "x": 25,
-        "y": 40,
+        "x": 45,
+        "y": 60,
         "wires": [
             [
                 "sd_72pIuvLMX3qRrrEK"
@@ -54,8 +54,8 @@
         ],
         "functionName": "sd_72pIuvLMX3qRrrEK",
         "category": "Function",
-        "x": 185,
-        "y": 40,
+        "x": 145,
+        "y": 60,
         "wires": [
             [
                 "sd_BtdHckZVCV5498OL"
@@ -63,7 +63,8 @@
         ],
         "__n_excludedFromValidation__": {},
         "generateNext": false,
-        "generated": true
+        "generated": true,
+        "serviceName": "dateOfBirthComponent"
     },
     {
         "id": "sd_cEm6zR4Xgj9BEX8O",
@@ -72,17 +73,20 @@
         "viewType": "common",
         "nodeType": "flow",
         "name": "",
-        "script": " page.dobForm = new FormGroup({\n    dob: new FormControl('',[Validators.required]),\n  });\nconsole.log(\"form\",page.dobForm)",
+        "script": " page.dobForm = new FormGroup({\n   dob: new FormControl(null, [NgxAgeValidator(18, 60),Validators.required])\n  });\nconsole.log(\"form\",page.dobForm)",
         "functionName": "sd_cEm6zR4Xgj9BEX8O",
         "category": "Function",
-        "x": 500,
-        "y": 40,
+        "x": 625,
+        "y": 60,
         "wires": [
-            []
+            [
+                "sd_HJsKUlh6AW6s65yQ"
+            ]
         ],
         "__n_excludedFromValidation__": {},
         "generateNext": false,
-        "generated": true
+        "generated": true,
+        "serviceName": "dateOfBirthComponent"
     },
     {
         "id": "sd_BtdHckZVCV5498OL",
@@ -129,6 +133,14 @@
                     "value": ""
                 },
                 "injectable": false
+            },
+            {
+                "textIp": "ValidationErrors",
+                "typedIpValue": {
+                    "type": "this.page",
+                    "value": ""
+                },
+                "injectable": false
             }
         ],
         "import_all": false,
@@ -136,11 +148,11 @@
         "serviceDesignerType": "pages",
         "functionName": "sd_BtdHckZVCV5498OL",
         "category": "Function",
-        "x": 325,
-        "y": 40,
+        "x": 265,
+        "y": 60,
         "wires": [
             [
-                "sd_cEm6zR4Xgj9BEX8O"
+                "sd_B7aF1oBUAUMfHKPc"
             ]
         ],
         "__n_excludedFromValidation__": {},
@@ -192,6 +204,254 @@
         "category": "Function",
         "x": 360,
         "y": 200,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "generated": true
+    },
+    {
+        "id": "sd_B7aF1oBUAUMfHKPc",
+        "type": "UseDependency",
+        "z": "sd_BtNk2YVQQ7iho5P2",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "inputs": 1,
+        "outputs": 1,
+        "property": "",
+        "propertyType": "bh",
+        "propertyGv": "bh.",
+        "alias": "",
+        "modules": [
+            {
+                "textIp": "EventEmitter",
+                "typedIpValue": {
+                    "type": "this.page",
+                    "value": ""
+                },
+                "injectable": false
+            },
+            {
+                "textIp": "Output",
+                "typedIpValue": {
+                    "type": "this.page",
+                    "value": ""
+                },
+                "injectable": false
+            }
+        ],
+        "import_all": false,
+        "library": "@angular/core",
+        "serviceDesignerType": "pages",
+        "functionName": "sd_B7aF1oBUAUMfHKPc",
+        "category": "Function",
+        "x": 385,
+        "y": 60,
+        "wires": [
+            [
+                "sd_AcP0HYzuCAafET7E"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "generated": true
+    },
+    {
+        "id": "sd_Vz5Nd5Ir2x3gbzQm",
+        "type": "Output",
+        "z": "sd_BtNk2YVQQ7iho5P2",
+        "viewType": "pages",
+        "nodeType": "flow",
+        "name": "",
+        "eventName": "bh.pageOutput.emitValue",
+        "data": "this.page.dobForm.value",
+        "functionName": "sd_Vz5Nd5Ir2x3gbzQm",
+        "category": "Function",
+        "x": 365,
+        "y": 620,
+        "wires": [
+            []
+        ],
+        "__ssdTypeInputs__": {
+            "eventName": {
+                "type": "bh.pageOutput",
+                "value": "emitValue",
+                "constant": false
+            },
+            "data": {
+                "type": "this.page",
+                "value": "dobForm.value",
+                "constant": false
+            }
+        },
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "generated": true
+    },
+    {
+        "id": "sd_zkKwY7Eppd7zRX8K",
+        "type": "PageStart",
+        "z": "sd_BtNk2YVQQ7iho5P2",
+        "viewType": "pages",
+        "nodeType": "start",
+        "name": "",
+        "outputs": 1,
+        "inputVariables": [
+            {
+                "key": "dob",
+                "defaultValue": {
+                    "type": "any",
+                    "value": ""
+                },
+                "output": false
+            }
+        ],
+        "localVariables": [],
+        "flow_type": "sync",
+        "functionName": "sd_zkKwY7Eppd7zRX8K",
+        "category": "General",
+        "x": 160,
+        "y": 620,
+        "wires": [
+            [
+                "sd_Vz5Nd5Ir2x3gbzQm"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "dateOfBirthComponent"
+    },
+    {
+        "id": "sd_AcP0HYzuCAafET7E",
+        "type": "UseDependency",
+        "z": "sd_BtNk2YVQQ7iho5P2",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "inputs": 1,
+        "outputs": 1,
+        "property": "",
+        "propertyType": "bh",
+        "propertyGv": "bh.",
+        "alias": "",
+        "modules": [
+            {
+                "textIp": "NgxAgeValidator",
+                "typedIpValue": {
+                    "type": "this.page",
+                    "value": ""
+                },
+                "injectable": false
+            }
+        ],
+        "import_all": false,
+        "library": "ngx-age-validator",
+        "serviceDesignerType": "pages",
+        "functionName": "sd_AcP0HYzuCAafET7E",
+        "category": "Function",
+        "x": 505,
+        "y": 60,
+        "wires": [
+            [
+                "sd_cEm6zR4Xgj9BEX8O"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "generated": true
+    },
+    {
+        "id": "sd_HJsKUlh6AW6s65yQ",
+        "type": "Script",
+        "z": "sd_BtNk2YVQQ7iho5P2",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "page.dobForm.controls.dob.valueChanges.subscribe(() => {\n \n      const controlErrors: ValidationErrors | null = page.dobForm.controls.dob.errors;\n      if (controlErrors != null) {\n        Object.keys(controlErrors).forEach(keyError => {\n          console.log(' keyError: ' + keyError + ', err value: ', controlErrors[keyError]);\n        });\n      }\n \n    })\n  ",
+        "functionName": "sd_HJsKUlh6AW6s65yQ",
+        "category": "Function",
+        "x": 765,
+        "y": 60,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "generated": true
+    },
+    {
+        "id": "sd_OcXEx2uExoOFVBcm",
+        "type": "UseDependency",
+        "z": "sd_BtNk2YVQQ7iho5P2",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "inputs": 1,
+        "outputs": 1,
+        "property": "",
+        "propertyType": "bh",
+        "propertyGv": "bh.",
+        "alias": "",
+        "modules": [
+            {
+                "textIp": "shareformService",
+                "typedIpValue": {
+                    "type": "this.page",
+                    "value": "shareform"
+                },
+                "injectable": true
+            }
+        ],
+        "import_all": false,
+        "library": "app/services/shareform/shareform.service",
+        "serviceDesignerType": "pages",
+        "functionName": "sd_OcXEx2uExoOFVBcm",
+        "category": "Function",
+        "x": 325,
+        "y": 340,
+        "wires": [
+            [
+                "sd_KXhwJGYqpAdYEHP6"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "generated": true
+    },
+    {
+        "id": "sd_GITQTOhxGnvoYsv3",
+        "type": "AfterContentChecked",
+        "z": "sd_BtNk2YVQQ7iho5P2",
+        "viewType": "common",
+        "nodeType": "start",
+        "name": "After Content Checked",
+        "functionName": "ngAfterContentChecked",
+        "category": "Lifecycle Events",
+        "x": 160,
+        "y": 340,
+        "wires": [
+            [
+                "sd_OcXEx2uExoOFVBcm"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "dateOfBirthComponent"
+    },
+    {
+        "id": "sd_KXhwJGYqpAdYEHP6",
+        "type": "Script",
+        "z": "sd_BtNk2YVQQ7iho5P2",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "page.shareform.myForm=page.dobForm.status\npage.shareform.data.dob=page.dobForm.controls.dob.value\nconsole.log(page.shareform.data.dob)",
+        "functionName": "sd_KXhwJGYqpAdYEHP6",
+        "category": "Function",
+        "x": 505,
+        "y": 340,
         "wires": [
             []
         ],

@@ -12,14 +12,13 @@
             },
             {
                 "_key": "style",
-                "_value": "",
+                "_value": "padding:8px",
                 "_type": "kv",
                 "_attrDef": "p"
             },
             {
                 "_key": "class",
                 "_value": [
-                    "borderBottom",
                     "width100"
                 ],
                 "_type": "dav",
@@ -1189,7 +1188,7 @@
                 },
                 {
                     "_key": "[fxShow]",
-                    "_value": "true",
+                    "_value": "page.routerVal=='/home/summary'||page.routerVal=='/home/gender'||page.routerVal=='/home/employee'||page.routerVal=='/home/dob'||page.routerVal=='/home/four'||page.routerVal=='/home/need'||page.routerVal=='/home/nicotine'||page.routerVal=='/home/occupation'||page.routerVal=='/home/hours'||page.routerVal=='/home/salary'||page.routerVal=='/home/state'",
                     "_type": "kv",
                     "_attrDef": "p",
                     "_customAttributeFlag": "customInput"

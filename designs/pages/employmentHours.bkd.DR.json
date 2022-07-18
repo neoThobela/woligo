@@ -256,7 +256,9 @@
                             },
                             {
                                 "_key": "class",
-                                "_value": "",
+                                "_value": [
+                                    "fontSize18"
+                                ],
                                 "_type": "dav",
                                 "_attrDef": "p"
                             },
@@ -676,15 +678,13 @@
                                     },
                                     {
                                         "_key": "style",
-                                        "_value": "",
+                                        "_value": "width:60%;",
                                         "_type": "kv",
                                         "_attrDef": "p"
                                     },
                                     {
                                         "_key": "class",
-                                        "_value": [
-                                            "width90"
-                                        ],
+                                        "_value": [],
                                         "_type": "dav",
                                         "_attrDef": "p"
                                     },
@@ -863,7 +863,9 @@
                                                 },
                                                 {
                                                     "_key": "class",
-                                                    "_value": "",
+                                                    "_value": [
+                                                        "font400"
+                                                    ],
                                                     "_type": "dav",
                                                     "_attrDef": "p"
                                                 },
@@ -1134,6 +1136,7 @@
                                         "84dc04a0-22d7-f67b-77c9-72253148b85b": {
                                             "paletteKey": "NG-Radio",
                                             "parentEditorKey": "3ce8b9ec-53dc-5379-c451-111f816236f9",
+                                            "isCommented": "false",
                                             "commentid": null,
                                             "designerReference": [
                                                 {
@@ -1157,7 +1160,7 @@
                                                 },
                                                 {
                                                     "_key": "[value]",
-                                                    "_value": "'yes'",
+                                                    "_value": "'Yes'",
                                                     "_type": "kv",
                                                     "_attrDef": "p"
                                                 },
@@ -1371,7 +1374,9 @@
                                                 },
                                                 {
                                                     "_key": "class",
-                                                    "_value": "",
+                                                    "_value": [
+                                                        "font400"
+                                                    ],
                                                     "_type": "dav",
                                                     "_attrDef": "p"
                                                 },
@@ -1665,7 +1670,7 @@
                                                 },
                                                 {
                                                     "_key": "[value]",
-                                                    "_value": "'no'",
+                                                    "_value": "'No'",
                                                     "_type": "kv",
                                                     "_attrDef": "p"
                                                 },

@@ -771,7 +771,7 @@
                                         },
                                         {
                                             "_key": "fxLayoutGap",
-                                            "_value": "2em",
+                                            "_value": "1em",
                                             "_type": "kv",
                                             "_attrDef": "p"
                                         },
@@ -938,7 +938,7 @@
                                                     },
                                                     {
                                                         "_key": "style",
-                                                        "_value": "width:28px;height:34px",
+                                                        "_value": "width:38px;height:44px",
                                                         "_type": "kv",
                                                         "_attrDef": "p"
                                                     },
@@ -1012,7 +1012,7 @@
                                                     },
                                                     {
                                                         "_key": "style",
-                                                        "_value": "width:28px;height:34px",
+                                                        "_value": "width:38px;height:44px",
                                                         "_type": "kv",
                                                         "_attrDef": "p"
                                                     },
@@ -1446,7 +1446,7 @@
                                                     },
                                                     {
                                                         "_key": "[value]",
-                                                        "_value": "'male'",
+                                                        "_value": "'Male'",
                                                         "_type": "kv",
                                                         "_attrDef": "p"
                                                     },
@@ -1660,7 +1660,7 @@
                                                     },
                                                     {
                                                         "_key": "style",
-                                                        "_value": "width:28px;height:34px",
+                                                        "_value": "width:38px;height:44px",
                                                         "_type": "kv",
                                                         "_attrDef": "p"
                                                     },
@@ -1734,7 +1734,7 @@
                                                     },
                                                     {
                                                         "_key": "style",
-                                                        "_value": "width:28px;height:34px",
+                                                        "_value": "width:38px;height:44px",
                                                         "_type": "kv",
                                                         "_attrDef": "p"
                                                     },
@@ -2168,7 +2168,7 @@
                                                     },
                                                     {
                                                         "_key": "[value]",
-                                                        "_value": "'female'",
+                                                        "_value": "'Female'",
                                                         "_type": "kv",
                                                         "_attrDef": "p"
                                                     },
@@ -2707,7 +2707,7 @@
                                         },
                                         {
                                             "_key": "fxLayoutGap",
-                                            "_value": "3.5em",
+                                            "_value": "2.5em",
                                             "_type": "kv",
                                             "_attrDef": "p"
                                         },
@@ -3171,7 +3171,7 @@
                                                     },
                                                     {
                                                         "_key": "[value]",
-                                                        "_value": "'yes'",
+                                                        "_value": "'Yes'",
                                                         "_type": "kv",
                                                         "_attrDef": "p"
                                                     },
@@ -3682,7 +3682,7 @@
                                                     },
                                                     {
                                                         "_key": "[value]",
-                                                        "_value": "'no'",
+                                                        "_value": "'No'",
                                                         "_type": "kv",
                                                         "_attrDef": "p"
                                                     },

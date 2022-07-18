@@ -15,6 +15,12 @@ window['neutrinos'] = {
 };
 
 //CORE_REFERENCE_IMPORTS
+//CORE_REFERENCE_IMPORT-needHelpDialogComponent
+import { needHelpDialogComponent } from '../components/needHelpDialog.component';
+//CORE_REFERENCE_IMPORT-dialogBoxComponent
+import { dialogBoxComponent } from '../components/dialogBox.component';
+//CORE_REFERENCE_IMPORT-shareformService
+import { shareformService } from '../services/shareform/shareform.service';
 //CORE_REFERENCE_IMPORT-dataService
 import { dataService } from '../services/data/data.service';
 //CORE_REFERENCE_IMPORT-employmentHoursComponent
@@ -81,6 +87,10 @@ export const appDeclarations = [
   PageNotFoundComponent,
   ArtImgSrcDirective,
   //CORE_REFERENCE_PUSH_TO_DEC_ARRAY
+  //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-needHelpDialogComponent
+  needHelpDialogComponent,
+  //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-dialogBoxComponent
+  dialogBoxComponent,
   //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-employmentHoursComponent
   employmentHoursComponent,
   //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-fourIconsComponent
@@ -130,8 +140,10 @@ export const appProviders = [
   },
   NAuthGuardService,
   //CORE_REFERENCE_PUSH_TO_PRO_ARRAY
-//CORE_REFERENCE_PUSH_TO_PRO_ARRAY-dataService
-dataService,
+  //CORE_REFERENCE_PUSH_TO_PRO_ARRAY-shareformService
+  shareformService,
+  //CORE_REFERENCE_PUSH_TO_PRO_ARRAY-dataService
+  dataService,
 ];
 
 /**

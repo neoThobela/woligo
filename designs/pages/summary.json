@@ -51,11 +51,11 @@
         ],
         "functionName": "sd_5IJ7DiEuM1ybwDCH",
         "category": "Function",
-        "x": 165,
+        "x": 145,
         "y": 40,
         "wires": [
             [
-                "sd_f1NdOgy88VuN0XXG"
+                "sd_0WRKsukb2tyhGbtu"
             ]
         ],
         "__n_excludedFromValidation__": {},
@@ -69,10 +69,10 @@
         "viewType": "common",
         "nodeType": "flow",
         "name": "",
-        "script": "page.summary=[{\n    title:\"Protection type\",\n    content:\"Protect income or family\"\n},\n{\n    title:\"Insurance type\",\n    content:\"Disability\"\n},\n{\n    title:\"Date of birth\",\n    content:\"01/01/1985\"\n},\n{\n    title:\"Gender at birth\",\n    content:\"Female\"\n},\n{\n    title:\"Maternity leave coverage?\",\n    content:\"No\"\n},\n{\n    title:\"State\",\n    content:\"Tennessee\"\n},\n{\n    title:\"Occupation category\",\n    content:\"Artist\"\n},\n{\n    title:\"Are you employed full-time and work at least 30 hours per week?\",\n    content:\"Yes\"\n},\n{\n    title:\"Monthly Gross Income\",\n    content:\"$1,200\"\n},\n{\n    title:\"Government employee\",\n    content:\"No\"\n},\n{\n    title:\"Do you use nicotine?\",\n    content:\"No\"\n}\n]",
+        "script": "// page.summary=[{\n//     title:\"Protection type\",\n//     content:\"Protect income or family\"\n// },\n// {\n//     title:\"Insurance type\",\n//     content:\"Disability\"\n// },\n// {\n//     title:\"Date of birth\",\n//     content:\"01/01/1985\"\n// },\n// {\n//     title:\"Gender at birth\",\n//     content:\"Female\"\n// },\n// {\n//     title:\"Maternity leave coverage?\",\n//     content:\"No\"\n// },\n// {\n//     title:\"State\",\n//     content:\"Tennessee\"\n// },\n// {\n//     title:\"Occupation category\",\n//     content:\"Artist\"\n// },\n// {\n//     title:\"Are you employed full-time and work at least 30 hours per week?\",\n//     content:\"Yes\"\n// },\n// {\n//     title:\"Monthly Gross Income\",\n//     content:\"$1,200\"\n// },\n// {\n//     title:\"Government employee\",\n//     content:\"No\"\n// },\n// {\n//     title:\"Do you use nicotine?\",\n//     content:\"No\"\n// }\n// ]\npage.summary=[{title:\"Protection type\",content:\"Protect income or family\"},\n              {title:\"Insurance type\",content:\"Disability Insurance\"},\n              {title:\"Date of birth\",content:page.shareform.data.dob},\n              {title:\"Gender at birth\",content:page.shareform.data.gender},\n              {title:\"Maternity leave coverage?\",content:page.shareform.data.maternity},\n              {title:\"State\",content:page.shareform.data.state},\n              {title:\"Occupation category\",content:page.shareform.data.occupation},\n              {title:\"Are you employed full-time and work at least 30 hours per week?\",content:page.shareform.data.hours},\n              {title:\"Monthly Gross Income\",content:\"$\"+page.shareform.data.salary},\n              {title:\"Government employee\",content:page.shareform.data.governmentEmployee},\n              {title:\"Do you use nicotine?\",content:page.shareform.data.nicotine},\n]",
         "functionName": "sd_f1NdOgy88VuN0XXG",
         "category": "Function",
-        "x": 320,
+        "x": 385,
         "y": 40,
         "wires": [
             [
@@ -127,7 +127,7 @@
         "serviceDesignerType": "pages",
         "functionName": "sd_4E7S5LJSKKYQKqcc",
         "category": "Function",
-        "x": 445,
+        "x": 505,
         "y": 40,
         "wires": [
             [
@@ -148,10 +148,49 @@
         "script": "// console.log('page.router', page.router.url);\npage.routerVal = page.router.url;\npage.router.events.subscribe((event) => {\n    if (event instanceof page.navigationEnd) {\n        // Hide loading indicator\n        console.log(event)\n    }\n\n});\nconsole.log('page.router', page.routerVal);\n",
         "functionName": "sd_TgNYaPHqpTqfBCcs",
         "category": "Function",
-        "x": 565,
+        "x": 625,
         "y": 40,
         "wires": [
             []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "generated": true
+    },
+    {
+        "id": "sd_0WRKsukb2tyhGbtu",
+        "type": "UseDependency",
+        "z": "sd_lOipTkawQFpt8JAi",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "inputs": 1,
+        "outputs": 1,
+        "property": "",
+        "propertyType": "bh",
+        "propertyGv": "bh.",
+        "alias": "",
+        "modules": [
+            {
+                "textIp": "shareformService",
+                "typedIpValue": {
+                    "type": "this.page",
+                    "value": "shareform"
+                },
+                "injectable": true
+            }
+        ],
+        "import_all": false,
+        "library": "app/services/shareform/shareform.service",
+        "serviceDesignerType": "pages",
+        "functionName": "sd_0WRKsukb2tyhGbtu",
+        "category": "Function",
+        "x": 265,
+        "y": 40,
+        "wires": [
+            [
+                "sd_f1NdOgy88VuN0XXG"
+            ]
         ],
         "__n_excludedFromValidation__": {},
         "generateNext": false,

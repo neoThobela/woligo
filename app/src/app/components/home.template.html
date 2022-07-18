@@ -1,17 +1,17 @@
 <div fxLayout="column " class="backgoundImage" fxLayoutAlign="center center" [fxShow]="true" fxFill>
   <div fxLayout="row wrap" class="width80 backgorundColor heightwhite" fxLayoutAlign="start stretch" [fxShow]="true">
     <div fxLayout="column wrap" fxFlex="100" fxLayoutAlign="start stretch" [fxShow]="true">
-      <div fxLayout="row wrap" class="paddingtop toolbarHeight" fxLayoutAlign="center center" [fxShow]="true">
+      <div fxLayout="row wrap" class="toolbarHeight paddingtop" fxLayoutAlign="center center" [fxShow]="true">
         <bh-toolbar class="width100"></bh-toolbar>
       </div>
       <div fxLayout="row wrap" class="scroll bodyHeight width100" fxLayoutAlign="start stretch" [fxShow]="true">
-        <div fxLayout="column wrap" style="margin-top:30px" fxFlex="100" fxLayoutGap="1em" fxLayoutAlign="start center">
+        <div fxLayout="column wrap" style="margin-top:28px" fxFlex="100" fxLayoutGap="1em" fxLayoutAlign="start center">
           <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true">
             <div fxLayout="column wrap" fxLayoutGap="5px" fxLayoutAlign="center center" [fxShow]="page.routerVal==&apos;/home/gender&apos;||page.routerVal==&apos;/home/employee&apos;||page.routerVal==&apos;/home/dob&apos;||page.routerVal==&apos;/home/nicotine&apos;||page.routerVal==&apos;/home/occupation&apos;||page.routerVal==&apos;/home/hours&apos;||page.routerVal==&apos;/home/salary&apos;||page.routerVal==&apos;/home/state&apos;"><label class="fontSize12 lightGreyText">
                 Selected Plan</label>
-              <div fxLayout="row wrap" class="fontSize14" fxLayoutGap="5px" fxLayoutAlign="start stretch" [fxShow]="true">
+              <div fxLayout="row wrap" class="fontSize14" fxLayoutGap="5px" fxLayoutAlign="center center" [fxShow]="true">
                 <h3 class="fontSize16">
-                  Disability Insurance</h3><img imgSrc="/Web/Images/orangeEdit.png">
+                  Disability Insurance</h3><img imgSrc="/Web/Images/orangeEdit.png" style="width:15px;height;15px">
               </div>
             </div>
           </div>
@@ -50,11 +50,21 @@
               <router-outlet></router-outlet>
             </div>
           </div>
-          <div fxLayout="row wrap" style="height:100px" fxLayoutAlign="center center" [fxShow]="true">
+          <div fxLayout="row wrap" style="height:150px;marign-bottom:1em;" fxLayoutAlign="center end" [fxShow]="true" *ngIf="page.routerVal==&apos;/home/hours&apos;||page.routerVal==&apos;/home/occupation&apos;||page.routerVal==&apos;/home/nicotine&apos;||page.routerVal==&apos;/home/salary&apos;||page.routerVal==&apos;/home/dob&apos;||page.routerVal==&apos;/home/employee&apos;||page.routerVal==&apos;/home/state&apos;">
             <div fxLayout="column wrap" class="centerText" fxLayoutGap="10px" fxLayoutAlign="start stretch" [fxShow]="true">
               <div class="fontSize12">
                 Not sure?</div>
-              <div fxLayout="row wrap" fxLayoutGap="5px" fxLayoutAlign="center center" [fxShow]="true">
+              <div fxLayout="row wrap" fxLayoutGap="5px" fxLayoutAlign="center center" [fxShow]="true" (click)="sd_rLZ5b1P6VEE25nVb()">
+                <div class="fontSize12 blueText">
+                  I Need Advice</div><img imgSrc="/Web/Images/help.png" style="height:10px;width:10px">
+              </div>
+            </div>
+          </div>
+          <div fxLayout="row wrap" style="height:80px;margin-bottom: 2em;" fxLayoutAlign="center end" [fxShow]="true" *ngIf="page.routerVal==&apos;/home/need&apos;||page.routerVal==&apos;/home/four&apos;||page.routerVal==&apos;/home/gender&apos;">
+            <div fxLayout="column wrap" style="margin-bottom: 1em" class="centerText" fxLayoutGap="10px" fxLayoutAlign="start stretch" [fxShow]="true">
+              <div class="fontSize12">
+                Not sure?</div>
+              <div fxLayout="row wrap" fxLayoutGap="5px" fxLayoutAlign="center center" [fxShow]="true" (click)="sd_rLZ5b1P6VEE25nVb()">
                 <div class="fontSize12 blueText">
                   I Need Advice</div><img imgSrc="/Web/Images/help.png" style="height:10px;width:10px">
               </div>
@@ -62,35 +72,35 @@
           </div>
         </div>
       </div>
-      <div fxLayout="row wrap" class="padding10 borderTop width98" fxLayoutGap="10px" fxLayoutAlign="end end" [fxShow]="true"><button mat-raised-button style="width:100px" routerLink="nicotine" class="fontWeight500 secondary-button" *ngIf="page.routerVal==&apos;/home/summary&apos;">
+      <div fxLayout="row wrap" class="padding10 borderTop width98" fxLayoutGap="10px" fxLayoutAlign="end end" [fxShow]="page.routerVal==&apos;/home/summary&apos;||page.routerVal==&apos;/home/gender&apos;||page.routerVal==&apos;/home/employee&apos;||page.routerVal==&apos;/home/dob&apos;||page.routerVal==&apos;/home/four&apos;||page.routerVal==&apos;/home/need&apos;||page.routerVal==&apos;/home/nicotine&apos;||page.routerVal==&apos;/home/occupation&apos;||page.routerVal==&apos;/home/hours&apos;||page.routerVal==&apos;/home/salary&apos;||page.routerVal==&apos;/home/state&apos;"><button mat-raised-button style="width:100px" routerLink="nicotine" class="fontWeight500 secondary-button" *ngIf="page.routerVal==&apos;/home/summary&apos;">
           <mat-icon class="left fontSize14 lineHeight1-8">arrow_back</mat-icon><label>Back<label></label></label>
         </button><button mat-raised-button style="width:155px" routerLink="quotes" class="primary-button" *ngIf="page.routerVal==&apos;/home/summary&apos;" (click)="changeText()">Check My Price<mat-icon class="fontSize12 lineHeight1-9">arrow_forward</mat-icon></button><button mat-raised-button style="width:98px" routerLink="employee" class="fontWeight500 secondary-button" *ngIf="page.routerVal==&apos;/home/nicotine&apos;">
           <mat-icon class="left eft fontSize14 lineHeight1-8">arrow_back</mat-icon><label>Back<label></label></label>
-        </button><button mat-raised-button style="width:98px" routerLink="summary" class="primary-button" *ngIf="page.routerVal==&apos;/home/nicotine&apos;" (click)="changeText()">Next<mat-icon class="left fontSize14 lineHeight1-8">arrow_forward</mat-icon></button><button mat-raised-button style="width:98px" routerLink="salary" class="fontWeight500 secondary-button" *ngIf="page.routerVal==&apos;/home/employee&apos;">
+        </button><button mat-raised-button style="width:98px" routerLink="summary" class="primary-button" *ngIf="page.routerVal==&apos;/home/nicotine&apos;" (click)="changeText()" [disabled]="page.shareform.myForm==&apos;INVALID&apos;">Next<mat-icon class="left fontSize14 lineHeight1-8">arrow_forward</mat-icon></button><button mat-raised-button style="width:98px" routerLink="salary" class="fontWeight500 secondary-button" *ngIf="page.routerVal==&apos;/home/employee&apos;">
           <mat-icon class="left eft fontSize14 lineHeight1-8">arrow_back</mat-icon><label>Back<label></label></label>
-        </button><button mat-raised-button style="width:98px" routerLink="nicotine" class="primary-button" *ngIf="page.routerVal==&apos;/home/employee&apos;" (click)="changeText()">Next<mat-icon class="left fontSize14 lineHeight1-8">arrow_forward</mat-icon></button><button mat-raised-button style="width:98px" routerLink="hours" class="fontWeight500 secondary-button" *ngIf="page.routerVal==&apos;/home/salary&apos;">
+        </button><button mat-raised-button style="width:98px" routerLink="nicotine" class="primary-button" *ngIf="page.routerVal==&apos;/home/employee&apos;" (click)="changeText()" [disabled]="page.shareform.myForm==&apos;INVALID&apos;">Next<mat-icon class="left fontSize14 lineHeight1-8">arrow_forward</mat-icon></button><button mat-raised-button style="width:98px" routerLink="hours" class="fontWeight500 secondary-button" *ngIf="page.routerVal==&apos;/home/salary&apos;">
           <mat-icon class="left eft fontSize14 lineHeight1-8">arrow_back</mat-icon><label>Back<label></label></label>
-        </button><button mat-raised-button style="width:98px" routerLink="employee" class="primary-button" *ngIf="page.routerVal==&apos;/home/salary&apos;" (click)="changeText()">Next<mat-icon class="left fontSize14 lineHeight1-8">arrow_forward</mat-icon></button><button mat-raised-button style="width:98px" routerLink="occupation" class="fontWeight500 secondary-button" *ngIf="page.routerVal==&apos;/home/hours&apos;">
+        </button><button mat-raised-button style="width:98px" routerLink="employee" class="primary-button" *ngIf="page.routerVal==&apos;/home/salary&apos;" (click)="changeText()" [disabled]="page.shareform.myForm==&apos;INVALID&apos;">Next<mat-icon class="left fontSize14 lineHeight1-8">arrow_forward</mat-icon></button><button mat-raised-button style="width:98px" routerLink="occupation" class="fontWeight500 secondary-button" *ngIf="page.routerVal==&apos;/home/hours&apos;">
           <mat-icon class="left eft fontSize14 lineHeight1-8">arrow_back</mat-icon><label>Back<label></label></label>
-        </button><button mat-raised-button style="width:98px" routerLink="salary" class="primary-button" *ngIf="page.routerVal==&apos;/home/hours&apos;" (click)="changeText()">Next<mat-icon class="left fontSize14 lineHeight1-8">arrow_forward</mat-icon></button><button mat-raised-button style="width:98px" class="fontWeight500 secondary-button" *ngIf="page.routerVal==&apos;/home/need&apos;">
+        </button><button mat-raised-button style="width:98px" routerLink="salary" class="primary-button" *ngIf="page.routerVal==&apos;/home/hours&apos;" (click)="changeText()" [disabled]="page.shareform.myForm==&apos;INVALID&apos;">Next<mat-icon class="left fontSize14 lineHeight1-8">arrow_forward</mat-icon></button><button mat-raised-button style="width:98px" class="fontWeight500 secondary-button" *ngIf="page.routerVal==&apos;/home/need&apos;">
           <mat-icon class="left eft fontSize14 lineHeight1-8">arrow_back</mat-icon><label>Back<label></label></label>
-        </button><button mat-raised-button style="width:98px" routerLink="four" class="primary-button" *ngIf="page.routerVal==&apos;/home/need&apos;" (click)="changeText()">Next<mat-icon class="left fontSize14 lineHeight1-8">arrow_forward</mat-icon></button><button mat-raised-button style="width:98px" routerLink="need" class="fontWeight500 secondary-button" *ngIf="page.routerVal==&apos;/home/four&apos;">
+        </button><button mat-raised-button style="width:98px" routerLink="four" class="primary-button" *ngIf="page.routerVal==&apos;/home/need&apos;" (click)="changeText()" [disabled]="page.shareform.myForm==&apos;INVALID&apos;">Next<mat-icon class="left fontSize14 lineHeight1-8">arrow_forward</mat-icon></button><button mat-raised-button style="width:98px" routerLink="need" class="fontWeight500 secondary-button" *ngIf="page.routerVal==&apos;/home/four&apos;">
           <mat-icon class="left eft fontSize14 lineHeight1-8">arrow_back</mat-icon><label>Back<label></label></label>
-        </button><button mat-raised-button style="width:98px" routerLink="dob" class="primary-button" *ngIf="page.routerVal==&apos;/home/four&apos;" (click)="changeText()">Next<mat-icon class="left fontSize14 lineHeight1-8">arrow_forward</mat-icon></button><button mat-raised-button style="width:98px" routerLink="four" class="fontWeight500 secondary-button" *ngIf="page.routerVal==&apos;/home/dob&apos;">
+        </button><button mat-raised-button style="width:98px" routerLink="dob" class="primary-button" *ngIf="page.routerVal==&apos;/home/four&apos;" (click)="changeText()" [disabled]="page.shareform.myForm==&apos;INVALID&apos;">Next<mat-icon class="left fontSize14 lineHeight1-8">arrow_forward</mat-icon></button><button mat-raised-button style="width:98px" routerLink="four" class="fontWeight500 secondary-button" *ngIf="page.routerVal==&apos;/home/dob&apos;">
           <mat-icon class="left eft fontSize14 lineHeight1-8">arrow_back</mat-icon><label>Back<label></label></label>
-        </button><button mat-raised-button style="width:98px" routerLink="gender" class="primary-button" *ngIf="page.routerVal==&apos;/home/dob&apos;" (click)="changeText()" [disabled]="page.dobForm">Next<mat-icon class="left fontSize14 lineHeight1-8">arrow_forward</mat-icon></button><button mat-raised-button style="width:98px" routerLink="dob" class="fontWeight500 secondary-button" *ngIf="page.routerVal==&apos;/home/gender&apos;">
+        </button><button mat-raised-button style="width:98px" routerLink="gender" class="primary-button" *ngIf="page.routerVal==&apos;/home/dob&apos;" (click)="changeText()" [disabled]="page.shareform.myForm==&apos;INVALID&apos;">Next<mat-icon class="left fontSize14 lineHeight1-8">arrow_forward</mat-icon></button><button mat-raised-button style="width:98px" routerLink="dob" class="fontWeight500 secondary-button" *ngIf="page.routerVal==&apos;/home/gender&apos;">
           <mat-icon class="left eft fontSize14 lineHeight1-8">arrow_back</mat-icon><label>Back<label></label></label>
-        </button><button mat-raised-button style="width:98px" routerLink="state" class="primary-button" *ngIf="page.routerVal==&apos;/home/gender&apos;" (click)="changeText()">Next<mat-icon class="left fontSize14 lineHeight1-8">arrow_forward</mat-icon></button><button mat-raised-button style="width:98px" routerLink="gender" class="fontWeight500 secondary-button" *ngIf="page.routerVal==&apos;/home/state&apos;">
+        </button><button mat-raised-button style="width:98px" routerLink="state" class="primary-button" *ngIf="page.routerVal==&apos;/home/gender&apos;" (click)="changeText()" [disabled]="page.shareform.myForm==&apos;INVALID&apos;">Next<mat-icon class="left fontSize14 lineHeight1-8">arrow_forward</mat-icon></button><button mat-raised-button style="width:98px" routerLink="gender" class="fontWeight500 secondary-button" *ngIf="page.routerVal==&apos;/home/state&apos;">
           <mat-icon class="left eft fontSize14 lineHeight1-8">arrow_back</mat-icon><label>Back<label></label></label>
-        </button><button mat-raised-button style="width:98px" routerLink="occupation" class="primary-button" *ngIf="page.routerVal==&apos;/home/state&apos;" (click)="changeText()">Next<mat-icon class="left fontSize14 lineHeight1-8">arrow_forward</mat-icon></button><button mat-raised-button style="width:98px" routerLink="state" class="fontWeight500 secondary-button" *ngIf="page.routerVal==&apos;/home/occupation&apos;">
+        </button><button mat-raised-button style="width:98px" routerLink="occupation" class="primary-button" *ngIf="page.routerVal==&apos;/home/state&apos;" (click)="changeText()" [disabled]="page.shareform.myForm==&apos;INVALID&apos;">Next<mat-icon class="left fontSize14 lineHeight1-8">arrow_forward</mat-icon></button><button mat-raised-button style="width:98px" routerLink="state" class="fontWeight500 secondary-button" *ngIf="page.routerVal==&apos;/home/occupation&apos;">
           <mat-icon class="left eft fontSize14 lineHeight1-8">arrow_back</mat-icon><label>Back<label></label></label>
-        </button><button mat-raised-button style="width:98px" routerLink="hours" class="primary-button" *ngIf="page.routerVal==&apos;/home/occupation&apos;" (click)="changeText()">Next<mat-icon class="left fontSize14 lineHeight1-8">arrow_forward</mat-icon></button></div>
+        </button><button mat-raised-button style="width:98px" routerLink="hours" class="primary-button" *ngIf="page.routerVal==&apos;/home/occupation&apos;" (click)="changeText()" [disabled]="page.shareform.myForm==&apos;INVALID&apos;">Next<mat-icon class="left fontSize14 lineHeight1-8">arrow_forward</mat-icon></button></div>
       <div fxLayout="row wrap" class="padding10 borderTop width98" fxLayoutGap="10px" fxLayoutAlign="end end" [fxShow]="page.routerVal==&apos;/home/quotes&apos;"><button mat-raised-button style="width:100px" routerLink="summary" class="fontWeight500 secondary-button">
           <mat-icon class="left eft fontSize14 lineHeight1-8">arrow_back</mat-icon><label>Back<label></label></label>
         </button><button mat-raised-button style="width:116px" routerLink="summary_page" class="primary-button" (click)="changeText()">Review<mat-icon class="left fontSize14 lineHeight1-8">arrow_forward</mat-icon></button></div>
       <div fxLayout="row wrap" class="padding10 borderTop width98" fxLayoutGap="10px" fxLayoutAlign="end end" [fxShow]="page.routerVal==&apos;/home/summary_page&apos;"><button mat-raised-button style="width:100px" routerLink="quotes" class="fontWeight500 secondary-button">
           <mat-icon class="left fontSize14 lineHeight1-8">arrow_back</mat-icon><label>Back<label></label></label>
-        </button><button mat-raised-button style="width:120px" routerLink="register" class="primary-button" (click)="changeText()">Apply Now<mat-icon class="left fontSize14 lineHeight1-8">arrow_forward</mat-icon></button></div>
+        </button><button mat-raised-button style="width:120px" class="primary-button" (click)="changeText()">Apply Now<mat-icon class="left fontSize14 lineHeight1-8">arrow_forward</mat-icon></button></div>
     </div>
   </div>
   <div fxLayout="row wrap" class="width80" fxLayoutAlign="start stretch" [fxShow]="page.routerVal==&apos;/home/quotes&apos; || page.routerVal==&apos;/home/summary_page&apos;||page.routerVal==&apos;/home/need&apos;">

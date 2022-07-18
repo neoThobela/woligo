@@ -8,6 +8,7 @@ import {
   Input,
   Output,
   EventEmitter,
+  AfterContentChecked,
 } from '@angular/core'; //_splitter_
 import { SDBaseService } from 'app/n-services/SDBaseService'; //_splitter_
 import { SDPageCommonService } from 'app/n-services/sd-page-common.service'; //_splitter_
@@ -18,6 +19,9 @@ import {
   ReactiveFormsModule,
   Validators,
 } from '@angular/forms'; //_splitter_
+import { shareformService } from 'app/services/shareform/shareform.service'; //_splitter_
+import { MatDialog } from '@angular/material/dialog'; //_splitter_
+import { dialogBoxComponent } from './dialogBox.component'; //_splitter_
 //append_imports_end
 
 @Component({
@@ -27,7 +31,7 @@ import {
     //appendnew_element_providers
   ],
 })
-export class needCompComponent {
+export class needCompComponent implements AfterContentChecked {
   @Input('selection')
   public selection: any = undefined;
   page: any = { dep: {} };
@@ -82,6 +86,32 @@ export class needCompComponent {
     }
   }
 
+  ngAfterContentChecked() {
+    try {
+      var bh: any = this.__page_injector__
+        .get(SDPageCommonService)
+        .constructFlowObject(this);
+      bh = this.sd_KaopWNo7UMhyZhjk(bh);
+      //appendnew_next_ngAfterContentChecked
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_jP6L1DObxyFW5CPR');
+    }
+  }
+
+  sd_do0njk6nVTUIwNTL(data: any = undefined, ...others) {
+    try {
+      var bh: any = this.__page_injector__
+        .get(SDPageCommonService)
+        .constructFlowObject(this);
+      bh.input = { data: data };
+      bh.local = {};
+      bh = this.sd_DNt7aC77xKdRn0qi(bh);
+      //appendnew_next_sd_do0njk6nVTUIwNTL
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_do0njk6nVTUIwNTL');
+    }
+  }
+
   //appendnew_flow_needCompComponent_start
 
   sd_68VLm4zp4rvk7eDo(bh) {
@@ -102,7 +132,6 @@ export class needCompComponent {
   sd_9QIpXwUe9DvfBJBT(bh) {
     try {
       const page = this.page;
-      console.log('child', this.selection);
       page.icons = [
         // { "icon":"Web/Images/family.png","iconColor":"Web/Images/colorFamily.png","paragraph":"I need protect my income  or family"},
         {
@@ -154,6 +183,39 @@ export class needCompComponent {
       return bh;
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_9NFZdZ9WA9zpxEGl');
+    }
+  }
+
+  sd_KaopWNo7UMhyZhjk(bh) {
+    try {
+      this.page.shareform = this.__page_injector__.get(shareformService);
+      bh = this.sd_YGhJ5vQEFpm3uexH(bh);
+      //appendnew_next_sd_KaopWNo7UMhyZhjk
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_KaopWNo7UMhyZhjk');
+    }
+  }
+
+  sd_YGhJ5vQEFpm3uexH(bh) {
+    try {
+      const page = this.page;
+      page.shareform.myForm = page.needForm.status;
+      //appendnew_next_sd_YGhJ5vQEFpm3uexH
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_YGhJ5vQEFpm3uexH');
+    }
+  }
+
+  sd_DNt7aC77xKdRn0qi(bh) {
+    try {
+      const dialogBoxDialog = this.__page_injector__.get(MatDialog);
+      const dialogBoxDialogRef = dialogBoxDialog.open(dialogBoxComponent, {});
+
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_DNt7aC77xKdRn0qi');
     }
   }
 

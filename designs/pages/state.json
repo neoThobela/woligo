@@ -164,5 +164,83 @@
         "__n_excludedFromValidation__": {},
         "generateNext": false,
         "generated": true
+    },
+    {
+        "id": "sd_MBDcr98NXT9UdSLY",
+        "type": "UseDependency",
+        "z": "sd_3aHneG68rV8R8zSK",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "inputs": 1,
+        "outputs": 1,
+        "property": "",
+        "propertyType": "bh",
+        "propertyGv": "bh.",
+        "alias": "",
+        "modules": [
+            {
+                "textIp": "shareformService",
+                "typedIpValue": {
+                    "type": "this.page",
+                    "value": "shareform"
+                },
+                "injectable": true
+            }
+        ],
+        "import_all": false,
+        "library": "app/services/shareform/shareform.service",
+        "serviceDesignerType": "pages",
+        "functionName": "sd_MBDcr98NXT9UdSLY",
+        "category": "Function",
+        "x": 350,
+        "y": 152.8125,
+        "wires": [
+            [
+                "sd_xj135eBWL2U6887S"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "generated": true
+    },
+    {
+        "id": "sd_IGgIdjhsOgntwKAy",
+        "type": "AfterContentChecked",
+        "z": "sd_3aHneG68rV8R8zSK",
+        "viewType": "common",
+        "nodeType": "start",
+        "name": "After Content Checked",
+        "functionName": "ngAfterContentChecked",
+        "category": "Lifecycle Events",
+        "x": 185,
+        "y": 152.8125,
+        "wires": [
+            [
+                "sd_MBDcr98NXT9UdSLY"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "stateComponent"
+    },
+    {
+        "id": "sd_xj135eBWL2U6887S",
+        "type": "Script",
+        "z": "sd_3aHneG68rV8R8zSK",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "page.shareform.myForm=page.stateForm.status\npage.shareform.data.state=page.stateForm.controls.state.value\nconsole.log(page.shareform.data.state)",
+        "functionName": "sd_xj135eBWL2U6887S",
+        "category": "Function",
+        "x": 530,
+        "y": 152.8125,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "generated": true
     }
 ]

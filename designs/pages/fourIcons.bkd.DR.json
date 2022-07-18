@@ -1338,6 +1338,19 @@
                                     "_value": "",
                                     "_type": "kv",
                                     "_attrDef": "p"
+                                },
+                                {
+                                    "_key": "(click)",
+                                    "_value": "sd_G6zVN8ZQ7buWO36w()",
+                                    "_type": "kv",
+                                    "_attrDef": "c",
+                                    "objValue": {
+                                        "nodeID": "sd_G6zVN8ZQ7buWO36w",
+                                        "functionName": "sd_G6zVN8ZQ7buWO36w",
+                                        "activeTree": "pages",
+                                        "z": "sd_5httbDlk33UENCRB",
+                                        "input": []
+                                    }
                                 }
                             ]
                         }
@@ -1795,7 +1808,6 @@
                             "paletteKey": "Html5",
                             "parentEditorKey": "40b27385-6bbf-dfa2-7e63-e6be445e4a03",
                             "isAdvancedComponent": true,
-                            "isCommented": "false",
                             "commentid": null,
                             "designerReference": [
                                 {
@@ -1987,7 +1999,6 @@
                                 "paletteKey": "html-editor",
                                 "parentEditorKey": "b3ac5bca-95d9-d749-1f63-cb99cbedaa97",
                                 "isAdvancedChildComponent": true,
-                                "isCommented": "false",
                                 "commentid": null,
                                 "designerReference": [
                                     {

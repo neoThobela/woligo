@@ -94,7 +94,7 @@
         "script": "page.changeGender = true;\npage.changeFemale =false;\n",
         "functionName": "sd_qpVGRmIDxagQsswP",
         "category": "Function",
-        "x": 245,
+        "x": 285,
         "y": 160,
         "wires": [
             []
@@ -117,7 +117,7 @@
         "flow_type": "sync",
         "functionName": "changeGenderfunc",
         "category": "General",
-        "x": 45,
+        "x": 65,
         "y": 160,
         "wires": [
             [
@@ -138,14 +138,15 @@
         "script": "page.changeFemale = true;\npage.changeGender =false ;\n\n\n",
         "functionName": "sd_VUINEU02vuAn1UGw",
         "category": "Function",
-        "x": 225,
-        "y": 240,
+        "x": 265,
+        "y": 260,
         "wires": [
             []
         ],
         "__n_excludedFromValidation__": {},
         "generateNext": false,
-        "generated": true
+        "generated": true,
+        "serviceName": "genderComponent"
     },
     {
         "id": "sd_fzVzir0zmavPBRUh",
@@ -161,7 +162,7 @@
         "functionName": "changeFemaleFunct",
         "category": "General",
         "x": 65,
-        "y": 240,
+        "y": 260,
         "wires": [
             [
                 "sd_VUINEU02vuAn1UGw"
@@ -264,7 +265,7 @@
         "functionName": "sd_1Jh7cMZVHFwTSRLB",
         "category": "Function",
         "x": 265,
-        "y": 400,
+        "y": 360,
         "wires": [
             []
         ],
@@ -285,8 +286,8 @@
         "flow_type": "sync",
         "functionName": "yesFun",
         "category": "General",
-        "x": 105,
-        "y": 400,
+        "x": 65,
+        "y": 360,
         "wires": [
             [
                 "sd_1Jh7cMZVHFwTSRLB"
@@ -306,8 +307,8 @@
         "script": "page.no = true;\npage.yes =false;\n\n\n",
         "functionName": "sd_AuWvKwuXQ74Fy7qA",
         "category": "Function",
-        "x": 285,
-        "y": 520,
+        "x": 265,
+        "y": 460,
         "wires": [
             []
         ],
@@ -328,8 +329,8 @@
         "flow_type": "sync",
         "functionName": "noFunc",
         "category": "General",
-        "x": 125,
-        "y": 520,
+        "x": 65,
+        "y": 460,
         "wires": [
             [
                 "sd_AuWvKwuXQ74Fy7qA"
@@ -338,5 +339,83 @@
         "__n_excludedFromValidation__": {},
         "generateNext": true,
         "serviceName": "genderComponent"
+    },
+    {
+        "id": "sd_SdSnDZTOS0OVL6MI",
+        "type": "UseDependency",
+        "z": "sd_MQ6iqse4WKVGyIXu",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "inputs": 1,
+        "outputs": 1,
+        "property": "",
+        "propertyType": "bh",
+        "propertyGv": "bh.",
+        "alias": "",
+        "modules": [
+            {
+                "textIp": "shareformService",
+                "typedIpValue": {
+                    "type": "this.page",
+                    "value": "shareform"
+                },
+                "injectable": true
+            }
+        ],
+        "import_all": false,
+        "library": "app/services/shareform/shareform.service",
+        "serviceDesignerType": "pages",
+        "functionName": "sd_SdSnDZTOS0OVL6MI",
+        "category": "Function",
+        "x": 245,
+        "y": 600,
+        "wires": [
+            [
+                "sd_aCz3yCZl4XLpXocK"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "generated": true
+    },
+    {
+        "id": "sd_6mgjThzHYmgXqjmP",
+        "type": "AfterContentChecked",
+        "z": "sd_MQ6iqse4WKVGyIXu",
+        "viewType": "common",
+        "nodeType": "start",
+        "name": "After Content Checked",
+        "functionName": "ngAfterContentChecked",
+        "category": "Lifecycle Events",
+        "x": 80,
+        "y": 600,
+        "wires": [
+            [
+                "sd_SdSnDZTOS0OVL6MI"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "genderComponent"
+    },
+    {
+        "id": "sd_aCz3yCZl4XLpXocK",
+        "type": "Script",
+        "z": "sd_MQ6iqse4WKVGyIXu",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "page.shareform.myForm=page.genderForm.status\npage.shareform.data.gender=page.genderForm.controls.gender.value\nconsole.log(page.shareform.data.gender)\npage.shareform.data.maternity=page.genderForm.controls.maternity.value\nconsole.log(page.shareform.data.maternity)\n",
+        "functionName": "sd_aCz3yCZl4XLpXocK",
+        "category": "Function",
+        "x": 425,
+        "y": 600,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "generated": true
     }
 ]

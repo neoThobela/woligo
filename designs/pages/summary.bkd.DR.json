@@ -1593,8 +1593,8 @@
                         {
                             "_key": "class",
                             "_value": [
-                                "centerText",
-                                "circleOrange"
+                                "circleOrangeSum",
+                                "centerText"
                             ],
                             "_type": "dav",
                             "_attrDef": "p"
@@ -2693,14 +2693,14 @@
                                         },
                                         {
                                             "_key": "htmlElement",
-                                            "_value": "p",
+                                            "_value": "div",
                                             "_type": "dav",
                                             "_attrDef": "p",
                                             "_useAsLabel": true
                                         },
                                         {
                                             "_key": "tagType",
-                                            "_value": "p",
+                                            "_value": "div",
                                             "_type": "a",
                                             "_attrDef": "p",
                                             "_visibility": false
@@ -2880,7 +2880,7 @@
                                             },
                                             {
                                                 "_key": "html",
-                                                "_value": "{{item.content}}",
+                                                "_value": "\r\n<p *ngIf=\"item.title !== 'Date of birth'\" >{{item.content}}</p>\r\n<p *ngIf=\"item.title == 'Date of birth'\" > {{item.content | date:'shortDate'}}</p>\r\n<!-- <p *ngIf=\"item.title == 'salary'\" > {{item.content |  currency:'CAD':'symbol-narrow':'4.2-2'}}</p> -->",
                                                 "_type": "a",
                                                 "_attrDef": "p"
                                             }

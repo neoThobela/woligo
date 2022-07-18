@@ -23,7 +23,7 @@
       </div>
     </div>
     <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true">
-      <div class="centerText circleOrange">
+      <div class="circleOrangeSum centerText">
         3</div>
     </div>
   </div>
@@ -42,9 +42,12 @@
               </p>
             </div>
             <div fxLayout="column wrap" fxFlex="32" fxLayoutAlign="start stretch" [fxShow]="true">
-              <p class="fontWeight500 blueText fontSize14">
-                {{item.content}}
-              </p>
+              <div class="fontWeight500 blueText fontSize14">
+
+                <p *ngIf="item.title !== &apos;Date of birth&apos;">{{item.content}}</p>
+                <p *ngIf="item.title == &apos;Date of birth&apos;"> {{item.content | date:&apos;shortDate&apos;}}</p>
+                <!-- <p *ngIf="item.title == 'salary'" > {{item.content |  currency:'CAD':'symbol-narrow':'4.2-2'}}</p> -->
+              </div>
             </div>
             <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true"><img imgSrc="/Web/Images/edit.png"></div>
           </div>

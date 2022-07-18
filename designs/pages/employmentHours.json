@@ -19,8 +19,8 @@
         "name": "",
         "functionName": "sd_eWBLzDveKN5V4Ruk",
         "category": "Lifecycle Events",
-        "x": 30,
-        "y": 30,
+        "x": 45,
+        "y": 40,
         "wires": [
             [
                 "sd_Jykt9EsMVShHmfLU"
@@ -58,8 +58,8 @@
         ],
         "functionName": "sd_Jykt9EsMVShHmfLU",
         "category": "Function",
-        "x": 180,
-        "y": 30,
+        "x": 185,
+        "y": 40,
         "wires": [
             [
                 "sd_k6oAeJeac85YQhCx"
@@ -131,7 +131,8 @@
         ],
         "__n_excludedFromValidation__": {},
         "generateNext": false,
-        "generated": true
+        "generated": true,
+        "serviceName": "employmentHoursComponent"
     },
     {
         "id": "sd_eOC9MAwPFZfkUNRp",
@@ -163,7 +164,7 @@
         "functionName": "sd_VtGNkgcNuXphL3As",
         "category": "Function",
         "x": 225,
-        "y": 180,
+        "y": 140,
         "wires": [
             []
         ],
@@ -185,7 +186,7 @@
         "functionName": "yesFun",
         "category": "General",
         "x": 65,
-        "y": 180,
+        "y": 140,
         "wires": [
             [
                 "sd_VtGNkgcNuXphL3As"
@@ -205,8 +206,8 @@
         "script": "page.no = true;\npage.yes =false;\n\n\n",
         "functionName": "sd_fhwcluh4NQDxP5hY",
         "category": "Function",
-        "x": 190,
-        "y": 264.8125,
+        "x": 225,
+        "y": 240,
         "wires": [
             []
         ],
@@ -227,8 +228,8 @@
         "flow_type": "sync",
         "functionName": "noFunc",
         "category": "General",
-        "x": 30,
-        "y": 264.8125,
+        "x": 65,
+        "y": 240,
         "wires": [
             [
                 "sd_fhwcluh4NQDxP5hY"
@@ -237,5 +238,83 @@
         "__n_excludedFromValidation__": {},
         "generateNext": true,
         "serviceName": "employmentHoursComponent"
+    },
+    {
+        "id": "sd_vx1RDnFMDvkvsY5L",
+        "type": "UseDependency",
+        "z": "sd_ZTzWdzlL2m81rARD",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "inputs": 1,
+        "outputs": 1,
+        "property": "",
+        "propertyType": "bh",
+        "propertyGv": "bh.",
+        "alias": "",
+        "modules": [
+            {
+                "textIp": "shareformService",
+                "typedIpValue": {
+                    "type": "this.page",
+                    "value": "shareform"
+                },
+                "injectable": true
+            }
+        ],
+        "import_all": false,
+        "library": "app/services/shareform/shareform.service",
+        "serviceDesignerType": "pages",
+        "functionName": "sd_vx1RDnFMDvkvsY5L",
+        "category": "Function",
+        "x": 245,
+        "y": 360,
+        "wires": [
+            [
+                "sd_f70cOzay4hgAfEPV"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "generated": true
+    },
+    {
+        "id": "sd_Pba3LYIQr4NE0PNQ",
+        "type": "AfterContentChecked",
+        "z": "sd_ZTzWdzlL2m81rARD",
+        "viewType": "common",
+        "nodeType": "start",
+        "name": "After Content Checked",
+        "functionName": "ngAfterContentChecked",
+        "category": "Lifecycle Events",
+        "x": 80,
+        "y": 360,
+        "wires": [
+            [
+                "sd_vx1RDnFMDvkvsY5L"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "employmentHoursComponent"
+    },
+    {
+        "id": "sd_f70cOzay4hgAfEPV",
+        "type": "Script",
+        "z": "sd_ZTzWdzlL2m81rARD",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "page.shareform.myForm=page.hoursForm.status\npage.shareform.data.hours=page.hoursForm.controls.hours.value\nconsole.log(page.shareform.data.hours)",
+        "functionName": "sd_f70cOzay4hgAfEPV",
+        "category": "Function",
+        "x": 425,
+        "y": 360,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "generated": true
     }
 ]

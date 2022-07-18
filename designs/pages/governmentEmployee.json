@@ -19,8 +19,8 @@
         "name": "",
         "functionName": "sd_yI5QjaQksmkg6IqU",
         "category": "Lifecycle Events",
-        "x": 30,
-        "y": 30,
+        "x": 45,
+        "y": 60,
         "wires": [
             [
                 "sd_248EJjl1Ewvu7VyT"
@@ -43,8 +43,8 @@
         "globalVariables": [],
         "functionName": "sd_248EJjl1Ewvu7VyT",
         "category": "Function",
-        "x": 180,
-        "y": 30,
+        "x": 205,
+        "y": 60,
         "wires": [
             [
                 "sd_71lDPQfZiBra6ZrZ"
@@ -116,7 +116,8 @@
         ],
         "__n_excludedFromValidation__": {},
         "generateNext": false,
-        "generated": true
+        "generated": true,
+        "serviceName": "governmentEmployeeComponent"
     },
     {
         "id": "sd_74Cw0Qrqa3nLCFnG",
@@ -222,5 +223,83 @@
         "__n_excludedFromValidation__": {},
         "generateNext": true,
         "serviceName": "governmentEmployeeComponent"
+    },
+    {
+        "id": "sd_8TaIirQOcsrBYUr0",
+        "type": "UseDependency",
+        "z": "sd_L3ra3dHBI6P6nFwk",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "inputs": 1,
+        "outputs": 1,
+        "property": "",
+        "propertyType": "bh",
+        "propertyGv": "bh.",
+        "alias": "",
+        "modules": [
+            {
+                "textIp": "shareformService",
+                "typedIpValue": {
+                    "type": "this.page",
+                    "value": "shareform"
+                },
+                "injectable": true
+            }
+        ],
+        "import_all": false,
+        "library": "app/services/shareform/shareform.service",
+        "serviceDesignerType": "pages",
+        "functionName": "sd_8TaIirQOcsrBYUr0",
+        "category": "Function",
+        "x": 225,
+        "y": 440,
+        "wires": [
+            [
+                "sd_kNcgjCg5QfuovAPQ"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "generated": true
+    },
+    {
+        "id": "sd_2cnt5zg2dkdDDduv",
+        "type": "AfterContentChecked",
+        "z": "sd_L3ra3dHBI6P6nFwk",
+        "viewType": "common",
+        "nodeType": "start",
+        "name": "After Content Checked",
+        "functionName": "ngAfterContentChecked",
+        "category": "Lifecycle Events",
+        "x": 60,
+        "y": 440,
+        "wires": [
+            [
+                "sd_8TaIirQOcsrBYUr0"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "governmentEmployeeComponent"
+    },
+    {
+        "id": "sd_kNcgjCg5QfuovAPQ",
+        "type": "Script",
+        "z": "sd_L3ra3dHBI6P6nFwk",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "page.shareform.myForm=page.governmentForm.status\npage.shareform.data.governmentEmployee=page.governmentForm.controls.governmentEmployee.value\nconsole.log(page.shareform.data.government)",
+        "functionName": "sd_kNcgjCg5QfuovAPQ",
+        "category": "Function",
+        "x": 405,
+        "y": 440,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "generated": true
     }
 ]

@@ -13,7 +13,7 @@
         <div fxLayout="row wrap" class="myGrayText width100" fxLayoutAlign="center center" [fxShow]="true"><img imgSrc="Web/Images/disabilityInsure.png" *ngIf="!page.checkedInsure"><img imgSrc="Web/Images/colorHand.png" *ngIf="page.checkedInsure"></div>
         <div fxLayout="row wrap" class="width100" fxLayoutAlign="center center" [fxShow]="true"><label class="fontSize14 centerText darkestGrayText">
             Disability insurance</label>
-          <mat-icon class="lineHeight1-8 fontSize14 lightGreyText">help_outline</mat-icon>
+          <mat-icon class="lineHeight1-8 fontSize14 lightGreyText" (click)="sd_G6zVN8ZQ7buWO36w()">help_outline</mat-icon>
         </div>
         <div fxLayout="row wrap" class="width100" fxLayoutAlign="center center" [fxShow]="true">
           <mat-checkbox (change)="changeColor()" value="&apos;Disability&apos;" [required]="true" formControlName="DisabilityInsurance"></mat-checkbox>

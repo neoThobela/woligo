@@ -8,6 +8,9 @@ import {
   Input,
   Output,
   EventEmitter,
+  AfterContentChecked,
+  Pipe,
+  PipeTransform,
 } from '@angular/core'; //_splitter_
 import { SDBaseService } from 'app/n-services/SDBaseService'; //_splitter_
 import { SDPageCommonService } from 'app/n-services/sd-page-common.service'; //_splitter_
@@ -19,6 +22,7 @@ import {
   Validators,
   FormBuilder,
 } from '@angular/forms'; //_splitter_
+import { shareformService } from 'app/services/shareform/shareform.service'; //_splitter_
 //append_imports_end
 
 @Component({
@@ -28,7 +32,7 @@ import {
     //appendnew_element_providers
   ],
 })
-export class salaryComponent {
+export class salaryComponent implements AfterContentChecked {
   page: any = { dep: {} };
   constructor(
     private __page_injector__: Injector,
@@ -68,6 +72,18 @@ export class salaryComponent {
     }
   }
 
+  ngAfterContentChecked() {
+    try {
+      var bh: any = this.__page_injector__
+        .get(SDPageCommonService)
+        .constructFlowObject(this);
+      bh = this.sd_kEx6uhOSz7ro7hU9(bh);
+      //appendnew_next_ngAfterContentChecked
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_pSTFpPA9nz0K9pD6');
+    }
+  }
+
   //appendnew_flow_salaryComponent_start
 
   sd_AG0N4bDy3CA0o3a5(bh) {
@@ -94,13 +110,53 @@ export class salaryComponent {
     try {
       const page = this.page;
       page.salaryForm = new FormGroup({
-        salary: new FormControl('', [Validators.required]),
+        salary: new FormControl('', [
+          Validators.required,
+          Validators.min(1200),
+          Validators.pattern('^(0|[1-9][0-9]*)$'),
+        ]),
       });
       console.log('form', page.salaryForm);
+      bh = this.sd_lAynT1LU71UrhDJX(bh);
       //appendnew_next_sd_B3ygWMJPX5CnVBRC
       return bh;
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_B3ygWMJPX5CnVBRC');
+    }
+  }
+
+  sd_lAynT1LU71UrhDJX(bh) {
+    try {
+      //appendnew_next_sd_lAynT1LU71UrhDJX
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_lAynT1LU71UrhDJX');
+    }
+  }
+
+  sd_kEx6uhOSz7ro7hU9(bh) {
+    try {
+      this.page.shareform = this.__page_injector__.get(shareformService);
+      bh = this.sd_hnLrjtnCrURD7OA8(bh);
+      //appendnew_next_sd_kEx6uhOSz7ro7hU9
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_kEx6uhOSz7ro7hU9');
+    }
+  }
+
+  sd_hnLrjtnCrURD7OA8(bh) {
+    try {
+      const page = this.page; //assign my service form to the salary form
+      page.shareform.myForm = page.salaryForm.status;
+      //assign my object to the value from form
+      page.shareform.data.salary = page.salaryForm.controls.salary.value;
+      console.log(page.shareform.data.salary);
+
+      //appendnew_next_sd_hnLrjtnCrURD7OA8
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_hnLrjtnCrURD7OA8');
     }
   }
 

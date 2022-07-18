@@ -8,6 +8,7 @@ import {
   Input,
   Output,
   EventEmitter,
+  AfterContentChecked,
 } from '@angular/core'; //_splitter_
 import { SDBaseService } from 'app/n-services/SDBaseService'; //_splitter_
 import { SDPageCommonService } from 'app/n-services/sd-page-common.service'; //_splitter_
@@ -18,6 +19,7 @@ import {
   ReactiveFormsModule,
   Validators,
 } from '@angular/forms'; //_splitter_
+import { shareformService } from 'app/services/shareform/shareform.service'; //_splitter_
 //append_imports_end
 
 @Component({
@@ -27,7 +29,7 @@ import {
     //appendnew_element_providers
   ],
 })
-export class noicotineComponent {
+export class noicotineComponent implements AfterContentChecked {
   page: any = { dep: {} };
   constructor(
     private __page_injector__: Injector,
@@ -94,6 +96,18 @@ export class noicotineComponent {
     }
   }
 
+  ngAfterContentChecked() {
+    try {
+      var bh: any = this.__page_injector__
+        .get(SDPageCommonService)
+        .constructFlowObject(this);
+      bh = this.sd_1ikr0LAswBBYyf9L(bh);
+      //appendnew_next_ngAfterContentChecked
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_nBxxgTolB4kc0Lyl');
+    }
+  }
+
   //appendnew_flow_noicotineComponent_start
 
   sd_DzCcjuSyZ0I2i9tc(bh) {
@@ -153,6 +167,30 @@ export class noicotineComponent {
       return bh;
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_x1jqio7XVv4YmILd');
+    }
+  }
+
+  sd_1ikr0LAswBBYyf9L(bh) {
+    try {
+      this.page.shareform = this.__page_injector__.get(shareformService);
+      bh = this.sd_s2HlvjAos5h3E4Sm(bh);
+      //appendnew_next_sd_1ikr0LAswBBYyf9L
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_1ikr0LAswBBYyf9L');
+    }
+  }
+
+  sd_s2HlvjAos5h3E4Sm(bh) {
+    try {
+      const page = this.page;
+      page.shareform.myForm = page.nicotineForm.status;
+      page.shareform.data.nicotine = page.nicotineForm.controls.nicotine.value;
+      console.log(page.shareform.data.nicotine);
+      //appendnew_next_sd_s2HlvjAos5h3E4Sm
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_s2HlvjAos5h3E4Sm');
     }
   }
 

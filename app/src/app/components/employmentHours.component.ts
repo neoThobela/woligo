@@ -8,6 +8,7 @@ import {
   Input,
   Output,
   EventEmitter,
+  AfterContentChecked,
 } from '@angular/core'; //_splitter_
 import { SDBaseService } from 'app/n-services/SDBaseService'; //_splitter_
 import { SDPageCommonService } from 'app/n-services/sd-page-common.service'; //_splitter_
@@ -18,6 +19,7 @@ import {
   ReactiveFormsModule,
   Validators,
 } from '@angular/forms'; //_splitter_
+import { shareformService } from 'app/services/shareform/shareform.service'; //_splitter_
 //append_imports_end
 
 @Component({
@@ -27,7 +29,7 @@ import {
     //appendnew_element_providers
   ],
 })
-export class employmentHoursComponent {
+export class employmentHoursComponent implements AfterContentChecked {
   page: any = { dep: {} };
   constructor(
     private __page_injector__: Injector,
@@ -94,6 +96,18 @@ export class employmentHoursComponent {
     }
   }
 
+  ngAfterContentChecked() {
+    try {
+      var bh: any = this.__page_injector__
+        .get(SDPageCommonService)
+        .constructFlowObject(this);
+      bh = this.sd_vx1RDnFMDvkvsY5L(bh);
+      //appendnew_next_ngAfterContentChecked
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_Pba3LYIQr4NE0PNQ');
+    }
+  }
+
   //appendnew_flow_employmentHoursComponent_start
 
   sd_Jykt9EsMVShHmfLU(bh) {
@@ -155,6 +169,30 @@ export class employmentHoursComponent {
       return bh;
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_fhwcluh4NQDxP5hY');
+    }
+  }
+
+  sd_vx1RDnFMDvkvsY5L(bh) {
+    try {
+      this.page.shareform = this.__page_injector__.get(shareformService);
+      bh = this.sd_f70cOzay4hgAfEPV(bh);
+      //appendnew_next_sd_vx1RDnFMDvkvsY5L
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_vx1RDnFMDvkvsY5L');
+    }
+  }
+
+  sd_f70cOzay4hgAfEPV(bh) {
+    try {
+      const page = this.page;
+      page.shareform.myForm = page.hoursForm.status;
+      page.shareform.data.hours = page.hoursForm.controls.hours.value;
+      console.log(page.shareform.data.hours);
+      //appendnew_next_sd_f70cOzay4hgAfEPV
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_f70cOzay4hgAfEPV');
     }
   }
 

@@ -116,7 +116,8 @@
         ],
         "__n_excludedFromValidation__": {},
         "generateNext": false,
-        "generated": true
+        "generated": true,
+        "serviceName": "noicotineComponent"
     },
     {
         "id": "sd_8olGAiryYMTlTLXi",
@@ -222,5 +223,83 @@
         "__n_excludedFromValidation__": {},
         "generateNext": true,
         "serviceName": "noicotineComponent"
+    },
+    {
+        "id": "sd_1ikr0LAswBBYyf9L",
+        "type": "UseDependency",
+        "z": "sd_LMPEuKU3ZmxGom13",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "inputs": 1,
+        "outputs": 1,
+        "property": "",
+        "propertyType": "bh",
+        "propertyGv": "bh.",
+        "alias": "",
+        "modules": [
+            {
+                "textIp": "shareformService",
+                "typedIpValue": {
+                    "type": "this.page",
+                    "value": "shareform"
+                },
+                "injectable": true
+            }
+        ],
+        "import_all": false,
+        "library": "app/services/shareform/shareform.service",
+        "serviceDesignerType": "pages",
+        "functionName": "sd_1ikr0LAswBBYyf9L",
+        "category": "Function",
+        "x": 227,
+        "y": 427.8125,
+        "wires": [
+            [
+                "sd_s2HlvjAos5h3E4Sm"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "generated": true
+    },
+    {
+        "id": "sd_nBxxgTolB4kc0Lyl",
+        "type": "AfterContentChecked",
+        "z": "sd_LMPEuKU3ZmxGom13",
+        "viewType": "common",
+        "nodeType": "start",
+        "name": "After Content Checked",
+        "functionName": "ngAfterContentChecked",
+        "category": "Lifecycle Events",
+        "x": 62,
+        "y": 427.8125,
+        "wires": [
+            [
+                "sd_1ikr0LAswBBYyf9L"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "noicotineComponent"
+    },
+    {
+        "id": "sd_s2HlvjAos5h3E4Sm",
+        "type": "Script",
+        "z": "sd_LMPEuKU3ZmxGom13",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "page.shareform.myForm=page.nicotineForm.status\npage.shareform.data.nicotine=page.nicotineForm.controls.nicotine.value\nconsole.log(page.shareform.data.nicotine)",
+        "functionName": "sd_s2HlvjAos5h3E4Sm",
+        "category": "Function",
+        "x": 407,
+        "y": 427.8125,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "generated": true
     }
 ]

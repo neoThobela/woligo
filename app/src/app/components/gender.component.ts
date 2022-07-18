@@ -8,6 +8,7 @@ import {
   Input,
   Output,
   EventEmitter,
+  AfterContentChecked,
 } from '@angular/core'; //_splitter_
 import { SDBaseService } from 'app/n-services/SDBaseService'; //_splitter_
 import { SDPageCommonService } from 'app/n-services/sd-page-common.service'; //_splitter_
@@ -18,6 +19,7 @@ import {
   ReactiveFormsModule,
   Validators,
 } from '@angular/forms'; //_splitter_
+import { shareformService } from 'app/services/shareform/shareform.service'; //_splitter_
 //append_imports_end
 
 @Component({
@@ -27,7 +29,7 @@ import {
     //appendnew_element_providers
   ],
 })
-export class genderComponent {
+export class genderComponent implements AfterContentChecked {
   page: any = { dep: {} };
   constructor(
     private __page_injector__: Injector,
@@ -122,6 +124,18 @@ export class genderComponent {
     }
   }
 
+  ngAfterContentChecked() {
+    try {
+      var bh: any = this.__page_injector__
+        .get(SDPageCommonService)
+        .constructFlowObject(this);
+      bh = this.sd_SdSnDZTOS0OVL6MI(bh);
+      //appendnew_next_ngAfterContentChecked
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_6mgjThzHYmgXqjmP');
+    }
+  }
+
   //appendnew_flow_genderComponent_start
 
   sd_V8Cdw7sudscPXniK(bh) {
@@ -212,6 +226,33 @@ export class genderComponent {
       return bh;
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_AuWvKwuXQ74Fy7qA');
+    }
+  }
+
+  sd_SdSnDZTOS0OVL6MI(bh) {
+    try {
+      this.page.shareform = this.__page_injector__.get(shareformService);
+      bh = this.sd_aCz3yCZl4XLpXocK(bh);
+      //appendnew_next_sd_SdSnDZTOS0OVL6MI
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_SdSnDZTOS0OVL6MI');
+    }
+  }
+
+  sd_aCz3yCZl4XLpXocK(bh) {
+    try {
+      const page = this.page;
+      page.shareform.myForm = page.genderForm.status;
+      page.shareform.data.gender = page.genderForm.controls.gender.value;
+      console.log(page.shareform.data.gender);
+      page.shareform.data.maternity = page.genderForm.controls.maternity.value;
+      console.log(page.shareform.data.maternity);
+
+      //appendnew_next_sd_aCz3yCZl4XLpXocK
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_aCz3yCZl4XLpXocK');
     }
   }
 

@@ -615,7 +615,7 @@
                                 },
                                 {
                                     "_key": "style",
-                                    "_value": "width:60%",
+                                    "_value": "width:50%",
                                     "_type": "kv",
                                     "_attrDef": "p"
                                 },
@@ -633,7 +633,7 @@
                                 },
                                 {
                                     "_key": "fxLayoutGap",
-                                    "_value": "",
+                                    "_value": "3.2em",
                                     "_type": "kv",
                                     "_attrDef": "p"
                                 },
@@ -645,7 +645,7 @@
                                 },
                                 {
                                     "_key": "layoutAlign",
-                                    "_value": "space-between",
+                                    "_value": "center",
                                     "_type": "a",
                                     "_attrDef": "p"
                                 },
@@ -1097,7 +1097,7 @@
                                             },
                                             {
                                                 "_key": "[value]",
-                                                "_value": "'yes'",
+                                                "_value": "'Yes'",
                                                 "_type": "kv",
                                                 "_attrDef": "p"
                                             },
@@ -1608,7 +1608,7 @@
                                             },
                                             {
                                                 "_key": "[value]",
-                                                "_value": "'no'",
+                                                "_value": "'No'",
                                                 "_type": "kv",
                                                 "_attrDef": "p"
                                             },

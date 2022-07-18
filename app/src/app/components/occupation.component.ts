@@ -8,6 +8,9 @@ import {
   Input,
   Output,
   EventEmitter,
+  AfterContentChecked,
+  Pipe,
+  PipeTransform,
 } from '@angular/core'; //_splitter_
 import { SDBaseService } from 'app/n-services/SDBaseService'; //_splitter_
 import { SDPageCommonService } from 'app/n-services/sd-page-common.service'; //_splitter_
@@ -18,6 +21,7 @@ import {
   ReactiveFormsModule,
   Validators,
 } from '@angular/forms'; //_splitter_
+import { shareformService } from 'app/services/shareform/shareform.service'; //_splitter_
 //append_imports_end
 
 @Component({
@@ -27,7 +31,7 @@ import {
     //appendnew_element_providers
   ],
 })
-export class occupationComponent {
+export class occupationComponent implements AfterContentChecked {
   page: any = { dep: {} };
   constructor(
     private __page_injector__: Injector,
@@ -63,6 +67,32 @@ export class occupationComponent {
       return bh;
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_G5CDUZ5rS5N1hsNJ');
+    }
+  }
+
+  ngAfterContentChecked() {
+    try {
+      var bh: any = this.__page_injector__
+        .get(SDPageCommonService)
+        .constructFlowObject(this);
+      bh = this.sd_hFjItBTKUqp0g9SD(bh);
+      //appendnew_next_ngAfterContentChecked
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_Ur9FZvLLn6VOoeU2');
+    }
+  }
+
+  show(...others) {
+    try {
+      var bh: any = this.__page_injector__
+        .get(SDPageCommonService)
+        .constructFlowObject(this);
+      bh.input = {};
+      bh.local = {};
+      bh = this.sd_YoivaSpXCksL88o5(bh);
+      //appendnew_next_show
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_4F5rc1FDrDBP6d4K');
     }
   }
 
@@ -120,6 +150,40 @@ export class occupationComponent {
       return bh;
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_Iw2J0gCjxNAHY25L');
+    }
+  }
+
+  sd_hFjItBTKUqp0g9SD(bh) {
+    try {
+      this.page.shareform = this.__page_injector__.get(shareformService);
+      bh = this.sd_KSyZ7Pny284fddWn(bh);
+      //appendnew_next_sd_hFjItBTKUqp0g9SD
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_hFjItBTKUqp0g9SD');
+    }
+  }
+
+  sd_KSyZ7Pny284fddWn(bh) {
+    try {
+      const page = this.page;
+      page.shareform.myForm = page.occupationForm.status;
+      page.shareform.data.occupation =
+        page.occupationForm.controls.occupation.value;
+      console.log(page.shareform.data.occupation);
+      //appendnew_next_sd_KSyZ7Pny284fddWn
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_KSyZ7Pny284fddWn');
+    }
+  }
+
+  sd_YoivaSpXCksL88o5(bh) {
+    try {
+      //appendnew_next_sd_YoivaSpXCksL88o5
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_YoivaSpXCksL88o5');
     }
   }
 

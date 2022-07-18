@@ -8,6 +8,7 @@ import {
   Input,
   Output,
   EventEmitter,
+  AfterContentChecked,
 } from '@angular/core'; //_splitter_
 import { SDBaseService } from 'app/n-services/SDBaseService'; //_splitter_
 import { SDPageCommonService } from 'app/n-services/sd-page-common.service'; //_splitter_
@@ -18,6 +19,9 @@ import {
   ReactiveFormsModule,
   Validators,
 } from '@angular/forms'; //_splitter_
+import { shareformService } from 'app/services/shareform/shareform.service'; //_splitter_
+import { MatDialog } from '@angular/material/dialog'; //_splitter_
+import { dialogBoxComponent } from './dialogBox.component'; //_splitter_
 //append_imports_end
 
 @Component({
@@ -27,7 +31,7 @@ import {
     //appendnew_element_providers
   ],
 })
-export class fourIconsComponent {
+export class fourIconsComponent implements AfterContentChecked {
   page: any = { dep: {} };
   constructor(
     private __page_injector__: Injector,
@@ -77,6 +81,32 @@ export class fourIconsComponent {
       //appendnew_next_changeColor
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_UTwjUcMWRxcIFYUj');
+    }
+  }
+
+  ngAfterContentChecked() {
+    try {
+      var bh: any = this.__page_injector__
+        .get(SDPageCommonService)
+        .constructFlowObject(this);
+      bh = this.sd_pPMYr9IyU7DSpdu2(bh);
+      //appendnew_next_ngAfterContentChecked
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_aGVRYNMAwl1XH4CL');
+    }
+  }
+
+  sd_G6zVN8ZQ7buWO36w(data: any = undefined, ...others) {
+    try {
+      var bh: any = this.__page_injector__
+        .get(SDPageCommonService)
+        .constructFlowObject(this);
+      bh.input = { data: data };
+      bh.local = {};
+      bh = this.sd_bSFnTPY1Ak5rXWYM(bh);
+      //appendnew_next_sd_G6zVN8ZQ7buWO36w
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_G6zVN8ZQ7buWO36w');
     }
   }
 
@@ -153,6 +183,41 @@ export class fourIconsComponent {
       return bh;
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_mySwMU8D3TtIrOj7');
+    }
+  }
+
+  sd_pPMYr9IyU7DSpdu2(bh) {
+    try {
+      this.page.shareform = this.__page_injector__.get(shareformService);
+      bh = this.sd_SfpspZIOeG3qWdlr(bh);
+      //appendnew_next_sd_pPMYr9IyU7DSpdu2
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_pPMYr9IyU7DSpdu2');
+    }
+  }
+
+  sd_SfpspZIOeG3qWdlr(bh) {
+    try {
+      const page = this.page;
+      page.shareform.myForm = page.insuranceTypeForm.status;
+      // page.shareform.data.insuranceType=page.insuranceTypeForm.controls.insuranceType
+      // console.log(page.shareform.data.insuranceType)
+      //appendnew_next_sd_SfpspZIOeG3qWdlr
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_SfpspZIOeG3qWdlr');
+    }
+  }
+
+  sd_bSFnTPY1Ak5rXWYM(bh) {
+    try {
+      const dialogBoxDialog = this.__page_injector__.get(MatDialog);
+      const dialogBoxDialogRef = dialogBoxDialog.open(dialogBoxComponent, {});
+
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_bSFnTPY1Ak5rXWYM');
     }
   }
 

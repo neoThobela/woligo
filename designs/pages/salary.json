@@ -19,8 +19,8 @@
         "name": "",
         "functionName": "sd_mJSMrnB80lhRRqyr",
         "category": "Lifecycle Events",
-        "x": 30,
-        "y": 30,
+        "x": 45,
+        "y": 60,
         "wires": [
             [
                 "sd_AG0N4bDy3CA0o3a5"
@@ -43,8 +43,8 @@
         "globalVariables": [],
         "functionName": "sd_AG0N4bDy3CA0o3a5",
         "category": "Function",
-        "x": 180,
-        "y": 30,
+        "x": 185,
+        "y": 60,
         "wires": [
             [
                 "sd_nbb1lCUFh2V7lt3r"
@@ -106,8 +106,8 @@
         "serviceDesignerType": "pages",
         "functionName": "sd_nbb1lCUFh2V7lt3r",
         "category": "Function",
-        "x": 325,
-        "y": 40,
+        "x": 305,
+        "y": 60,
         "wires": [
             [
                 "sd_B3ygWMJPX5CnVBRC"
@@ -124,11 +124,136 @@
         "viewType": "common",
         "nodeType": "flow",
         "name": "",
-        "script": " page.salaryForm= new FormGroup({\n    salary: new FormControl('',[Validators.required]),\n   \n  });\nconsole.log(\"form\",page.salaryForm)",
+        "script": " page.salaryForm= new FormGroup({\n    salary: new FormControl('',[Validators.required,Validators.min(1200),Validators.pattern('^(0|[1-9][0-9]*)$')]),\n   \n  });\nconsole.log(\"form\",page.salaryForm)",
         "functionName": "sd_B3ygWMJPX5CnVBRC",
         "category": "Function",
         "x": 425,
-        "y": 40,
+        "y": 60,
+        "wires": [
+            [
+                "sd_lAynT1LU71UrhDJX"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "generated": true
+    },
+    {
+        "id": "sd_kEx6uhOSz7ro7hU9",
+        "type": "UseDependency",
+        "z": "sd_XWYc3G7hZ1h9ksnS",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "inputs": 1,
+        "outputs": 1,
+        "property": "",
+        "propertyType": "bh",
+        "propertyGv": "bh.",
+        "alias": "",
+        "modules": [
+            {
+                "textIp": "shareformService",
+                "typedIpValue": {
+                    "type": "this.page",
+                    "value": "shareform"
+                },
+                "injectable": true
+            }
+        ],
+        "import_all": false,
+        "library": "app/services/shareform/shareform.service",
+        "serviceDesignerType": "pages",
+        "functionName": "sd_kEx6uhOSz7ro7hU9",
+        "category": "Function",
+        "x": 305,
+        "y": 180,
+        "wires": [
+            [
+                "sd_hnLrjtnCrURD7OA8"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "generated": true
+    },
+    {
+        "id": "sd_pSTFpPA9nz0K9pD6",
+        "type": "AfterContentChecked",
+        "z": "sd_XWYc3G7hZ1h9ksnS",
+        "viewType": "common",
+        "nodeType": "start",
+        "name": "After Content Checked",
+        "functionName": "ngAfterContentChecked",
+        "category": "Lifecycle Events",
+        "x": 140,
+        "y": 180,
+        "wires": [
+            [
+                "sd_kEx6uhOSz7ro7hU9"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "salaryComponent"
+    },
+    {
+        "id": "sd_hnLrjtnCrURD7OA8",
+        "type": "Script",
+        "z": "sd_XWYc3G7hZ1h9ksnS",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "//assign my service form to the salary form \npage.shareform.myForm=page.salaryForm.status\n//assign my object to the value from form\npage.shareform.data.salary=page.salaryForm.controls.salary.value\nconsole.log(page.shareform.data.salary);\n",
+        "functionName": "sd_hnLrjtnCrURD7OA8",
+        "category": "Function",
+        "x": 485,
+        "y": 180,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "generated": true
+    },
+    {
+        "id": "sd_lAynT1LU71UrhDJX",
+        "type": "UseDependency",
+        "z": "sd_XWYc3G7hZ1h9ksnS",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "inputs": 1,
+        "outputs": 1,
+        "property": "",
+        "propertyType": "bh",
+        "propertyGv": "bh.",
+        "alias": "",
+        "modules": [
+            {
+                "textIp": "Pipe",
+                "typedIpValue": {
+                    "type": "this.page",
+                    "value": ""
+                },
+                "injectable": false
+            },
+            {
+                "textIp": "PipeTransform",
+                "typedIpValue": {
+                    "type": "this.page",
+                    "value": ""
+                },
+                "injectable": false
+            }
+        ],
+        "import_all": false,
+        "library": "@angular/core",
+        "serviceDesignerType": "pages",
+        "functionName": "sd_lAynT1LU71UrhDJX",
+        "category": "Function",
+        "x": 560,
+        "y": 60,
         "wires": [
             []
         ],

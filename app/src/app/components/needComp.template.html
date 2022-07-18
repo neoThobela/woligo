@@ -1,8 +1,5 @@
 <form [formGroup]="page.needForm">
   <div fxLayout="column wrap" fxLayoutGap=".5em" fxLayoutAlign="center center" [fxShow]="true">
-    <div fxLayout="row wrap" class="width100" fxLayoutAlign="start stretch" [fxShow]="true">
-      <div fxLayout="column wrap" class="width100" fxLayoutAlign="center center" [fxShow]="true"></div>
-    </div>
     <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true">
       <div class="fontSize18 fontWeight500">
         How can we help you?</div>
@@ -14,7 +11,7 @@
     <div fxLayout="row wrap" fxLayoutGap="2em" fxLayoutAlign="center end" [fxShow]="true">
       <div fxLayout="column wrap" class="centerText fitContent" fxFlex="180px" fxLayoutGap="1em" fxLayoutAlign="center end" [fxShow]="true">
         <div fxLayout="row wrap" class="myGrayText width100" fxLayoutAlign="center center" [fxShow]="true"><img imgSrc="Web/Images/colorFamily.png" *ngIf="page.checkedBox"><img imgSrc="Web/Images/family.png" *ngIf="!page.checkedBox"></div>
-        <div fxLayout="row wrap" class="width100" fxLayoutAlign="center center" [fxShow]="true"><label style="height:30px" class="fontSize14 centerText darkestGrayText">
+        <div fxLayout="row wrap" class="width100" fxLayoutAlign="center center" [fxShow]="true" (click)="sd_do0njk6nVTUIwNTL()"><label style="height:30px" class="fontSize14 centerText darkestGrayText">
             I need protect my income or family</label></div>
         <div fxLayout="row wrap" class="width100" fxLayoutAlign="center center" [fxShow]="true">
           <mat-checkbox (change)="changeIcon()" [required]="true" formControlName="need"></mat-checkbox>
